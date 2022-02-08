@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
+      <module fileurl="file://$PROJECT_DIR$/.idea/voxeloop.iml" filepath="$PROJECT_DIR$/.idea/voxeloop.iml" />
+=======
       <module fileurl="file://$PROJECT_DIR$/.idea/Voxeloop.iml" filepath="$PROJECT_DIR$/.idea/Voxeloop.iml" />
+>>>>>>> f5e18b79224988378be0609f941a6981e135a6b1
     </modules>
   </component>
 </project>

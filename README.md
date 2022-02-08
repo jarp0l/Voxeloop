@@ -1,23 +1,11 @@
-# Voxelloop
+# Voxeloop
 
-### Setting Up Project
 
-**Installing GLFW**
-
+**Build using CMake**
 ```sh
-    sudo apt install libglfw3 libglfw3-dev
-```
-
-or use similar commands based on your distro
-
-**Installing GLAD**
-
-```sh
-    git clone https://github.com/Dav1dde/glad.git
-    cd glad
-    cmake ./
+    mkdir build
+    cd build
+    cmake ..
     make
-    sudo cp -a include /usr/local/
+    ./voxeloop
 ```
-
-**Build using cmake**
