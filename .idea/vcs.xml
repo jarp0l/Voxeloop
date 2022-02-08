@@ -2,8 +2,11 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+<<<<<<< HEAD
     <mapping directory="$PROJECT_DIR$/cmake-build-debug/_deps/glfw-src" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/cmake-build-debug/_deps/glm-src" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/cmake-build-debug/_deps/voxeloop-base-src" vcs="Git" />
+=======
+>>>>>>> f5e18b79224988378be0609f941a6981e135a6b1
   </component>
 </project>
