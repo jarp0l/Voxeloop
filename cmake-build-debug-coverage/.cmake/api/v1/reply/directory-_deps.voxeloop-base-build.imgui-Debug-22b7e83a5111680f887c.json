@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "_deps/voxeloop-base-build/imgui",
+		"source" : "cmake-build-debug-coverage/_deps/voxeloop-base-src/imgui"
+	}
+}

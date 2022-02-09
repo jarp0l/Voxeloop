@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "_deps/glfw-build/examples",
+		"source" : "cmake-build-debug-coverage/_deps/glfw-src/examples"
+	}
+}
