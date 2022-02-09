@@ -1,14 +1,12 @@
-//
-// Created by fady on 2022-02-09.
-//
-
 #ifndef VOXELOOP_FILEHANDLER_HPP
 #define VOXELOOP_FILEHANDLER_HPP
 
+#include <cerrno>
+#include <fstream>
+#include <iostream>
+#include <sstream>
+#include <string>
 
-class fileHandler {
+std::string getFileData(const char* filename);
 
-};
-
-
-#endif //VOXELOOP_FILEHANDLER_HPP
+#endif  // VOXELOOP_FILEHANDLER_HPP

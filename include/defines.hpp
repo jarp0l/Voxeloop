@@ -1,8 +1,7 @@
-//
-// Created by fady on 2022-02-09.
-//
-
 #ifndef VOXELOOP_DEFINES_HPP
 #define VOXELOOP_DEFINES_HPP
 
-#endif //VOXELOOP_DEFINES_HPP
+#define GL_MAJOR_VERSION 4
+#define GL_MINOR_VERSION 5
+
+#endif  // VOXELOOP_DEFINES_HPP

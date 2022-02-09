@@ -1,14 +1,20 @@
-//
-// Created by fady on 2022-02-09.
-//
-
 #ifndef VOXELOOP_VAO_HPP
 #define VOXELOOP_VAO_HPP
 
+#include <glad/gl.h>
+
+#include <vbo.hpp>
 
 class VAO {
+ public:
+  VAO();
+  GLuint ID;
 
+  void linkVBO(VBO vbo, GLuint layout);
+
+  void bind();
+  void unbind();
+  void remove();
 };
 
-
-#endif //VOXELOOP_VAO_HPP
+#endif  // VOXELOOP_VAO_HPP
