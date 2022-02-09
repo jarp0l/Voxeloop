@@ -1,13 +1,14 @@
-
-#include <defines.hpp>
 #include <main.hpp>
+
+const uint32_t _glMajor = 4;
+const uint32_t _glMinor = 5;
 
 int main() {
   // Initialize Project
   glfwInit();
 
-  glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, GL_MAJOR_VERSION);
-  glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, GL_MINOR_VERSION);
+  glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, _glMajor);
+  glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, _glMinor);
   glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
   // Setup Window
