@@ -23,24 +23,12 @@ FetchContent_MakeAvailable(voxeloop-base)
 
 include_directories(include)
 
-<<<<<<< HEAD
-add_executable(voxeloop src/shader.cpp src/fileHandler.cpp src/main.cpp src/vbo.cpp src/ebo.cpp src/vao.cpp src/texture.cpp)
-
-target_link_libraries(
-        voxeloop
-        glad
-        imgui
-        glm
-        stb
-)
-=======
 file(GLOB PROJECT_HEADERS include/*.hpp)
 file(GLOB PROJECT_SOURCES src/*.cpp)
 
 source_group("Headers" FILES ${PROJECT_HEADERS})
 source_group("Sources" FILES ${PROJECT_SOURCES})
->>>>>>> feature/gui
 
 add_executable(${PROJECT_NAME} ${PROJECT_HEADERS} ${PROJECT_SOURCES})
 
-target_link_libraries(${PROJECT_NAME} glad imgui glm)
+target_link_libraries(${PROJECT_NAME} glad glm imgui stb)
