@@ -16,12 +16,13 @@ FetchContent_MakeAvailable(voxeloop-base)
 
 include_directories(include)
 
-add_executable(voxeloop src/shader.cpp src/fileHandler.cpp src/main.cpp src/vbo.cpp src/ebo.cpp src/vao.cpp)
+add_executable(voxeloop src/shader.cpp src/fileHandler.cpp src/main.cpp src/vbo.cpp src/ebo.cpp src/vao.cpp src/texture.cpp)
 
 target_link_libraries(
         voxeloop
         glad
         imgui
         glm
+        stb
 )
 

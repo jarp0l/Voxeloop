@@ -9,6 +9,7 @@
 #include <iostream>
 
 #include "ebo.hpp"
+#include "texture.hpp"
 #include "shader.hpp"
 #include "vao.hpp"
 #include "vbo.hpp"
