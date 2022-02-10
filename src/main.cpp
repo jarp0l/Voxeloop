@@ -28,12 +28,13 @@ int main() {
 
   // Vertices of triangle
   GLfloat vertices[] = {
-      -0.5f,     -0.5f * float(sqrt(3)) / 3,    0.0f,  // Lower left corner
-      0.5f,      -0.5f * float(sqrt(3)) / 3,    0.0f,  // Lower right corner
-      0.0f,      0.5f * float(sqrt(3)) * 2 / 3, 0.0f,  // Upper corner
-      -0.5f / 2, 0.5f * float(sqrt(3)) / 6,     0.0f,  // Inner left
-      0.5f / 2,  0.5f * float(sqrt(3)) / 6,     0.0f,  // Inner right
-      0.0f,      -0.5f * float(sqrt(3)) / 3,    0.0f   // Inner down
+       //   POSITIONS                          //   COLORS
+      -0.5f,     -0.5f * float(sqrt(3)) / 3,    0.0f, 0.2f, 0.7f, 0.2f, // Lower left corner
+      0.5f,      -0.5f * float(sqrt(3)) / 3,    0.0f, 0.4f, 0.1f, 0.6f, // Lower right corner
+      0.0f,      0.5f * float(sqrt(3)) * 2 / 3, 0.0f, 0.2f, 0.4f, 0.5f, // Upper corner
+      -0.5f / 2, 0.5f * float(sqrt(3)) / 6,     0.0f, 1.0f, 0.0f, 0.0f, // Inner left
+      0.5f / 2,  0.5f * float(sqrt(3)) / 6,     0.0f, 0.2f, 1.0f, 0.0f, // Inner right
+      0.0f,      -0.5f * float(sqrt(3)) / 3,    0.0f, 0.3f, 0.5f, 0.7f   // Inner down
   };
 
   GLuint indices[] = {0, 3, 5, 3, 2, 4, 5, 4, 1};
@@ -45,7 +46,8 @@ int main() {
   VBO vbo(vertices, sizeof(vertices));
   EBO ebo(indices, sizeof(indices));
 
-  vao.linkVBO(vbo, 0);
+  vao.linkAttrib(vbo, 0, 3, GL_FLOAT, 6*sizeof(float), (void*) 0);
+  vao.linkAttrib(vbo, 1, 3, GL_FLOAT, 6*sizeof(float), (void*) (3* sizeof(float)));
 
   vao.unbind();
   vbo.unbind();
@@ -56,6 +58,8 @@ int main() {
   glClear(GL_COLOR_BUFFER_BIT);
   glfwSwapBuffers(window);
 
+  GLuint  uniID = glGetUniformLocation(shader.ID, "scale");
+
   // Main Event Loop
   while (!glfwWindowShouldClose(window)) {
     glfwPollEvents();
@@ -64,6 +68,7 @@ int main() {
     glClearColor(0.1f, 0.3f, 0.2f, 1.0f);
     glClear(GL_COLOR_BUFFER_BIT);
     shader.activate();
+    glUniform1f(uniID, 2.0f);
     vao.bind();
     glDrawElements(GL_TRIANGLES, 9, GL_UNSIGNED_INT, 0);
     glfwSwapBuffers(window);
