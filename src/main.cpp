@@ -1,4 +1,4 @@
-#include <main.hpp>
+#include "main.hpp"
 
 const uint32_t _glMajor = 4;
 const uint32_t _glMinor = 5;

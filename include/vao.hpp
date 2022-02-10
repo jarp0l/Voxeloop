@@ -3,7 +3,7 @@
 
 #include <glad/gl.h>
 
-#include <vbo.hpp>
+#include "vbo.hpp"
 
 class VAO {
  public:
