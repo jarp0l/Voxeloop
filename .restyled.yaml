@@ -1,0 +1,4 @@
+restylers:
+  - clang-format:
+      arguments:
+        - "--style=file"
