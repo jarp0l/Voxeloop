@@ -32,7 +32,6 @@
 *.out
 *.app
 
-
 ## CMake
 CMakeLists.txt.user
 CMakeCache.txt
@@ -49,4 +48,6 @@ cmake-build-debug
 cmake-build-debug-coverage
 
 ## Others
+build
 extern
+.cache
