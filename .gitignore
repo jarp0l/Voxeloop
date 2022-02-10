@@ -49,4 +49,6 @@ cmake-build-debug
 cmake-build-debug-coverage
 
 ## Others
+.cache
 extern
+compile_commands.json
