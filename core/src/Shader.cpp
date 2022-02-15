@@ -1,4 +1,4 @@
-#include "shader.hpp"
+#include "Shader.hpp"
 
 Shader::Shader(const char* vertexfile, const char* fragmentfile) {
   // Read shader code to a string

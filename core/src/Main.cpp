@@ -1,4 +1,4 @@
-#include "main.hpp"
+#include "Main.hpp"
 
 const uint32_t _glMajor = 4;
 const uint32_t _glMinor = 5;
@@ -24,7 +24,7 @@ int main() {
   gladLoaderLoadGL();
   glViewport(0, 0, 800, 800);
 
-  Shader shader("../src/shaders/default.vert", "../src/shaders/default.frag");
+  Shader shader("../core/src/shaders/default.vert", "../core/src/shaders/default.frag");
 
   // Vertices of triangle
   GLfloat vertices[] = {
@@ -64,7 +64,7 @@ int main() {
   GLuint  uniID = glGetUniformLocation(shader.ID, "scale");
 
   // Setup Texture
-  Texture texture("../src/textures/great_img.png", GL_TEXTURE_2D, GL_TEXTURE0, GL_RGB, GL_UNSIGNED_BYTE);
+  Texture texture("../core/textures/great_img.png", GL_TEXTURE_2D, GL_TEXTURE0, GL_RGB, GL_UNSIGNED_BYTE);
 
   // Setup Uniform for texture image
   texture.texUint(&shader, "tex0", 0);
