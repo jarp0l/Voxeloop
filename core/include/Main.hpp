@@ -8,9 +8,9 @@
 #include <cmath>
 #include <iostream>
 
-#include "ebo.hpp"
 #include "Shader.hpp"
 #include "Texture.hpp"
+#include "ebo.hpp"
 #include "vao.hpp"
 #include "vbo.hpp"
 

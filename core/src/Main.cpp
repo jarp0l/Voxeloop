@@ -24,21 +24,20 @@ int main() {
   gladLoaderLoadGL();
   glViewport(0, 0, 800, 800);
 
-  Shader shader("../core/src/shaders/default.vert", "../core/src/shaders/default.frag");
+  Shader shader("../core/src/shaders/default.vert",
+                "../core/src/shaders/default.frag");
 
   // Vertices of triangle
   GLfloat vertices[] = {
-       //   POSITIONS          //   COLORS                          // TEXTURE COORDS
-      -0.5f, 0.5f, 0.0f, 0.2f, 0.7f, 0.2f, 0.0f, 0.0f, // Upper left corner
-      0.5f, 0.5f, 0.0f, 0.4f, 0.1f, 0.6f, 1.0f, 0.0f,// Upper right corner
-      0.5f, -0.5f, 0.0f, 0.2f, 0.4f, 0.5f, 1.0f, 1.0f,// Lower right corner
-      -0.5f, -0.5f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 1.0f // Lower left corner
+      //   POSITIONS          //   COLORS                          // TEXTURE
+      //   COORDS
+      -0.5f, 0.5f,  0.0f, 0.2f, 0.7f, 0.2f, 0.0f, 0.0f, // Upper left corner
+      0.5f,  0.5f,  0.0f, 0.4f, 0.1f, 0.6f, 1.0f, 0.0f, // Upper right corner
+      0.5f,  -0.5f, 0.0f, 0.2f, 0.4f, 0.5f, 1.0f, 1.0f, // Lower right corner
+      -0.5f, -0.5f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 1.0f  // Lower left corner
   };
 
-  GLuint indices[] = {
-      0, 1, 2,
-      2, 3, 0
-  };
+  GLuint indices[] = {0, 1, 2, 2, 3, 0};
 
   // Define Vertex Array Object (VAO), Vertex Buffer Object (VBO) and Element
   // Buffer Object(EBO) ==> NOTE: Generate VAO before VBO
@@ -47,13 +46,14 @@ int main() {
   VBO vbo(vertices, sizeof(vertices));
   EBO ebo(indices, sizeof(indices));
 
-  vao.linkAttrib(vbo, 0, 3, GL_FLOAT, 8*sizeof(float), (void*) 0);
-  vao.linkAttrib(vbo, 1, 3, GL_FLOAT, 8*sizeof(float), (void*) (3* sizeof(float)));
-  vao.linkAttrib(vbo, 2, 2, GL_FLOAT, 8*sizeof(float), (void*) (6* sizeof(float)));
+  vao.linkAttrib(vbo, 0, 3, GL_FLOAT, 8 * sizeof(float), (void *)0);
+  vao.linkAttrib(vbo, 1, 3, GL_FLOAT, 8 * sizeof(float),
+                 (void *)(3 * sizeof(float)));
+  vao.linkAttrib(vbo, 2, 2, GL_FLOAT, 8 * sizeof(float),
+                 (void *)(6 * sizeof(float)));
   vao.unbind();
   vbo.unbind();
   ebo.unbind();
-
 
   // Clear window and swap buffer
   glClearColor(0.1f, 0.3f, 0.2f, 1.0f);
@@ -61,10 +61,11 @@ int main() {
   glfwSwapBuffers(window);
 
   // ID for "scale" uniform i.e. scale of the shape
-  GLuint  uniID = glGetUniformLocation(shader.ID, "scale");
+  GLuint uniID = glGetUniformLocation(shader.ID, "scale");
 
   // Setup Texture
-  Texture texture("../core/textures/great_img.png", GL_TEXTURE_2D, GL_TEXTURE0, GL_RGB, GL_UNSIGNED_BYTE);
+  Texture texture("../core/textures/great_img.png", GL_TEXTURE_2D, GL_TEXTURE0,
+                  GL_RGB, GL_UNSIGNED_BYTE);
 
   // Setup Uniform for texture image
   texture.texUint(&shader, "tex0", 0);
