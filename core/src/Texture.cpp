@@ -1,8 +1,7 @@
 #define STB_IMAGE_IMPLEMENTATION
 
+#include "Texture.hpp"
 #include <stb_image.h>
-#include "texture.hpp"
-
 
 Texture::Texture(const char *image, GLenum texType, GLenum slot, GLenum format,
                  GLenum pixelType) {
@@ -10,8 +9,8 @@ Texture::Texture(const char *image, GLenum texType, GLenum slot, GLenum format,
 
   // Texture
   int widthImg, heightImg, numColCh;
-//  stbi_set_flip_vertically_on_load(true);
-  unsigned char* bytes = stbi_load(image, &widthImg, &heightImg, &numColCh, 0);
+  //  stbi_set_flip_vertically_on_load(true);
+  unsigned char *bytes = stbi_load(image, &widthImg, &heightImg, &numColCh, 0);
 
   glGenTextures(1, &ID);
 
@@ -33,7 +32,8 @@ Texture::Texture(const char *image, GLenum texType, GLenum slot, GLenum format,
   glTexParameterfv(texType, GL_TEXTURE_BORDER_COLOR, flatColor);
 
   // Setup Image
-  glTexImage2D(texType, 0, format, widthImg, heightImg, 0, format, pixelType, bytes);
+  glTexImage2D(texType, 0, format, widthImg, heightImg, 0, format, pixelType,
+               bytes);
 
   // Generate Mipmap
   glGenerateMipmap(texType);
@@ -43,20 +43,14 @@ Texture::Texture(const char *image, GLenum texType, GLenum slot, GLenum format,
   glBindTexture(texType, 0);
 }
 
-void Texture::texUint(Shader* shader, const char *uniform, GLuint uint) {
+void Texture::texUint(Shader *shader, const char *uniform, GLuint uint) {
   GLuint tex0Uni = glGetUniformLocation(shader->ID, uniform);
   shader->activate();
   glUniform1i(tex0Uni, uint);
 }
 
-void Texture::bind() {
-  glBindTexture(type, ID);
-}
+void Texture::bind() { glBindTexture(type, ID); }
 
-void Texture::unbind() {
-  glBindTexture(type, 0);
-}
+void Texture::unbind() { glBindTexture(type, 0); }
 
-void Texture::remove() {
-  glDeleteTextures(1, &ID);
-}
+void Texture::remove() { glDeleteTextures(1, &ID); }

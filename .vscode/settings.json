@@ -1,0 +1,20 @@
+{
+  "doxdocgen.c.triggerSequence": "///",
+  "doxdocgen.c.firstLine": "///",
+  "doxdocgen.c.commentPrefix": "/// ",
+  "doxdocgen.c.lastLine": "",
+  "doxdocgen.generic.authorName": "Prajwol Pradhan & Rujal Acharya",
+  "doxdocgen.generic.authorTag": "@author {author}",
+  "doxdocgen.file.fileOrder": [
+    "file",
+    "author",
+    "brief",
+    "version",
+    "date",
+    "empty",
+    "custom"
+  ],
+  "C/C++ Include Guard.Macro Type": "Filepath",
+  "C/C++ Include Guard.Comment Style": "Line",
+  "C/C++ Include Guard.Suffix": "_HPP"
+}

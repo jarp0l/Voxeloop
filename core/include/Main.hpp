@@ -1,5 +1,5 @@
-#ifndef VOXELOOP_MAIN_HPP
-#define VOXELOOP_MAIN_HPP
+#ifndef CORE_INCLUDE_MAIN_HPP
+#define CORE_INCLUDE_MAIN_HPP
 
 // clang-format off
 #include <glad/gl.h>
@@ -9,9 +9,9 @@
 #include <iostream>
 
 #include "ebo.hpp"
-#include "texture.hpp"
-#include "shader.hpp"
+#include "Shader.hpp"
+#include "Texture.hpp"
 #include "vao.hpp"
 #include "vbo.hpp"
 
-#endif  // VOXELOOP_MAIN_HPP
+#endif // CORE_INCLUDE_MAIN_HPP

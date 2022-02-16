@@ -1,5 +1,5 @@
-#ifndef VOXELOOP_EBO_HPP
-#define VOXELOOP_EBO_HPP
+#ifndef CORE_INCLUDE_EBO_HPP
+#define CORE_INCLUDE_EBO_HPP
 
 #include <glad/gl.h>
 
@@ -13,4 +13,4 @@ class EBO {
   void remove();
 };
 
-#endif  // VOXELOOP_EBO_HPP
+#endif // CORE_INCLUDE_EBO_HPP

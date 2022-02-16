@@ -1,5 +1,5 @@
-#ifndef VOXELOOP_VBO_HPP
-#define VOXELOOP_VBO_HPP
+#ifndef CORE_INCLUDE_VBO_HPP
+#define CORE_INCLUDE_VBO_HPP
 
 #include <glad/gl.h>
 
@@ -13,4 +13,4 @@ class VBO {
   void remove();
 };
 
-#endif  // VOXELOOP_VBO_HPP
+#endif // CORE_INCLUDE_VBO_HPP

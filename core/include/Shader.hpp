@@ -1,11 +1,11 @@
-#ifndef VOXELOOP_SHADER_HPP
-#define VOXELOOP_SHADER_HPP
+#ifndef CORE_INCLUDE_SHADER_HPP
+#define CORE_INCLUDE_SHADER_HPP
 
 // clang-format off
 #include <glad/gl.h>
 #include <GLFW/glfw3.h>
 // clang-format on
-#include "fileHandler.hpp"
+#include "FileHandler.hpp"
 
 class Shader {
  public:
@@ -17,4 +17,4 @@ class Shader {
   GLuint ID;
 };
 
-#endif  // VOXELOOP_SHADER_HPP
+#endif // CORE_INCLUDE_SHADER_HPP
