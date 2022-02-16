@@ -7,6 +7,6 @@
 #include <sstream>
 #include <string>
 
-std::string getFileData(const char* filename);
+std::string getFileData(const char *filename);
 
 #endif // CORE_INCLUDE_FILEHANDLER_HPP

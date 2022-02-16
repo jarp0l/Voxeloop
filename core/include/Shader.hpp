@@ -8,8 +8,8 @@
 #include "FileHandler.hpp"
 
 class Shader {
- public:
-  Shader(const char* vertexfile, const char* fragmentfile);
+public:
+  Shader(const char *vertexfile, const char *fragmentfile);
 
   void activate();
   void remove();
