@@ -34,8 +34,8 @@ public:
   T push(T element) {
     if (isFull()) {
       throw EmptyError();
-      // std::cerr << "Stack overflow! No more elements can be pushed." <<
-      // std::endl; exit(EXIT_FAILURE);
+      // std::cerr << "Stack overflow! No more elements can be pushed." << std::endl;
+      // exit(EXIT_FAILURE);
     }
 
     stack[++_top] = element;

@@ -1,12 +1,16 @@
 #include "Shader.hpp"
 
+
 Shader::Shader(const char *vertexfile, const char *fragmentfile) {
+
   // Read shader code to a string
   std::string vertexCode = getFileData(vertexfile);
   std::string fragmentCode = getFileData(fragmentfile);
 
-  const char *vertexSource = vertexCode.c_str();
-  const char *fragmentSource = fragmentCode.c_str();
+
+  const char* vertexSource = vertexCode.c_str();
+  const char* fragmentSource = fragmentCode.c_str();
+
 
   GLint success;
   GLchar infoLog[512];

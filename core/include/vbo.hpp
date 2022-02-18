@@ -8,6 +8,7 @@ public:
   GLuint ID;
   VBO(GLfloat *vertices, GLsizeiptr size);
 
+
   void bind();
   void unbind();
   void remove();
