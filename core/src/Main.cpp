@@ -9,40 +9,39 @@ const uint32_t WinHeight = 800;
 // Vertices of coordinates
 GLfloat vertices[] = {
     //   POSITIONS     /  COLORS             / TEXTURE COORDS
-    -0.125f,  0.125f,  0.125f,  0.0f,  0.0f,  0.0f,  0.0f,  0.0f, // Upper left corner
-     0.125f,  0.125f,  0.125f,  0.0f,  0.0f,  0.0f,  5.0f,  0.0f, // Upper right corner
-     0.125f, -0.125f,  0.125f,  0.0f,  0.0f,  0.0f,  5.0f,  5.0f, // Lower right corner
-    -0.125f, -0.125f,  0.125f,  0.0f,  0.0f,  0.0f,  0.0f,  5.0f,  // Lower left corner
+    -0.125f, 0.125f,  0.125f,  0.0f,
+    0.0f,    0.0f,    0.0f,    0.0f, // Upper left corner
+    0.125f,  0.125f,  0.125f,  0.0f,
+    0.0f,    0.0f,    5.0f,    0.0f, // Upper right corner
+    0.125f,  -0.125f, 0.125f,  0.0f,
+    0.0f,    0.0f,    5.0f,    5.0f, // Lower right corner
+    -0.125f, -0.125f, 0.125f,  0.0f,
+    0.0f,    0.0f,    0.0f,    5.0f, // Lower left corner
 
-
-    -0.125f,  0.125f, -0.125f,  0.0f,  0.0f,  0.0f,  5.0f,  5.0f, // Upper left corner
-     0.125f,  0.125f, -0.125f,  0.0f,  0.0f,  0.0f,  0.0f,  5.0f, // Upper right corner
-     0.125f, -0.125f, -0.125f,  0.0f,  0.0f,  0.0f,  0.0f,  0.0f, // Lower right corner
-    -0.125f, -0.125f, -0.125f,  0.0f,  0.0f,  0.0f,  5.0f,  0.0f  // Lower left corner
+    -0.125f, 0.125f,  -0.125f, 0.0f,
+    0.0f,    0.0f,    5.0f,    5.0f, // Upper left corner
+    0.125f,  0.125f,  -0.125f, 0.0f,
+    0.0f,    0.0f,    0.0f,    5.0f, // Upper right corner
+    0.125f,  -0.125f, -0.125f, 0.0f,
+    0.0f,    0.0f,    0.0f,    0.0f, // Lower right corner
+    -0.125f, -0.125f, -0.125f, 0.0f,
+    0.0f,    0.0f,    5.0f,    0.0f // Lower left corner
 };
 
 // Indices of vertices
 GLuint indices[] = {
-    // face 1 
-    0, 1, 2,  
-    2, 3, 0,
+    // face 1
+    0, 1, 2, 2, 3, 0,
     // face 2
-    4, 5, 6,
-    6, 7, 4,
+    4, 5, 6, 6, 7, 4,
     // face 3
-    0, 4, 7,
-    7, 3, 0,
+    0, 4, 7, 7, 3, 0,
     // face 4
-    1, 5, 6,
-    6, 2, 1,
+    1, 5, 6, 6, 2, 1,
     // face 5
-    0, 4, 5,
-    5, 1, 0,
+    0, 4, 5, 5, 1, 0,
     // face 6
-    3, 7, 6,
-    6, 2, 3
-};
-
+    3, 7, 6, 6, 2, 3};
 
 int main() {
   // Initialize Project
@@ -53,7 +52,8 @@ int main() {
   glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
   // Setup Window
-  GLFWwindow *window = glfwCreateWindow(WinWidth, WinHeight, "Voxeloop", nullptr, nullptr);
+  GLFWwindow *window =
+      glfwCreateWindow(WinWidth, WinHeight, "Voxeloop", nullptr, nullptr);
   if (!window) {
     std::cerr << "Couldn't open window" << std::endl;
     glfwTerminate();
@@ -73,16 +73,16 @@ int main() {
 
   // Vertices of triangle
   GLfloat vertices[] = {
-       //   POSITIONS          //   COLORS                          // TEXTURE COORDS
-      -0.5f, 0.5f, 0.0f, 0.2f, 0.7f, 0.2f, 0.0f, 0.0f, // Upper left corner
-      0.5f, 0.5f, 0.0f, 0.4f, 0.1f, 0.6f, 1.0f, 0.0f,// Upper right corner
-      0.5f, -0.5f, 0.0f, 0.2f, 0.4f, 0.5f, 1.0f, 1.0f,// Lower right corner
-      -0.5f, -0.5f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 1.0f // Lower left corner
+      //   POSITIONS          //   COLORS                          // TEXTURE
+      //   COORDS
+      -0.5f, 0.5f,  0.0f, 0.2f, 0.7f, 0.2f, 0.0f, 0.0f, // Upper left corner
+      0.5f,  0.5f,  0.0f, 0.4f, 0.1f, 0.6f, 1.0f, 0.0f, // Upper right corner
+      0.5f,  -0.5f, 0.0f, 0.2f, 0.4f, 0.5f, 1.0f, 1.0f, // Lower right corner
+      -0.5f, -0.5f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 1.0f  // Lower left corner
   };
 >>>>>>> 1ccb1ffc86654a6e73e54f74b3afbacb0a7b9415
 
   Shader shader("../core/shaders/default.vert", "../core/shaders/default.frag");
-
 
   // Define Vertex Array Object (VAO), Vertex Buffer Object (VBO) and Element
   // Buffer Object(EBO) ==> NOTE: Generate VAO before VBO
@@ -113,7 +113,6 @@ int main() {
   Texture texture("../core/textures/great_img.png", GL_TEXTURE_2D, GL_TEXTURE0,
                   GL_RGB, GL_UNSIGNED_BYTE);
 
-
   // Setup Uniform for texture image
   texture.texUint(&shader, "tex0", 0);
 
@@ -126,7 +125,6 @@ int main() {
   // Enable Depth Testing
   glEnable(GL_DEPTH_TEST);
 
-
   // Main Event Loop
   while (!glfwWindowShouldClose(window)) {
     glfwPollEvents();
@@ -138,12 +136,11 @@ int main() {
 
     // Rotate the object
     double crntTime = glfwGetTime();
-    if (crntTime - prevTime >= 1/60) {
+    if (crntTime - prevTime >= 1 / 60) {
       rotation += 0.5f;
       zmove -= 0.1f;
       prevTime = crntTime;
     }
-
 
     // Model Matrix
     glm::mat4 model = glm::mat4(1.0f);
@@ -154,11 +151,13 @@ int main() {
     // Projection Matrix
     glm::mat4 proj = glm::mat4(1.0f);
 
-    model = glm::rotate(model, glm::radians(rotation), glm::vec3(0.0f, 1.0f, 0.0f));
+    model =
+        glm::rotate(model, glm::radians(rotation), glm::vec3(0.0f, 1.0f, 0.0f));
 
     view = glm::translate(view, glm::vec3(0.0f, 0.0f, -2.0f + zmove));
 
-    proj = glm::perspective(glm::radians(45.0f), (float)(WinWidth/WinHeight), 0.1f, 25.0f);
+    proj = glm::perspective(glm::radians(45.0f), (float)(WinWidth / WinHeight),
+                            0.1f, 25.0f);
 
     // Uniform for model matrix
     int modelLoc = glGetUniformLocation(shader.ID, "model");
@@ -175,9 +174,9 @@ int main() {
     glUniform1f(uniID, 1.5f);
     texture.bind();
     vao.bind();
-    glDrawElements(GL_TRIANGLES, sizeof(indices)/sizeof(int), GL_UNSIGNED_INT, 0);
+    glDrawElements(GL_TRIANGLES, sizeof(indices) / sizeof(int), GL_UNSIGNED_INT,
+                   0);
     glfwSwapBuffers(window);
- 
   }
 
   //// Destroy and terminate
