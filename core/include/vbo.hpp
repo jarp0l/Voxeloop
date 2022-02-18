@@ -4,9 +4,10 @@
 #include <glad/gl.h>
 
 class VBO {
- public:
+public:
   GLuint ID;
-  VBO(GLfloat* vertices, GLsizeiptr size);
+  VBO(GLfloat *vertices, GLsizeiptr size);
+
 
   void bind();
   void unbind();
