@@ -8,6 +8,7 @@
 #include <cmath>
 #include <iostream>
 
+
 #include "ebo.hpp"
 #include "Shader.hpp"
 #include "Texture.hpp"
