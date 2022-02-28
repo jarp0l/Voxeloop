@@ -12,7 +12,10 @@ int main() {
   glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
   // Setup Window
-  GLFWwindow *window = glfwCreateWindow(WinWidth, WinHeight, "Voxeloop", nullptr, nullptr);
+
+  GLFWwindow *window =
+      glfwCreateWindow(WinWidth, WinHeight, "Voxeloop", nullptr, nullptr);
+
   if (!window) {
     std::cerr << "Couldn't open window" << std::endl;
     glfwTerminate();
@@ -37,7 +40,6 @@ int main() {
   cube->setScaleUniform();
 
 
-
   // Setup Uniform for texture image
   cube->setTexUinform();
 
@@ -59,7 +61,6 @@ int main() {
     // Rotate the object
     double crntTime = glfwGetTime();
 
-
     if (crntTime - prevTime >= 1/60) {
       cube->rotate(1.5f);
       cube->move(0.1f);
@@ -68,6 +69,7 @@ int main() {
 
     cube->scale(1.0f);
     cube->draw();
+
     glfwSwapBuffers(window);
   }
 
