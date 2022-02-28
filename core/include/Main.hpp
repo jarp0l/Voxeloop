@@ -11,10 +11,11 @@
 #include <glm/gtc/type_ptr.hpp>
 #include <iostream>
 
-#include "Shader.hpp"
-#include "Texture.hpp"
-#include "ebo.hpp"
-#include "vao.hpp"
-#include "vbo.hpp"
+#include "Cube.hpp"
+//#include "ebo.hpp"
+//#include "Shader.hpp"
+//#include "Texture.hpp"
+//#include "vao.hpp"
+//#include "vbo.hpp"
 
 #endif // CORE_INCLUDE_MAIN_HPP
