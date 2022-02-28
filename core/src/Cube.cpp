@@ -1,42 +1,41 @@
 #include "Cube.hpp"
 
-Cube::Cube() :
-  shader {"../core/shaders/default.vert", "../core/shaders/default.frag"},
-  _vertices {
-                   //   POSITIONS     /  COLORS             / TEXTURE COORDS
-                   -0.125f,  0.125f,  0.125f,  0.0f,  0.0f,  0.0f,  0.0f,  0.0f, // Upper left corner
-                   0.125f,  0.125f,  0.125f,  0.0f,  0.0f,  0.0f,  5.0f,  0.0f, // Upper right corner
-                   0.125f, -0.125f,  0.125f,  0.0f,  0.0f,  0.0f,  5.0f,  5.0f, // Lower right corner
-                   -0.125f, -0.125f,  0.125f,  0.0f,  0.0f,  0.0f,  0.0f,  5.0f,  // Lower left corner
+Cube::Cube()
+    : shader{"../core/shaders/default.vert", "../core/shaders/default.frag"},
+      _vertices{
+          //   POSITIONS     /  COLORS             / TEXTURE COORDS
+          -0.125f, 0.125f,  0.125f,  0.0f,
+          0.0f,    0.0f,    0.0f,    0.0f, // Upper left corner
+          0.125f,  0.125f,  0.125f,  0.0f,
+          0.0f,    0.0f,    5.0f,    0.0f, // Upper right corner
+          0.125f,  -0.125f, 0.125f,  0.0f,
+          0.0f,    0.0f,    5.0f,    5.0f, // Lower right corner
+          -0.125f, -0.125f, 0.125f,  0.0f,
+          0.0f,    0.0f,    0.0f,    5.0f, // Lower left corner
 
-                   -0.125f,  0.125f, -0.125f,  0.0f,  0.0f,  0.0f,  5.0f,  5.0f, // Upper left corner
-                   0.125f,  0.125f, -0.125f,  0.0f,  0.0f,  0.0f,  0.0f,  5.0f, // Upper right corner
-                   0.125f, -0.125f, -0.125f,  0.0f,  0.0f,  0.0f,  0.0f,  0.0f, // Lower right corner
-                   -0.125f, -0.125f, -0.125f,  0.0f,  0.0f,  0.0f,  5.0f,  0.0f  // Lower left corner
-               },
-  _indices {
-                   // face 1
-                   0, 1, 2,
-                   2, 3, 0,
-                   // face 2
-                   4, 5, 6,
-                   6, 7, 4,
-                   // face 3
-                   0, 4, 7,
-                   7, 3, 0,
-                   // face 4
-                   1, 5, 6,
-                   6, 2, 1,
-                   // face 5
-                   0, 4, 5,
-                   5, 1, 0,
-                   // face 6
-                   3, 7, 6,
-                   6, 2, 3
-            },
-  texture {"../core/textures/great_img.png", GL_TEXTURE_2D, GL_TEXTURE0,
-                                 GL_RGB, GL_UNSIGNED_BYTE}
-{
+          -0.125f, 0.125f,  -0.125f, 0.0f,
+          0.0f,    0.0f,    5.0f,    5.0f, // Upper left corner
+          0.125f,  0.125f,  -0.125f, 0.0f,
+          0.0f,    0.0f,    0.0f,    5.0f, // Upper right corner
+          0.125f,  -0.125f, -0.125f, 0.0f,
+          0.0f,    0.0f,    0.0f,    0.0f, // Lower right corner
+          -0.125f, -0.125f, -0.125f, 0.0f,
+          0.0f,    0.0f,    5.0f,    0.0f // Lower left corner
+      },
+      _indices{// face 1
+               0, 1, 2, 2, 3, 0,
+               // face 2
+               4, 5, 6, 6, 7, 4,
+               // face 3
+               0, 4, 7, 7, 3, 0,
+               // face 4
+               1, 5, 6, 6, 2, 1,
+               // face 5
+               0, 4, 5, 5, 1, 0,
+               // face 6
+               3, 7, 6, 6, 2, 3},
+      texture{"../core/textures/great_img.png", GL_TEXTURE_2D, GL_TEXTURE0,
+              GL_RGB, GL_UNSIGNED_BYTE} {
   vao.bind();
 
   vbo.setup(_vertices, sizeof(_vertices));
@@ -64,9 +63,11 @@ Cube::~Cube() {
   shader.remove();
 }
 
-void Cube::setScaleUniform() {scaleUniID =  glGetUniformLocation(shader.ID, "scale");}
+void Cube::setScaleUniform() {
+  scaleUniID = glGetUniformLocation(shader.ID, "scale");
+}
 
-void Cube::setTexUinform() {texture.texUint(&shader, "tex0", 0);}
+void Cube::setTexUinform() { texture.texUint(&shader, "tex0", 0); }
 
 void Cube::setMatUniform() {
   // Uniform for model matrix
@@ -82,14 +83,11 @@ void Cube::setMatUniform() {
   glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(proj));
 }
 
-void Cube::scale(float s) {
-  glUniform1f(scaleUniID, s);
-}
+void Cube::scale(float s) { glUniform1f(scaleUniID, s); }
 
 void Cube::rotate(float r) { rotation += r; }
 
 void Cube::activateShader() { shader.activate(); }
-
 
 void Cube::draw() {
   // Model Matrix
@@ -101,25 +99,27 @@ void Cube::draw() {
   // Projection Matrix
   proj = glm::mat4(1.0f);
 
-
-  model = glm::rotate(model, glm::radians(rotation), glm::vec3(0.0f, 1.0f, 0.0f));
+  model =
+      glm::rotate(model, glm::radians(rotation), glm::vec3(0.0f, 1.0f, 0.0f));
 
   view = glm::translate(view, glm::vec3(xpos, ypos, -2.0f + zmove));
 
-  proj = glm::perspective(glm::radians(45.0f), (float)(WinWidth/WinHeight), 0.1f, 25.0f);
+  proj = glm::perspective(glm::radians(45.0f), (float)(WinWidth / WinHeight),
+                          0.1f, 25.0f);
 
   setMatUniform();
   texture.bind();
   vao.bind();
-  glDrawElements(GL_TRIANGLES, sizeof(_indices)/sizeof(int), GL_UNSIGNED_INT, 0);
+  glDrawElements(GL_TRIANGLES, sizeof(_indices) / sizeof(int), GL_UNSIGNED_INT,
+                 0);
 }
 
-void Cube::move(float z) { zmove -=z; }
+void Cube::move(float z) { zmove -= z; }
 
 GLfloat Cube::random() {
-  GLfloat ran = float(rand()%10)/10.0f;
-  if (rand()%2 == 0) {
-    return  ran;
+  GLfloat ran = float(rand() % 10) / 10.0f;
+  if (rand() % 2 == 0) {
+    return ran;
   } else {
     return -ran;
   }

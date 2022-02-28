@@ -18,5 +18,4 @@
 //#include "vao.hpp"
 //#include "vbo.hpp"
 
-
 #endif // CORE_INCLUDE_MAIN_HPP

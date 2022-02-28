@@ -27,18 +27,15 @@ int main() {
   gladLoaderLoadGL();
   glViewport(0, 0, WinWidth, WinHeight);
 
-
-  Cube* cube = new Cube;
+  Cube *cube = new Cube;
 
   // Clear window and swap buffer
   glClearColor(0.1f, 0.3f, 0.2f, 1.0f);
   glClear(GL_COLOR_BUFFER_BIT);
   glfwSwapBuffers(window);
 
-
   // ID for "scale" uniform i.e. scale of the shape
   cube->setScaleUniform();
-
 
   // Setup Uniform for texture image
   cube->setTexUinform();
@@ -61,7 +58,7 @@ int main() {
     // Rotate the object
     double crntTime = glfwGetTime();
 
-    if (crntTime - prevTime >= 1/60) {
+    if (crntTime - prevTime >= 1 / 60) {
       cube->rotate(1.5f);
       cube->move(0.1f);
       prevTime = crntTime;
