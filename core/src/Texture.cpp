@@ -5,6 +5,7 @@
 // WARNING: stb_image shouldn't be included in header file: is discouraged by
 // the documentation and causes errors
 
+
 Texture::Texture(const char *image, GLenum texType, GLenum slot, GLenum format,
                  GLenum pixelType) {
   type = texType;
