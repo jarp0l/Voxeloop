@@ -66,8 +66,6 @@ private:
 
   GLfloat xpos, ypos;
 
-
-
   GLfloat random();
 };
 

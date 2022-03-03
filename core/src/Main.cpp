@@ -3,6 +3,12 @@
 const uint32_t GLMajor = 4;
 const uint32_t GLMinor = 5;
 
+Cube* cube;
+Cubes* cubes;
+
+float mvmt = 0.0f;
+float scale = 1.0f;
+
 int main() {
   // Initialize Project
   glfwInit();
@@ -28,20 +34,15 @@ int main() {
   glViewport(0, 0, WinWidth, WinHeight);
 
 
-  Cube* cube = new Cube;
+//  cube = new Cube;
+    cubes = new Cubes;
+
 
   // Clear window and swap buffer
-  glClearColor(0.1f, 0.3f, 0.2f, 1.0f);
+  glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
   glClear(GL_COLOR_BUFFER_BIT);
   glfwSwapBuffers(window);
 
-
-  // ID for "scale" uniform i.e. scale of the shape
-  cube->setScaleUniform();
-
-
-  // Setup Uniform for texture image
-  cube->setTexUinform();
 
   // Setup rotation
   double prevTime = glfwGetTime();
@@ -52,31 +53,66 @@ int main() {
   // Main Event Loop
   while (!glfwWindowShouldClose(window)) {
     glfwPollEvents();
+    glfwSetKeyCallback(window, key_callback);
 
     // Render
-    glClearColor(0.1f, 0.3f, 0.2f, 1.0f);
+    glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-    cube->activateShader();
+    cubes->activateShader();
 
     // Rotate the object
     double crntTime = glfwGetTime();
 
     if (crntTime - prevTime >= 1/60) {
-      cube->rotate(1.5f);
-      cube->move(0.1f);
+      mvmt -= 0.1f;
+      cubes->rotate(1.5f);
+      cubes->move(0.1f);
       prevTime = crntTime;
     }
 
-    cube->scale(1.0f);
-    cube->draw();
+    cubes->scale(scale);
+    cubes->draw();
 
     glfwSwapBuffers(window);
   }
 
   //// Destroy and terminate
-  delete cube;
+//  delete cube;
   // Window
   glfwDestroyWindow(window);
   glfwTerminate();
   return EXIT_SUCCESS;
 }
+
+void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods) {
+  if (key == GLFW_KEY_SPACE && action == GLFW_PRESS) {
+    while (mvmt <= 0.0f) {
+      glfwPollEvents();
+      glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+      cubes->activateShader();
+      cubes->move(-0.5f);
+      cubes->scale(scale);
+      cubes->draw();
+
+      glfwSwapBuffers(window);
+
+      mvmt += 0.5f;
+    }
+  }
+
+  if (key == GLFW_KEY_E && action == GLFW_PRESS) {
+    cubes->addCube();
+  }
+
+  if (key == GLFW_KEY_UP && action == GLFW_PRESS) {
+    scale += 0.1f;
+  }
+
+  if (key == GLFW_KEY_DOWN && action == GLFW_PRESS) {
+    scale -= 0.1f;
+  }
+}
+
+
+ 
