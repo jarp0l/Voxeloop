@@ -23,6 +23,7 @@ void Audio::play(char s) {
   ma_sound_seek_to_pcm_frame(&sounds[s], 0);
   ma_sound_start(&sounds[s]);
 }
+
 void Audio::setAudio(char s, char *path) {
   result = ma_sound_init_from_file(&engine, path, 0, nullptr, nullptr, &sounds[s]);
   if (result != MA_SUCCESS) {
