@@ -3,8 +3,10 @@
 const uint32_t GLMajor = 4;
 const uint32_t GLMinor = 5;
 
+
 Cubes* cubes;
 Audio* audio;
+
 
 float mvmt = 0.0f;
 float scale = 1.0f;
@@ -75,6 +77,7 @@ int main() {
 
   //// Destroy and terminate
   delete cubes;
+
   // Window
   glfwDestroyWindow(window);
   glfwTerminate();
@@ -82,6 +85,7 @@ int main() {
 }
 
 void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods) {
+
   if (key == GLFW_KEY_SPACE && action == GLFW_PRESS) {
     audio->play(' ');
     while (mvmt <= 0.0f) {
@@ -150,5 +154,3 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
   }
 }
 
-
- 

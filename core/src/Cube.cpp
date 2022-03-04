@@ -1,6 +1,5 @@
 #include "Cube.hpp"
 
-
 Cube::Cube() :
   shader {"../core/shaders/default.vert", "../core/shaders/default.frag"},
   _vertices {
@@ -110,11 +109,11 @@ Cube::~Cube() {
   shader.remove();
 }
 
+void Cube::setScaleUniform() {
+  scaleUniID = glGetUniformLocation(shader.ID, "scale");
+}
 
-void Cube::setScaleUniform() {scaleUniID =  glGetUniformLocation(shader.ID, "scale");}
-
-void Cube::setTexUinform() {texture.texUint(&shader, "tex0", 0);}
-
+void Cube::setTexUinform() { texture.texUint(&shader, "tex0", 0); }
 
 void Cube::setMatUniform() {
   // Uniform for model matrix
@@ -130,13 +129,11 @@ void Cube::setMatUniform() {
   glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(proj));
 }
 
-
 void Cube::scale(float s) { glUniform1f(scaleUniID, s); }
 
 void Cube::rotate(float r) { rotation += r; }
 
 void Cube::activateShader() { shader.activate(); }
-
 
 void Cube::draw() {
   // Model Matrix
@@ -148,14 +145,13 @@ void Cube::draw() {
   // Projection Matrix
   proj = glm::mat4(1.0f);
 
-
-
-  model = glm::rotate(model, glm::radians(rotation), glm::vec3(0.0f, 1.0f, 0.0f));
+  model =
+      glm::rotate(model, glm::radians(rotation), glm::vec3(0.0f, 1.0f, 0.0f));
 
   view = glm::translate(view, glm::vec3(xpos, ypos, -2.0f + zmove));
 
-  proj = glm::perspective(glm::radians(45.0f), (float)(WinWidth/WinHeight), 0.1f, 25.0f);
-
+  proj = glm::perspective(glm::radians(45.0f), (float)(WinWidth / WinHeight),
+                          0.1f, 25.0f);
 
   setMatUniform();
   texture.bind();
