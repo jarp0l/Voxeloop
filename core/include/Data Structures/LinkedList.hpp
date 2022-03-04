@@ -1,6 +1,7 @@
 #ifndef VOXELOOP_LINKEDLIST_HPP
 #define VOXELOOP_LINKEDLIST_HPP
 
+
 template <class T>
 struct Node{
   T data;

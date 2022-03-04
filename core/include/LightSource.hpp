@@ -9,6 +9,7 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
 
+
 #include "ebo.hpp"
 #include "Shader.hpp"
 #include "vao.hpp"
@@ -22,7 +23,6 @@ public:
   LightSource();
   ~LightSource();
   void setMatUniform();
-
 
   void activateShader();
   void draw();

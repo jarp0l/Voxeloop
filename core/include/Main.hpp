@@ -12,9 +12,10 @@
 #include <iostream>
 
 #include "Cube.hpp"
-#include "LinkedList.hpp"
 #include "Cubes.hpp"
+#include "LinkedList.hpp"
 
-void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods);
+void key_callback(GLFWwindow *window, int key, int scancode, int action,
+                  int mods);
 
 #endif // CORE_INCLUDE_MAIN_HPP

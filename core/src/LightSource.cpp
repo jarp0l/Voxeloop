@@ -1,4 +1,5 @@
 #include "LightSource.hpp"
+
 LightSource::LightSource() :
     shader{" ", " "},
     _vertices{

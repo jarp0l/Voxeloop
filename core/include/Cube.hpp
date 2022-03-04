@@ -9,7 +9,6 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
 
-
 #include "Shader.hpp"
 #include "Texture.hpp"
 #include "ebo.hpp"
@@ -40,11 +39,10 @@ public:
   void activateShader();
   void draw();
 
-
 private:
   Shader shader;
-  GLfloat _vertices [verticesSize];
-  GLuint _indices [indicesSize];
+  GLfloat _vertices[verticesSize];
+  GLuint _indices[indicesSize];
 
   Texture texture;
 

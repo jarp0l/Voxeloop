@@ -18,6 +18,7 @@ public:
 
   void activateShader();
   void clean();
+
 private:
   LinkedList <Cube*> *list;
 };

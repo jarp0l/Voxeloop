@@ -3,7 +3,9 @@
 const uint32_t GLMajor = 4;
 const uint32_t GLMinor = 5;
 
+
 Cubes* cubes;
+
 
 float mvmt = 0.0f;
 float scale = 1.0f;
@@ -32,7 +34,6 @@ int main() {
   gladLoaderLoadGL();
   glViewport(0, 0, WinWidth, WinHeight);
 
-
   cubes = new Cubes;
 
 
@@ -40,7 +41,6 @@ int main() {
   glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
   glClear(GL_COLOR_BUFFER_BIT);
   glfwSwapBuffers(window);
-
 
   // Setup rotation
   double prevTime = glfwGetTime();
@@ -75,7 +75,9 @@ int main() {
   }
 
   //// Destroy and terminate
-//  delete cube;
+
+  //  delete cube;
+
   // Window
   glfwDestroyWindow(window);
   glfwTerminate();
@@ -83,6 +85,7 @@ int main() {
 }
 
 void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods) {
+
   if (key == GLFW_KEY_SPACE && action == GLFW_PRESS) {
     while (mvmt <= 0.0f) {
       glfwPollEvents();
@@ -112,5 +115,3 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
   }
 }
 
-
- 
