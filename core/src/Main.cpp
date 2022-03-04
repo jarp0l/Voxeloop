@@ -3,10 +3,8 @@
 const uint32_t GLMajor = 4;
 const uint32_t GLMinor = 5;
 
-
-Cubes* cubes;
-Audio* audio;
-
+Cubes *cubes;
+Audio *audio;
 
 float mvmt = 0.0f;
 float scale = 1.0f;
@@ -62,7 +60,7 @@ int main() {
     // Rotate the object
     double crntTime = glfwGetTime();
 
-    if (crntTime - prevTime >= 1/60) {
+    if (crntTime - prevTime >= 1 / 60) {
       mvmt -= 0.1f;
       cubes->rotate(1.5f);
       cubes->move(0.1f);
@@ -84,7 +82,8 @@ int main() {
   return EXIT_SUCCESS;
 }
 
-void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods) {
+void key_callback(GLFWwindow *window, int key, int scancode, int action,
+                  int mods) {
 
   if (key == GLFW_KEY_SPACE && action == GLFW_PRESS) {
     audio->play(' ');
@@ -153,4 +152,3 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
     }
   }
 }
-

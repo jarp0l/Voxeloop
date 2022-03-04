@@ -11,8 +11,9 @@ public:
   Audio();
   ~Audio();
 
-  void setAudio(char s, char* path);
+  void setAudio(char s, char *path);
   void play(char s);
+
 private:
   ma_engine engine;
   ma_result result;
