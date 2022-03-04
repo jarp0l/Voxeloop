@@ -1,13 +1,12 @@
 #include "LightSource.hpp"
-LightSource::LightSource() :
-    shader{" ", " "},
-    _vertices{
-                                 -0.125f, 0.125f, 0.125f,
-                             },
-    _indices{
-                             }{
-
-}
+LightSource::LightSource()
+    : shader{" ", " "},
+      _vertices{
+          -0.125f,
+          0.125f,
+          0.125f,
+      },
+      _indices{} {}
 
 LightSource::~LightSource() {}
 

@@ -3,7 +3,7 @@
 const uint32_t GLMajor = 4;
 const uint32_t GLMinor = 5;
 
-Cubes* cubes;
+Cubes *cubes;
 
 float mvmt = 0.0f;
 float scale = 1.0f;
@@ -32,15 +32,12 @@ int main() {
   gladLoaderLoadGL();
   glViewport(0, 0, WinWidth, WinHeight);
 
-
   cubes = new Cubes;
-
 
   // Clear window and swap buffer
   glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
   glClear(GL_COLOR_BUFFER_BIT);
   glfwSwapBuffers(window);
-
 
   // Setup rotation
   double prevTime = glfwGetTime();
@@ -61,7 +58,7 @@ int main() {
     // Rotate the object
     double crntTime = glfwGetTime();
 
-    if (crntTime - prevTime >= 1/60) {
+    if (crntTime - prevTime >= 1 / 60) {
       mvmt -= 0.1f;
       cubes->rotate(1.5f);
       cubes->move(0.1f);
@@ -75,14 +72,15 @@ int main() {
   }
 
   //// Destroy and terminate
-//  delete cube;
+  //  delete cube;
   // Window
   glfwDestroyWindow(window);
   glfwTerminate();
   return EXIT_SUCCESS;
 }
 
-void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods) {
+void key_callback(GLFWwindow *window, int key, int scancode, int action,
+                  int mods) {
   if (key == GLFW_KEY_SPACE && action == GLFW_PRESS) {
     while (mvmt <= 0.0f) {
       glfwPollEvents();
@@ -111,6 +109,3 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
     scale -= 0.1f;
   }
 }
-
-
- 
