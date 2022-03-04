@@ -13,6 +13,7 @@ public:
   void update();
   void draw();
   // void handleInput();
+  virtual ~IntroState(){};
 
 private:
   GameDataRef m_gameData;
