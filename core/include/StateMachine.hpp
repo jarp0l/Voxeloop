@@ -24,6 +24,11 @@ public:
   StateMachine() {}
 
   ///
+  /// @brief Destroy the State Machine object
+  ///
+  ~StateMachine() {}
+
+  ///
   /// @brief Add a new state to the state machine
   ///
   /// @param newState The unique pointer to the new state
@@ -48,14 +53,10 @@ public:
   /// @return StateRef& The reference to the state at the top of the stack
   StateRef &getActiveState();
 
-  ///
-  /// @brief Destroy the State Machine object
-  ///
-  ~StateMachine() {}
-
 private:
   std::stack<StateRef> _states; /// Stack to store states
   StateRef _newState; /// The unique pointer to new state that is being added
+  
   bool _isAdded;      /// Whether a new state is being added
   bool _isReplaced;   /// Whether the state at the top of stack is being
                       /// popped or another state is being pushed

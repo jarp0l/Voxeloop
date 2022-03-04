@@ -21,7 +21,7 @@ public:
   ///
   /// @brief Handle user input
   ///
-  virtual void handleInput() = 0;
+  // virtual void handleInput() = 0;
 
   ///
   /// @brief Pause a state
@@ -37,6 +37,7 @@ public:
   /// @brief Destroy the State object
   ///
   virtual ~State() = default;
+  // virtual ~State() {}
 };
 
 #endif // CORE_INCLUDE_STATE_HPP

@@ -1,0 +1,112 @@
+#include "main.hpp"
+#include "GLFW/glfw3.h"
+#include "SharedData.hpp"
+
+// const uint32_t glMajor = 4;
+// const uint32_t glMinor = 5;
+const int winWidth = 800;
+const int winHeight = 800;
+// std::string winTitle = "Voxeloop";
+const std::string glslVersion = "#version 130";
+
+static void glfwErrorCallback(int error, const char *description);
+
+int main() {
+  GameDataRef gameData;
+  ///////////////////// GLFW /////////////////////////
+  // Initialize glfw along with error callback
+  ///////////////////// GLFW /////////////////////////
+  // glfwSetErrorCallback(glfwErrorCallback);
+
+  // if (!glfwInit()) {
+  //   std::cerr << "[ERROR] Couldn't initialize GLFW" << std::endl;
+  //   return EXIT_FAILURE;
+  // }
+  // std::cout << "[INFO] GLFW initialized" << std::endl;
+
+  // glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, glMajor);
+  // glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, glMinor);
+  // glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+
+  // Setup Window
+  gameData->window.create("Voxeloop", winWidth, winHeight);
+
+  // if (!gameData->window.getWindow()) {
+  //   std::cerr << "[ERROR] Couldn't create a GLFW window" << std::endl;
+  //   glfwTerminate();
+  //   return EXIT_FAILURE;
+  // }
+  // std::cout << "[INFO] GLFW window created" << std::endl;
+
+  // glfwMakeContextCurrent(gameData->window.getWindow());
+  // glfwSwapInterval(1); // vsync
+
+  /////////////////// GLAD /////////////////////
+  // load all OpenGL function pointers with glad
+  /////////////////// GLAD /////////////////////
+  // if (!gladLoaderLoadGL()) {
+  //   std::cerr << "[ERROR] Couldn't initialize GLAD" << std::endl;
+  //   return EXIT_FAILURE;
+  // }
+  // std::cout << "[INFO] GLAD initialized" << std::endl;
+
+  /////////////////// Dear ImGui /////////////////////
+  ImguiWrapper imgui(gameData);
+
+  /////////////////// Main Event Loop /////////////////////
+  // Main Event Loop
+  /////////////////// Main Event Loop /////////////////////
+  while (!glfwWindowShouldClose(gameData->window.getWindow())) {
+    // Poll and handle events (inputs, window resize, etc.)
+    // You can read the io.WantCaptureMouse, io.WantCaptureKeyboard flags to
+    // tell if dear imgui wants to use your inputs.
+    // - When io.WantCaptureMouse is true, do not dispatch mouse input data to
+    // your main application.
+    // - When io.WantCaptureKeyboard is true, do not dispatch keyboard input
+    // data to your main application. Generally you may always pass all inputs
+    // to dear imgui, and hide them from your application based on those two
+    // flags.
+    // glfwPollEvents();
+    // // glClearColor(0.8f, 0.9f, 0.2f, 1.0f);
+    // glClearColor(0.2f, 0.25f, 0.3f, 1.0f);
+    // glClear(GL_COLOR_BUFFER_BIT);
+    gameData->window.update();
+    gameData->window.clear();
+
+    imgui.init();
+
+    ImGui::Begin("Voxeloop");
+    ImGui::Text("MAIN MENU");
+    ImGui::End();
+
+    imgui.render();
+
+    // break;
+    // glfwMakeContextCurrent(window);
+    // glClearColor(0.8f, 0.9f, 0.2f, 1.0f);
+    // glClear(GL_COLOR_BUFFER_BIT);
+
+    // ImGui::End();
+    // }
+
+    // glfwSwapBuffers(gameData->window.getWindow());
+    gameData->window.render();
+  }
+
+  // ImGui cleanup
+  // ImGui_ImplOpenGL3_Shutdown();
+  // ImGui_ImplGlfw_Shutdown();
+  // ImGui::DestroyContext();
+  imgui.cleanup();
+
+  // GLFW window cleanup
+  // glfwDestroyWindow(gameData->window.getWindow());
+  // glfwTerminate();
+  gameData->window.cleanup();
+
+  return EXIT_SUCCESS;
+}
+
+static void glfwErrorCallback(int error, const char *description) {
+  fprintf(stderr, "GLFW Error %d: %s\n", error, description);
+}

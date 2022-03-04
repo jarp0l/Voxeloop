@@ -17,6 +17,7 @@ endif()
 FetchContent_Declare(
   voxeloop-base
   GIT_REPOSITORY https://github.com/RujalAcharya/voxeloop-base.git
+  # GIT_REPOSITORY https://github.com/jarp0l/voxeloop-base.git
   GIT_TAG main)
 
 FetchContent_MakeAvailable(voxeloop-base)
