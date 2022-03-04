@@ -33,4 +33,4 @@ source_group("Sources" FILES ${PROJECT_SOURCES})
 
 add_executable(${PROJECT_NAME} ${PROJECT_HEADERS} ${PROJECT_SOURCES})
 
-target_link_libraries(${PROJECT_NAME} glad glm imgui stb)
+target_link_libraries(${PROJECT_NAME} glad glm imgui stb miniaudio)
