@@ -12,11 +12,10 @@
 #include <iostream>
 
 #include "Cube.hpp"
-//#include "ebo.hpp"
-//#include "Shader.hpp"
-//#include "Texture.hpp"
-//#include "vao.hpp"
-//#include "vbo.hpp"
+#include "Cubes.hpp"
+#include "LinkedList.hpp"
 
+void key_callback(GLFWwindow *window, int key, int scancode, int action,
+                  int mods);
 
 #endif // CORE_INCLUDE_MAIN_HPP

@@ -9,7 +9,6 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
 
-
 #include "Shader.hpp"
 #include "Texture.hpp"
 #include "ebo.hpp"
@@ -20,7 +19,7 @@
 const uint32_t WinWidth = 800;
 const uint32_t WinHeight = 800;
 
-const uint8_t verticesSize = 64;
+const uint8_t verticesSize = 192;
 const uint8_t indicesSize = 36;
 
 class Cube {
@@ -40,11 +39,10 @@ public:
   void activateShader();
   void draw();
 
-
 private:
   Shader shader;
-  GLfloat _vertices [verticesSize];
-  GLuint _indices [indicesSize];
+  GLfloat _vertices[verticesSize];
+  GLuint _indices[indicesSize];
 
   Texture texture;
 

@@ -22,8 +22,10 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(voxeloop-base)
 
 include_directories(core/include)
+include_directories(core/include/Data\ Structures)
 
 file(GLOB PROJECT_HEADERS core/include/*.hpp)
+file(GLOB PROJECT_HEADERS core/include/Data\ Structures/*.hpp)
 file(GLOB PROJECT_SOURCES core/src/*.cpp)
 
 source_group("Headers" FILES ${PROJECT_HEADERS})
