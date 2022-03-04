@@ -9,8 +9,9 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
 
-#include "Shader.hpp"
+
 #include "ebo.hpp"
+#include "Shader.hpp"
 #include "vao.hpp"
 #include "vbo.hpp"
 
@@ -28,8 +29,8 @@ public:
 
 private:
   Shader shader;
-  GLfloat _vertices[ls_verticesSize];
-  GLuint _indices[ls_indicesSize];
+  GLfloat _vertices [ls_verticesSize];
+  GLuint _indices [ls_indicesSize];
 
   VAO vao;
   VBO vbo;

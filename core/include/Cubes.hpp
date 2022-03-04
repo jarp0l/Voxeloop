@@ -20,7 +20,7 @@ public:
   void clean();
 
 private:
-  LinkedList<Cube *> *list;
+  LinkedList <Cube*> *list;
 };
 
 #endif // VOXELOOP_CUBES_HPP

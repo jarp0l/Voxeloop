@@ -1,5 +1,6 @@
 #include "Cubes.hpp"
 
+
 Cubes::Cubes() { list = new LinkedList<Cube *>; }
 
 Cubes::~Cubes() { delete list; }
