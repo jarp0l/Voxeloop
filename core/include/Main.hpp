@@ -13,7 +13,7 @@
 
 #include "Cube.hpp"
 #include "LinkedList.hpp"
-#include "cubes.hpp"
+#include "Cubes.hpp"
 
 void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods);
 

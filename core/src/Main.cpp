@@ -3,7 +3,6 @@
 const uint32_t GLMajor = 4;
 const uint32_t GLMinor = 5;
 
-Cube* cube;
 Cubes* cubes;
 
 float mvmt = 0.0f;
@@ -34,8 +33,7 @@ int main() {
   glViewport(0, 0, WinWidth, WinHeight);
 
 
-//  cube = new Cube;
-    cubes = new Cubes;
+  cubes = new Cubes;
 
 
   // Clear window and swap buffer

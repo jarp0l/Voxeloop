@@ -1,4 +1,4 @@
-#include "cubes.hpp"
+#include "Cubes.hpp"
 
 Cubes::Cubes() {
   list = new LinkedList <Cube*>;

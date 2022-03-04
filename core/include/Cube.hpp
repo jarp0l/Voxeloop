@@ -18,7 +18,7 @@
 const uint32_t WinWidth = 800;
 const uint32_t WinHeight = 800;
 
-const uint8_t verticesSize = 64;
+const uint8_t verticesSize = 192;
 const uint8_t indicesSize = 36;
 
 class Cube {
