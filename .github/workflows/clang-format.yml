@@ -1,0 +1,18 @@
+name: clang-format
+on:
+  - push
+  - pull_request
+
+jobs:
+  clang-format-checking:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install clang-format
+        run: sudo apt install clang-format
+      - uses: actions/checkout@v2
+      - uses: HorstBaerbel/action-clang-format@1.4
+        with:
+          scandir: ''
+#           excludedirs: 'external'
+          extensions: 'c,h,C,H,cpp,hpp,cc,hh,c++,h++,cxx,hxx'
+          style: 'file'

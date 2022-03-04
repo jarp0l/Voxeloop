@@ -9,9 +9,11 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
 
-#include "ebo.hpp"
+
 #include "Shader.hpp"
 #include "Texture.hpp"
+#include "ebo.hpp"
+
 #include "vao.hpp"
 #include "vbo.hpp"
 
@@ -39,11 +41,11 @@ public:
   void draw();
 
 
-
 private:
   Shader shader;
   GLfloat _vertices [verticesSize];
   GLuint _indices [indicesSize];
+
   Texture texture;
 
   VAO vao;
