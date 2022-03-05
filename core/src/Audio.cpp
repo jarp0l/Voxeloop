@@ -5,7 +5,7 @@
 Audio::Audio() {
   result = ma_engine_init(nullptr, &engine);
   if (result != MA_SUCCESS) {
-    std::cerr <<  result << std::endl;  // Failed to initialize the engine.
+    std::cerr << result << std::endl; // Failed to initialize the engine.
   }
 
   std::stringstream aBinding, sBinding, dBinding, fBinding, jBinding, kBinding, lBinding, scolonBinding, spaceBinding;
