@@ -30,8 +30,6 @@ public:
     temp->next = node;
   }
 
-
-
 private:
   struct Node <T>* newNode(T data) {
     auto *node = new struct Node <T>;

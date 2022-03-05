@@ -1,19 +1,19 @@
 #ifndef VOXELOOP_AUDIO_HPP
 #define VOXELOOP_AUDIO_HPP
 
-#include "AVLTree.hpp"
+#include "Tree.hpp"
 
 #include <iostream>
 #include <map>
 #include <miniaudio.h>
-
+#include <string>
 
 class Audio {
 public:
   Audio();
   ~Audio();
 
-  void setAudio(char s, char* path);
+  void setAudio(char s, std::string path);
   void play(char s);
 
   void addAudio(char key, float mvmt);
@@ -25,9 +25,9 @@ private:
   ma_result result;
   std::map<char, ma_sound> sounds;
 
-  AVLTree* tree;
+  Tree* tree;
 
-  AVLNode* currentSound;
+  TreeNode* currentSound;
 };
 
 #endif // VOXELOOP_AUDIO_HPP

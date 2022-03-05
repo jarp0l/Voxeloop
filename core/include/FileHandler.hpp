@@ -7,7 +7,6 @@
 #include <sstream>
 #include <string>
 
-
 std::string getFileData(const char* filename);
 
 
