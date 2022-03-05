@@ -8,7 +8,8 @@ Audio::Audio() {
     std::cerr << result << std::endl; // Failed to initialize the engine.
   }
 
-  std::stringstream aBinding, sBinding, dBinding, fBinding, jBinding, kBinding, lBinding, scolonBinding, spaceBinding;
+  std::stringstream aBinding, sBinding, dBinding, fBinding, jBinding, kBinding,
+      lBinding, scolonBinding, spaceBinding;
   aBinding << "../core/audio/" << KEY_A_BINDING;
   sBinding << "../core/audio/" << KEY_S_BINDING;
   dBinding << "../core/audio/" << KEY_D_BINDING;
@@ -31,9 +32,7 @@ Audio::Audio() {
   tree = new Tree;
 }
 
-Audio::~Audio() {
-  delete tree;
-}
+Audio::~Audio() { delete tree; }
 
 void Audio::play(char s) {
   ma_sound_seek_to_pcm_frame(&sounds[s], 0);
@@ -41,7 +40,8 @@ void Audio::play(char s) {
 }
 
 void Audio::setAudio(char s, std::string path) {
-  result = ma_sound_init_from_file(&engine, path.c_str(), 0, nullptr, nullptr, &sounds[s]);
+  result = ma_sound_init_from_file(&engine, path.c_str(), 0, nullptr, nullptr,
+                                   &sounds[s]);
   if (result != MA_SUCCESS) {
     std::cerr << "Couldn't init audio" << std::endl;
   }
@@ -58,8 +58,9 @@ void Audio::updateList() {
 }
 
 void Audio::traverseList(float mvmt) {
-  if (currentSound == nullptr) return;
-  if(currentSound->value->mvmt >= mvmt) {
+  if (currentSound == nullptr)
+    return;
+  if (currentSound->value->mvmt >= mvmt) {
     play(currentSound->value->key);
     currentSound = currentSound->right;
   }

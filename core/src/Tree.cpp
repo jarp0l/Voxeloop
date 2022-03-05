@@ -1,12 +1,10 @@
 #include "Tree.hpp"
 
-Tree::Tree() {
-  root = nullptr;
-}
+Tree::Tree() { root = nullptr; }
 
-TreeNode* Tree::addNode(char key, float mvmt, TreeNode* troot) {
+TreeNode *Tree::addNode(char key, float mvmt, TreeNode *troot) {
   if (troot == nullptr) {
-    TreeNode* node = createNode(key, mvmt);
+    TreeNode *node = createNode(key, mvmt);
     troot = node;
     return troot;
   }
@@ -19,7 +17,7 @@ TreeNode* Tree::addNode(char key, float mvmt, TreeNode* troot) {
   return troot;
 }
 
-void Tree::flatten(TreeNode* node) {
+void Tree::flatten(TreeNode *node) {
   if (node == nullptr || (node->left == nullptr && node->right == nullptr)) {
     return;
   }
@@ -27,11 +25,11 @@ void Tree::flatten(TreeNode* node) {
   if (node->left != nullptr) {
     flatten(node->left);
 
-    TreeNode* tmpRight = node->right;
+    TreeNode *tmpRight = node->right;
     node->right = node->left;
     node->left = nullptr;
 
-    TreeNode* tmp = node->right;
+    TreeNode *tmp = node->right;
     while (tmp->right != nullptr) {
       tmp = tmp->right;
     }
@@ -41,7 +39,7 @@ void Tree::flatten(TreeNode* node) {
   flatten(node->right);
 }
 
-TreeNode* Tree::createNode(char key, float mvmt) {
+TreeNode *Tree::createNode(char key, float mvmt) {
   auto *node = new TreeNode;
   node->value = new TreeData;
   node->value->key = key;
@@ -50,6 +48,3 @@ TreeNode* Tree::createNode(char key, float mvmt) {
   node->right = nullptr;
   return node;
 }
-
-
-

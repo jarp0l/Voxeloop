@@ -20,11 +20,10 @@ public:
   Tree();
 
   TreeNode *root;
-  TreeNode* addNode(char key, float mvmt, TreeNode* troot);
-  void flatten(TreeNode* node);
+  TreeNode *addNode(char key, float mvmt, TreeNode *troot);
+  void flatten(TreeNode *node);
 
-  TreeNode* createNode(char key, float mvmt);
-
+  TreeNode *createNode(char key, float mvmt);
 };
 
 #endif // VOXELOOP_AVLTREE_HPP

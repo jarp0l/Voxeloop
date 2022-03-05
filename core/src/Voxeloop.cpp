@@ -1,6 +1,6 @@
 #include "Voxeloop.hpp"
 
-Voxeloop::Voxeloop() : GLMajor { 4 }, GLMinor {5} {
+Voxeloop::Voxeloop() : GLMajor{4}, GLMinor{5} {
   mvmt = 0.0f;
   scale = 1.0f;
 
@@ -14,8 +14,7 @@ Voxeloop::Voxeloop() : GLMajor { 4 }, GLMinor {5} {
 
   // Setup Window
 
-   window =
-      glfwCreateWindow(WinWidth, WinHeight, "Voxeloop", nullptr, nullptr);
+  window = glfwCreateWindow(WinWidth, WinHeight, "Voxeloop", nullptr, nullptr);
 
   if (!window) {
     std::cerr << "Couldn't open window" << std::endl;
@@ -44,9 +43,8 @@ Voxeloop::Voxeloop() : GLMajor { 4 }, GLMinor {5} {
   glfwSetWindowUserPointer(window, this);
 }
 
-
 Voxeloop::~Voxeloop() {
-  //Destrroy and terminate
+  // Destrroy and terminate
   delete cubes;
   delete audio;
 
@@ -56,7 +54,7 @@ Voxeloop::~Voxeloop() {
 }
 
 void Voxeloop::run() {
-  while(!glfwWindowShouldClose(window)) {
+  while (!glfwWindowShouldClose(window)) {
     loop();
   }
 }
@@ -72,7 +70,7 @@ void Voxeloop::loop() {
   // Rotate the object
   double crntTime = glfwGetTime();
 
-  if (crntTime - prevTime >= 1/60) {
+  if (crntTime - prevTime >= 1 / 60) {
     mvmt -= 0.1f;
     cubes->rotate(1.5f);
     cubes->move(0.1f);
@@ -86,7 +84,8 @@ void Voxeloop::loop() {
   glfwSwapBuffers(window);
 }
 
-void Voxeloop::key_callback(GLFWwindow* window, int key, int scancode, int action, int mods) {
+void Voxeloop::key_callback(GLFWwindow *window, int key, int scancode,
+                            int action, int mods) {
   Voxeloop *vwin = static_cast<Voxeloop *>(glfwGetWindowUserPointer(window));
   Cubes *cubes = vwin->cubes;
   Audio *audio = vwin->audio;

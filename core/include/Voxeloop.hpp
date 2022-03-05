@@ -15,24 +15,25 @@ public:
   Voxeloop();
   ~Voxeloop();
 
-  static void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods);
+  static void key_callback(GLFWwindow *window, int key, int scancode,
+                           int action, int mods);
 
   void run();
+
 private:
-  Cubes* cubes;
-  Audio* audio;
+  Cubes *cubes;
+  Audio *audio;
 
   float mvmt;
   float scale;
 
-  GLFWwindow* window;
+  GLFWwindow *window;
 
   const uint32_t GLMajor;
   const uint32_t GLMinor;
   void loop();
 
   double prevTime;
-
 };
 
 #endif // VOXELOOP_VOXELOOP_HPP
