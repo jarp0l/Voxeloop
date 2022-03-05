@@ -53,7 +53,6 @@ int main() {
   while (!glfwWindowShouldClose(window)) {
     glfwPollEvents();
     glfwSetKeyCallback(window, key_callback);
-
     // Render
     glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -67,11 +66,11 @@ int main() {
       cubes->rotate(1.5f);
       cubes->move(0.1f);
       prevTime = crntTime;
+      audio->traverseList(mvmt);
     }
 
     cubes->scale(scale);
     cubes->draw();
-
     glfwSwapBuffers(window);
   }
 
@@ -83,6 +82,8 @@ int main() {
   glfwTerminate();
   return EXIT_SUCCESS;
 }
+
+
 
 void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods) {
 
@@ -101,46 +102,55 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
 
       mvmt += 0.5f;
     }
+    audio->updateList();
   } else {
     if (action == GLFW_PRESS) {
       if (key == GLFW_KEY_A) {
         cubes->addCube();
-        audio->play('a');
+//        audio->play('a');
+        audio->addAudio('a', mvmt);
       }
 
       if (key == GLFW_KEY_S) {
         cubes->addCube();
-        audio->play('s');
+//        audio->play('s');
+        audio->addAudio('s', mvmt);
       }
 
       if (key == GLFW_KEY_D) {
         cubes->addCube();
-        audio->play('d');
+//        audio->play('d');
+        audio->addAudio('d', mvmt);
       }
 
       if (key == GLFW_KEY_F) {
         cubes->addCube();
-        audio->play('f');
+//        audio->play('f');
+        audio->addAudio('f', mvmt);
       }
 
       if (key == GLFW_KEY_J) {
         cubes->addCube();
-        audio->play('j');
+//        audio->play('j');
+        audio->addAudio('j', mvmt);
       }
 
       if (key == GLFW_KEY_K) {
         cubes->addCube();
-        audio->play('k');
+//        audio->play('k');
+        audio->addAudio('k', mvmt);
       }
 
       if (key == GLFW_KEY_L) {
         cubes->addCube();
-        audio->play('l');
+//        audio->play('l');
+        audio->addAudio('l', mvmt);
       }
 
       if (key == GLFW_KEY_SEMICOLON) {
         cubes->addCube();
-        audio->play(';');
+//        audio->play(';');
+        audio->addAudio(';', mvmt);
       }
     }
 
