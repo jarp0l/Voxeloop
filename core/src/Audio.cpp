@@ -3,7 +3,7 @@
 Audio::Audio() {
   result = ma_engine_init(nullptr, &engine);
   if (result != MA_SUCCESS) {
-    std::cerr <<  result << std::endl;  // Failed to initialize the engine.
+    std::cerr << result << std::endl; // Failed to initialize the engine.
   }
 
   setAudio('a', "../core/audio/drum.wav");
@@ -25,7 +25,9 @@ void Audio::play(char s) {
 }
 
 void Audio::setAudio(char s, char *path) {
-  result = ma_sound_init_from_file(&engine, path, 0, nullptr, nullptr, &sounds[s]);
+
+  result =
+      ma_sound_init_from_file(&engine, path, 0, nullptr, nullptr, &sounds[s]);
   if (result != MA_SUCCESS) {
     std::cerr << "Couldn't init audio" << std::endl;
   }
