@@ -1,5 +1,5 @@
-#ifndef CORE_INCLUDE_VOXELOOP_HPP
-#define CORE_INCLUDE_VOXELOOP_HPP
+#ifndef CORE_INCLUDE_VOXELOOP_HPP_HPP
+#define CORE_INCLUDE_VOXELOOP_HPP_HPP
 
 // clang-format off
 #include "glad/gl.h"
@@ -7,32 +7,33 @@
 // clang-format on
 
 #include "Audio.hpp"
-#include "Common.hpp"
 #include "Cubes.hpp"
 #include "LinkedList.hpp"
 
 class Voxeloop {
 public:
+  Voxeloop();
+  ~Voxeloop();
+
   static void key_callback(GLFWwindow *window, int key, int scancode,
                            int action, int mods);
 
-  void init(GLFWwindow *window);
   void run();
-  void cleanup();
 
 private:
-  GLFWwindow *m_window;
-  GameDataRef m_gameData;
+  Cubes *cubes;
+  Audio *audio;
 
-  Cubes *m_cubes;
-  Audio *m_audio;
+  float mvmt;
+  float scale;
 
-  float m_mvmt;
-  float m_scale;
-  double m_prevTime;
+  GLFWwindow *window;
 
-private:
+  const uint32_t GLMajor;
+  const uint32_t GLMinor;
   void loop();
+
+  double prevTime;
 };
 
-#endif // CORE_INCLUDE_VOXELOOP_HPP
+#endif // CORE_INCLUDE_VOXELOOP_HPP_HPP
