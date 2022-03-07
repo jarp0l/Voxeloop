@@ -15,6 +15,5 @@
     "custom"
   ],
   "C/C++ Include Guard.Macro Type": "Filepath",
-  "C/C++ Include Guard.Comment Style": "Line",
-  "C/C++ Include Guard.Suffix": "_HPP"
+  "C/C++ Include Guard.Comment Style": "Line"
 }

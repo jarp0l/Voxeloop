@@ -86,7 +86,6 @@ Cube::Cube() :
   texture {"../core/textures/great_img.png", GL_TEXTURE_2D, GL_TEXTURE0,
                                  GL_RGB, GL_UNSIGNED_BYTE}
 {
-
   vao.bind();
 
   vbo.setup(_vertices, sizeof(_vertices));
