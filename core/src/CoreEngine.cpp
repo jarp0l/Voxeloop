@@ -1,4 +1,4 @@
-#include "../include/CoreEngine.hpp"
+#include "CoreEngine.hpp"
 #include "StateMachine.hpp"
 
 void CoreEngine::init(const char *title, int width, int height, int bpp,

@@ -5,7 +5,9 @@
 Audio::Audio() {
   result = ma_engine_init(nullptr, &engine);
   if (result != MA_SUCCESS) {
-    std::cerr << result << std::endl; // Failed to initialize the engine.
+    std::cerr << "Couldn't init engine"
+              << std::endl; // Failed to initialize the engine.
+    exit(-1);
   }
 
   std::stringstream aBinding, sBinding, dBinding, fBinding, jBinding, kBinding,
@@ -20,6 +22,8 @@ Audio::Audio() {
   scolonBinding << "../core/audio/" << KEY_SEMICOLON_BINDING;
   spaceBinding << "../core/audio/" << KEY_SPACE_BINDING;
 
+  // spaceBinding << getBinding(KEY_SPACE_BINDING);
+
   setAudio('a', aBinding.str());
   setAudio('s', sBinding.str());
   setAudio('d', dBinding.str());
@@ -30,6 +34,7 @@ Audio::Audio() {
   setAudio(';', scolonBinding.str());
   setAudio(' ', spaceBinding.str());
   tree = new Tree;
+  currentSound = nullptr;
 }
 
 Audio::~Audio() { delete tree; }
@@ -44,6 +49,7 @@ void Audio::setAudio(char s, std::string path) {
                                    &sounds[s]);
   if (result != MA_SUCCESS) {
     std::cerr << "Couldn't init audio" << std::endl;
+    exit(-1);
   }
 }
 

@@ -1,12 +1,14 @@
-#include "../include/CoreEngine.hpp"
-#include "../include/MenuState.hpp"
+#include "CoreEngine.hpp"
+#include "MenuState.hpp"
 
 int main() {
   CoreEngine *engine = new CoreEngine;
 
   const char *title = "Voxeloop";
+  int width = 800;
+  int height = 800;
   // initialize the engine
-  engine->init(title);
+  engine->init(title, width, height);
 
   // load the intro state
   engine->changeState(MenuState::instance());

@@ -1,12 +1,3 @@
-///
-/// @file vao.cpp
-/// @author Prajwol Pradhan & Rujal Acharya
-
-/// @brief Vertex Array Object for
-/// @version 0.1
-/// @date 2022-02-16
-///
-
 #include "vao.hpp"
 
 VAO::VAO() { glGenVertexArrays(1, &ID); }

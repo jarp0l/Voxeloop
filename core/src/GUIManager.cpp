@@ -21,7 +21,7 @@ void GUIManager::init(GLFWwindow *window) {
   // Setup platform/renderer backends
   ImGui_ImplGlfw_InitForOpenGL(window,
                                true);     // platform: GLFW
-  ImGui_ImplOpenGL3_Init("#version 130"); // renderer: OpenGL
+  ImGui_ImplOpenGL3_Init("#version 450"); // renderer: OpenGL
   // m_window = window;
   // m_style = &ImGui::GetStyle();
   // m_io = &ImGui::GetIO();
@@ -117,9 +117,9 @@ void GUIManager::renderSettings() {
   ImGuiWindowFlags windowFlags = 0;
   windowFlags |= ImGuiWindowFlags_NoTitleBar;
 
-  ImGui::Begin("Settings", &m_open, windowFlags);
-  ImGui::Text("Test");
-  ImGui::End();
+  // ImGui::Begin("Settings", &m_open, windowFlags);
+  // ImGui::Text("Test");
+  // ImGui::End();
 
   this->render();
 }

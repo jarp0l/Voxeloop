@@ -1,10 +1,35 @@
 #include "PlayState.hpp"
+#include "Voxeloop.hpp"
 
 PlayState PlayState::m_PlayState;
 
-void PlayState::init() { std::cout << "[INFO] PlayState initialized\n"; }
+void PlayState::init() {
+  voxeloop = new Voxeloop;
 
-void PlayState::cleanup() { std::cout << "[INFO] PlayState cleaned\n"; }
+  voxeloop->init(m_gameData->window.getWindow());
+
+  // m_mvmt = 0.0f;
+  // m_scale = 1.0f;
+
+  // m_audio = new Audio;
+  // m_cubes = new Cubes;
+
+  // // Setup rotation
+  // m_prevTime = glfwGetTime();
+
+  // glfwSetWindowUserPointer(window, this);
+
+  std::cout << "[INFO] PlayState initialized\n";
+}
+
+void PlayState::cleanup() {
+  // delete m_audio;
+  // delete m_cubes;
+  voxeloop->cleanup();
+  delete voxeloop;
+
+  std::cout << "[INFO] PlayState cleaned\n";
+}
 
 void PlayState::pause() { std::cout << "[INFO] PlayState paused\n"; }
 
@@ -44,6 +69,11 @@ void PlayState::draw(CoreEngine *engine) {
 
   // m_gameData->gui.getFrame();
   // m_gameData->gui.renderMenu(&m_gameData->window);
+  voxeloop->run();
+
+  m_gameData->gui.getFrame();
+  if (m_gameData->gui.renderBackButton())
+    engine->popState();
 
   m_gameData->window.render();
 }

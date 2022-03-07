@@ -1,5 +1,4 @@
 #include "MenuState.hpp"
-#include "SettingsState.hpp"
 
 MenuState MenuState::m_menuState;
 
@@ -48,7 +47,7 @@ void MenuState::draw(CoreEngine *engine) {
   case 0:
     break;
   case 1:
-    engine->changeState(PlayState::instance());
+    engine->pushState(PlayState::instance());
     break;
   case 2:
     engine->pushState(SettingsState::instance());

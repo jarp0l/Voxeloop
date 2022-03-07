@@ -5,6 +5,7 @@
 #include "Common.hpp"
 #include "CoreEngine.hpp"
 #include "PlayState.hpp"
+#include "SettingsState.hpp"
 #include "StateMachine.hpp"
 // #include "...State.hpp"
 
