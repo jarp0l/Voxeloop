@@ -2,8 +2,8 @@
 #define CORE_INCLUDE_COMMON_HPP
 
 // #include "StateMachine.hpp"
-#include "WindowManager.hpp"
 #include "GUIManager.hpp"
+#include "WindowManager.hpp"
 
 #include <memory>
 

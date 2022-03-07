@@ -24,7 +24,8 @@ public:
   bool isRunning() { return m_isRunning; }
   void quit() { m_isRunning = false; }
 
-  static void key_callback(GLFWwindow *window, int key, int scancode, int action, int modes);
+  static void key_callback(GLFWwindow *window, int key, int scancode,
+                           int action, int modes);
 
 private:
   // the stack of states
