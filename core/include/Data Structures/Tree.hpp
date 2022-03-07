@@ -27,4 +27,4 @@ public:
 
 };
 
-#endif // VOXELOOP_AVLTREE_HPP
+#endif // VOXELOOP_TREE_HPP
