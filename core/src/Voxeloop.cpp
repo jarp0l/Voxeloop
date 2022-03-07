@@ -31,7 +31,7 @@ void Voxeloop::loop() {
   // m_gameData->window.clear();
   glClearColor(0.f, 0.f, 0.f, 1.f);
   glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-  
+
   glfwSetKeyCallback(m_window, key_callback);
 
   m_cubes->activateShader();

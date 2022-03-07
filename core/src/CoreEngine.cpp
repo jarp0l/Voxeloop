@@ -1,5 +1,9 @@
 #include "CoreEngine.hpp"
+#include "GLFW/glfw3.h"
 #include "StateMachine.hpp"
+
+void CoreEngine::key_callback(GLFWwindow *window, int key, int scancode,
+                              int action, int modes) {}
 
 void CoreEngine::init(const char *title, int width, int height, int bpp,
                       bool fullscreen) {
@@ -74,9 +78,16 @@ void CoreEngine::update() {
 }
 
 void CoreEngine::draw() {
+  m_gameData->window.update();
+  m_gameData->window.clear();
+
   // let the state draw the screen
   if (m_gameData->window.isCloseRequested())
     this->quit();
-  else
+  else {
+    glfwSetKeyCallback(m_window, this->key_callback);
     states.back()->draw(this);
+
+    m_gameData->window.render();
+  }
 }

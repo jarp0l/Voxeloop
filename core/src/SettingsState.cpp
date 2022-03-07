@@ -39,17 +39,11 @@ void SettingsState::handleEvents(CoreEngine *engine) {
 void SettingsState::update(CoreEngine *engine) {}
 
 void SettingsState::draw(CoreEngine *engine) {
-  m_gameData->window.update();
-  m_gameData->window.clear();
-
   // draw all the stuffs here
-
   m_gameData->gui.getFrame();
 
   if (m_gameData->gui.renderBackButton())
     engine->popState();
 
   m_gameData->gui.renderSettings();
-
-  m_gameData->window.render();
 }

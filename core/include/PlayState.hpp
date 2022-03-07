@@ -19,8 +19,6 @@ public:
   void draw(CoreEngine *engine);
 
   static PlayState *instance() { return &m_PlayState; }
-  // static void key_callback(GLFWwindow *window, int key, int scancode,
-  //  int action, int mods);
 
 protected:
   PlayState() {}

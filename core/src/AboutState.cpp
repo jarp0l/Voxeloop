@@ -37,12 +37,7 @@ void AboutState::handleEvents(CoreEngine *engine) {
 void AboutState::update(CoreEngine *engine) {}
 
 void AboutState::draw(CoreEngine *engine) {
-  m_gameData->window.update();
-  m_gameData->window.clear();
-
   m_gameData->gui.getFrame();
   if (m_gameData->gui.renderBackButton())
     engine->popState();
-
-  m_gameData->window.render();
 }

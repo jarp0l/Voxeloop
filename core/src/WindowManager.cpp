@@ -67,7 +67,6 @@ void WindowManager::create(const char *title, int width, int height) {
 
   // Enable depth test
   glEnable(GL_DEPTH_TEST);
-  // glDepthFunc(GL_ALWAYS);
 }
 
 // Check to see if window close is reaquested

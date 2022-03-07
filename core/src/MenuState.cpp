@@ -37,9 +37,6 @@ void MenuState::handleEvents(CoreEngine *engine) {
 void MenuState::update(CoreEngine *engine) {}
 
 void MenuState::draw(CoreEngine *engine) {
-  m_gameData->window.update();
-  m_gameData->window.clear();
-
   m_gameData->gui.getFrame();
   nextState = m_gameData->gui.renderMenu(&m_gameData->window);
 
@@ -61,6 +58,4 @@ void MenuState::draw(CoreEngine *engine) {
     // case 15:
     //   break;
   }
-
-  m_gameData->window.render();
 }

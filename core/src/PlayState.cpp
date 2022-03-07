@@ -62,11 +62,6 @@ void PlayState::handleEvents(CoreEngine *engine) {
 void PlayState::update(CoreEngine *engine) {}
 
 void PlayState::draw(CoreEngine *engine) {
-  m_gameData->window.update();
-  m_gameData->window.clear();
-
-  // draw all the stuffs here
-
   // m_gameData->gui.getFrame();
   // m_gameData->gui.renderMenu(&m_gameData->window);
   voxeloop->run();
@@ -74,6 +69,4 @@ void PlayState::draw(CoreEngine *engine) {
   m_gameData->gui.getFrame();
   if (m_gameData->gui.renderBackButton())
     engine->popState();
-
-  m_gameData->window.render();
 }

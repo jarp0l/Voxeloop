@@ -37,7 +37,10 @@ Audio::Audio() {
   currentSound = nullptr;
 }
 
-Audio::~Audio() { delete tree; }
+Audio::~Audio() {
+  delete tree;
+  ma_engine_uninit(&engine);
+}
 
 void Audio::play(char s) {
   ma_sound_seek_to_pcm_frame(&sounds[s], 0);
