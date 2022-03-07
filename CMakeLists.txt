@@ -3,12 +3,13 @@ cmake_minimum_required(VERSION 3.17)
 project(voxeloop)
 
 set(CMAKE_CXX_STANDARD 17)
+set(CURRENT_COMPILER clang++)
 set(BUILD_SHARED_LIBS OFF)
 
 if(MSVC)
   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /W4")
 else()
-  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -Wpedantic")
+  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}") # -Wall -Wextra -Wpedantic")
   if(NOT WIN32)
     set(GLAD_LIBRARIES dl)
   endif()
@@ -17,6 +18,7 @@ endif()
 FetchContent_Declare(
   voxeloop-base
   GIT_REPOSITORY https://github.com/RujalAcharya/voxeloop-base.git
+  # GIT_REPOSITORY https://github.com/jarp0l/voxeloop-base.git
   GIT_TAG main)
 
 FetchContent_MakeAvailable(voxeloop-base)

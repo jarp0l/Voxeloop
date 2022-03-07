@@ -25,9 +25,9 @@ private:
   ma_result result;
   std::map<char, ma_sound> sounds;
 
-  Tree* tree;
+  Tree *tree;
 
-  TreeNode* currentSound;
+  TreeNode *currentSound;
 };
 
 #endif // VOXELOOP_AUDIO_HPP
