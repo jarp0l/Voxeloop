@@ -9,13 +9,11 @@ GLFWwindow *WindowManager::m_window = nullptr;
 void window_resize(GLFWwindow *window, int width, int height);
 
 void WindowManager::create(const char *title, int width, int height) {
-  // m_title = title;
   m_width = width;
   m_height = height;
-  // m_title = title;
 
   ///////////////////// GLFW /////////////////////////
-  // Initialize glfw
+  // Initialize GLFW
   if (!glfwInit()) {
     std::cerr << "[ERROR] Couldn't initialize GLFW" << std::endl;
     glfwTerminate();
@@ -46,7 +44,6 @@ void WindowManager::create(const char *title, int width, int height) {
   if (!m_window) {
     std::cerr << "[ERROR] Couldn't create a GLFW Window" << std::endl;
     glfwTerminate();
-    // return EXIT_FAILURE;
   }
   std::cout << "[INFO] GLFW Window created" << std::endl;
 
@@ -60,10 +57,9 @@ void WindowManager::create(const char *title, int width, int height) {
   glfwSwapInterval(1); // vsync
 
   /////////////////// GLAD /////////////////////
-  // load all OpenGL function pointers with glad
+  // Load all OpenGL function pointers with glad
   if (!gladLoaderLoadGL()) {
     std::cerr << "[ERROR] Couldn't initialize GLAD" << std::endl;
-    // return EXIT_FAILURE;
   }
   std::cout << "[INFO] GLAD initialized" << std::endl;
 
@@ -74,21 +70,21 @@ void WindowManager::create(const char *title, int width, int height) {
   glDepthFunc(GL_ALWAYS);
 }
 
-// CHECK TO SEE IF WINDOW CLOSE IS REAQUESTED
+// Check to see if window close is reaquested
 bool WindowManager::isCloseRequested() {
   return glfwWindowShouldClose(m_window);
 }
 
-// CLOSE WINDOW
+// Close window
 void WindowManager::close() { glfwSetWindowShouldClose(m_window, GLFW_TRUE); }
 
-// UPDATE WINDOW
+// Update window
 void WindowManager::update() { glfwPollEvents(); }
 
-// SWAP BUFFERS
+// Swap buffers
 void WindowManager::render() { glfwSwapBuffers(m_window); }
 
-// CLEAR SCREEN
+// Clear screen
 void WindowManager::clear() {
   glClearColor(0.45f, 0.55f, 0.60f, 1.0f);
   glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -100,16 +96,16 @@ void WindowManager::cleanup() {
   glfwTerminate();
 }
 
-// RETURN WINDOW WIDTH
+// Return window width
 int WindowManager::getWidth() { return m_width; }
 
-// RETURN WINDOW HEIGHT
+// Return window height
 int WindowManager::getHeight() { return m_height; }
 
-// RETURN GLFW WINDOW
+// Return glfw window
 GLFWwindow *WindowManager::getWindow() { return m_window; }
 
-// HANDLE WINDOW RESIZE
+// Handle window resize
 void window_resize(GLFWwindow *window, int width, int height) {
   glViewport(0, 0, width, height);
 }

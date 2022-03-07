@@ -8,7 +8,6 @@
 #include <GLFW/glfw3.h>
 // clang-format on
 #include <iostream>
-// #include <string>
 
 class WindowManager {
 public:
@@ -21,9 +20,6 @@ public:
 
   void cleanup();
 
-  // void draw();
-  // void display();
-
   static GLFWwindow *getWindow();
   static int getWidth();
   static int getHeight();
@@ -32,8 +28,6 @@ private:
   static GLFWwindow *m_window;
   static int m_width;
   static int m_height;
-
-  // char *m_title;
 
   int m_glMajor = 4;
   int m_glMinor = 5;
