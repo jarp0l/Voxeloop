@@ -1,21 +1,38 @@
 #ifndef CORE_INCLUDE_COREENGINE_HPP
 #define CORE_INCLUDE_COREENGINE_HPP
 
-#include "IntroState.hpp"
-#include "SharedData.hpp"
+#include "Common.hpp"
 
+#include <cstdio>
+#include <vector>
+
+class StateMachine;
 class CoreEngine {
 public:
-  CoreEngine(std::string title, int width = 640, int height = 480);
+  void init(const char *title, int width = 640, int height = 480, int bpp = 0,
+            bool fullscreen = false);
+  void cleanup();
 
-  ~CoreEngine();
+  void changeState(StateMachine *state);
+  void pushState(StateMachine *state);
+  void popState();
 
-  // void init();
-  void run();
+  void handleEvents();
+  void update();
+  void draw();
+
+  bool isRunning() { return m_isRunning; }
+  void quit() { m_isRunning = false; }
 
 private:
-  GameDataRef m_gameData =
-      std::make_shared<GameData>(); /// The shared pointer of game data
+  // the stack of states
+  std::vector<StateMachine *> states;
+
+  bool m_isRunning;
+  bool m_fullscreen;
+
+  GameDataRef m_gameData;
+  GLFWwindow *m_window;
 };
 
 #endif // CORE_INCLUDE_COREENGINE_HPP

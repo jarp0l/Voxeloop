@@ -1,5 +1,5 @@
-#ifndef CORE_INCLUDE_WINDOW_HPP
-#define CORE_INCLUDE_WINDOW_HPP
+#ifndef CORE_INCLUDE_WINDOWMANAGER_HPP
+#define CORE_INCLUDE_WINDOWMANAGER_HPP
 
 // We need to turn clang-format off here to prevent it from including glfw
 // before glad
@@ -8,11 +8,11 @@
 #include <GLFW/glfw3.h>
 // clang-format on
 #include <iostream>
-#include <string>
+// #include <string>
 
-class Window {
+class WindowManager {
 public:
-  void create(std::string title, int width, int height);
+  void create(const char *title, int width, int height);
   bool isCloseRequested();
   void close(); // close window
   static void clear();
@@ -32,11 +32,11 @@ private:
   static GLFWwindow *m_window;
   static int m_width;
   static int m_height;
-  
-  std::string m_title;
 
-  const int m_glMajor = 4;
-  const int m_glMinor = 5;
+  // char *m_title;
+
+  int m_glMajor = 4;
+  int m_glMinor = 5;
 };
 
-#endif // CORE_INCLUDE_WINDOW_HPP
+#endif // CORE_INCLUDE_WINDOWMANAGER_HPP

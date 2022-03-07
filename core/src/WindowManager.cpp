@@ -1,17 +1,18 @@
-#include "../include/Window.hpp"
+#include "../include/WindowManager.hpp"
 #include "GLFW/glfw3.h"
 
-int Window::m_height = 0;
-int Window::m_width = 0;
-GLFWwindow *Window::m_window = nullptr;
+int WindowManager::m_height = 0;
+int WindowManager::m_width = 0;
+GLFWwindow *WindowManager::m_window = nullptr;
 
 // HANDLE WINDOW RESIZE
 void window_resize(GLFWwindow *window, int width, int height);
 
-void Window::create(std::string title, int width, int height) {
-  m_title = title;
+void WindowManager::create(const char *title, int width, int height) {
+  // m_title = title;
   m_width = width;
   m_height = height;
+  // m_title = title;
 
   ///////////////////// GLFW /////////////////////////
   // Initialize glfw
@@ -21,8 +22,8 @@ void Window::create(std::string title, int width, int height) {
   }
   std::cout << "[INFO] GLFW initialized" << std::endl;
 
-  glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, m_glMajor);
-  glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, m_glMinor);
+  glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
+  glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 5);
   glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
   glfwWindowHint(GLFW_SAMPLES, 4);
 
@@ -35,8 +36,7 @@ void Window::create(std::string title, int width, int height) {
   const GLFWvidmode *glfwVidMode = glfwGetVideoMode(glfwMonitor);
 
   // Create GLFW Window
-  m_window =
-      glfwCreateWindow(m_width, m_height, m_title.c_str(), nullptr, nullptr);
+  m_window = glfwCreateWindow(m_width, m_height, title, nullptr, nullptr);
 
   // Set Window Position
   glfwSetWindowPos(m_window, (glfwVidMode->width - m_width) / 2,
@@ -75,37 +75,39 @@ void Window::create(std::string title, int width, int height) {
 }
 
 // CHECK TO SEE IF WINDOW CLOSE IS REAQUESTED
-bool Window::isCloseRequested() { return glfwWindowShouldClose(m_window); }
+bool WindowManager::isCloseRequested() {
+  return glfwWindowShouldClose(m_window);
+}
 
 // CLOSE WINDOW
-void Window::close() { glfwSetWindowShouldClose(m_window, GLFW_TRUE); }
+void WindowManager::close() { glfwSetWindowShouldClose(m_window, GLFW_TRUE); }
 
 // UPDATE WINDOW
-void Window::update() { glfwPollEvents(); }
+void WindowManager::update() { glfwPollEvents(); }
 
 // SWAP BUFFERS
-void Window::render() { glfwSwapBuffers(m_window); }
+void WindowManager::render() { glfwSwapBuffers(m_window); }
 
 // CLEAR SCREEN
-void Window::clear() {
-  glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
+void WindowManager::clear() {
+  glClearColor(0.45f, 0.55f, 0.60f, 1.0f);
   glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 }
 
-void Window::cleanup() {
+void WindowManager::cleanup() {
   // GLFW Window cleanup
   glfwDestroyWindow(m_window);
   glfwTerminate();
 }
 
 // RETURN WINDOW WIDTH
-int Window::getWidth() { return m_width; }
+int WindowManager::getWidth() { return m_width; }
 
 // RETURN WINDOW HEIGHT
-int Window::getHeight() { return m_height; }
+int WindowManager::getHeight() { return m_height; }
 
 // RETURN GLFW WINDOW
-GLFWwindow *Window::getWindow() { return m_window; }
+GLFWwindow *WindowManager::getWindow() { return m_window; }
 
 // HANDLE WINDOW RESIZE
 void window_resize(GLFWwindow *window, int width, int height) {
