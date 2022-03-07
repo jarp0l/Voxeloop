@@ -1,5 +1,5 @@
-#ifndef VOXELOOP_AVLTREE_HPP
-#define VOXELOOP_AVLTREE_HPP
+#ifndef VOXELOOP_TREE_HPP
+#define VOXELOOP_TREE_HPP
 
 #include "LinkedList.hpp"
 
