@@ -10,34 +10,16 @@ void AboutState::pause() { std::cout << "[INFO] AboutState paused\n"; }
 
 void AboutState::resume() { std::cout << "[INFO] AboutState resumed\n"; }
 
-void AboutState::handleEvents(CoreEngine *engine) {
-  // SDL_Event event;
-
-  // if (SDL_PollEvent(&event)) {
-  //   switch (event.type) {
-  //   case SDL_QUIT:
-  //     engine->quit();
-  //     break;
-
-  //   case SDL_KEYDOWN:
-  //     switch (event.key.keysym.sym) {
-  //     // case SDLK_SPACE:
-  //     //   engine->changeState(CAboutState::instance());
-  //     //   break;
-
-  //     case SDLK_ESCAPE:
-  //       engine->quit();
-  //       break;
-  //     }
-  //     break;
-  //   }
-  // }
-}
+void AboutState::handleEvents(CoreEngine *engine) {}
 
 void AboutState::update(CoreEngine *engine) {}
 
 void AboutState::draw(CoreEngine *engine) {
-  m_gameData->gui.getFrame();
-  if (m_gameData->gui.renderBackButton())
+
+  m_sharedData->gui.begin();
+
+  if (m_sharedData->gui.renderAbout(&m_sharedData->window))
     engine->popState();
+
+  m_sharedData->gui.end();
 }

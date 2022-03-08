@@ -10,35 +10,14 @@ void MenuState::pause() { std::cout << "[INFO] MenuState paused\n"; }
 
 void MenuState::resume() { std::cout << "[INFO] MenuState resumed\n"; }
 
-void MenuState::handleEvents(CoreEngine *engine) {
-  // SDL_Event event;
+void MenuState::handleEvents(CoreEngine *engine) {}
 
-  // if (SDL_PollEvent(&event)) {
-  //   switch (event.type) {
-  //   case SDL_QUIT:
-  //     engine->quit();
-  //     break;
-
-  //   case SDL_KEYDOWN:
-  //     switch (event.key.keysym.sym) {
-  //     // case SDLK_SPACE:
-  //     //   engine->changeState(CMenuState::instance());
-  //     //   break;
-
-  //     case SDLK_ESCAPE:
-  //       engine->quit();
-  //       break;
-  //     }
-  //     break;
-  //   }
-  // }
-}
 
 void MenuState::update(CoreEngine *engine) {}
 
 void MenuState::draw(CoreEngine *engine) {
-  m_gameData->gui.getFrame();
-  nextState = m_gameData->gui.renderMenu(&m_gameData->window);
+  m_sharedData->gui.begin();
+  nextState = m_sharedData->gui.renderMenu(&m_sharedData->window);
 
   switch (nextState) {
   case 0:
@@ -58,4 +37,6 @@ void MenuState::draw(CoreEngine *engine) {
     // case 15:
     //   break;
   }
+
+  m_sharedData->gui.end();
 }

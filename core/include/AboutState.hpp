@@ -25,7 +25,9 @@ protected:
 private:
   static AboutState m_AboutState;
 
-  GameDataRef m_gameData;
+
+  SharedDataRef m_sharedData;
+
 };
 
 #endif // CORE_INCLUDE_TEMPLATESTATE_HPP

@@ -5,11 +5,11 @@
 #include "glad/gl.h"
 #include "GLFW/glfw3.h"
 // clang-format on
-
 #include "Audio.hpp"
 #include "Common.hpp"
 #include "Cubes.hpp"
 #include "LinkedList.hpp"
+#include "WindowManager.hpp"
 
 class Voxeloop {
 public:
@@ -22,7 +22,8 @@ public:
 
 private:
   GLFWwindow *m_window;
-  GameDataRef m_gameData;
+  SharedDataRef m_sharedData;
+  WindowManager *win;
 
   Cubes *m_cubes;
   Audio *m_audio;

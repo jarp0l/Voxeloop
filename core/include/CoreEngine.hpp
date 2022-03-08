@@ -34,7 +34,7 @@ private:
   bool m_isRunning;
   bool m_fullscreen;
 
-  GameDataRef m_gameData;
+  SharedDataRef m_sharedData;
   GLFWwindow *m_window;
 };
 
