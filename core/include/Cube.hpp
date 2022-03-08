@@ -11,7 +11,7 @@
 
 #include "Shader.hpp"
 #include "Texture.hpp"
-#include "ebo.hpp"
+#include "EBO.hpp"
 
 #include "VAO.hpp"
 #include "VBO.hpp"

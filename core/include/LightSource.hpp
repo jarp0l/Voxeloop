@@ -10,7 +10,7 @@
 #include <glm/gtc/type_ptr.hpp>
 
 
-#include "ebo.hpp"
+#include "EBO.hpp"
 #include "Shader.hpp"
 #include "VAO.hpp"
 #include "VBO.hpp"

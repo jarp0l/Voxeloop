@@ -1,4 +1,4 @@
-#include "ebo.hpp"
+#include "EBO.hpp"
 
 EBO::EBO() {}
 
