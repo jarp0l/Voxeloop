@@ -11,14 +11,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      
-      # Using this approach to make it easier to integrate with cmake
       - name: Install Doxygen
         run: sudo apt-get install doxygen -y
         
+      # Using this approach to make it easier to integrate with cmake        
       - name: Run doxygen
-        working-directory: ../build
-        run: doxygen ../Doxyfile.ini
+        run: |
+          if [ ! -d build ]; then mkdir build; fi
+          cd build
+          doxygen ../Doxyfile.ini
 
       - name: Commit updated file(s) back to this repository
         run: |
