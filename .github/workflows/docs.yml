@@ -18,7 +18,7 @@ jobs:
 
       - name: Change current working directory
         run: |
-          if [ ! -d "build" ]; then mkdir build; elif
+          if [ ! -d "build" ]; then mkdir build; endif
           cd build
       - name: Run doxygen
         run: doxygen ../Doxyfile.ini
