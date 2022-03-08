@@ -1,5 +1,5 @@
 #include "../include/WindowManager.hpp"
-#include "GLFW/glfw3.h"
+#include <GLFW/glfw3.h>
 
 int WindowManager::m_height = 0;
 int WindowManager::m_width = 0;
