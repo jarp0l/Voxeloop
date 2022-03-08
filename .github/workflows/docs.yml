@@ -1,0 +1,34 @@
+name: Generate and deploy documentation
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispath:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    # Using this approach to make it easier to integrate with cmake
+     
+    - name: Install Doxygen
+      run: sudo apt-get install doxygen -y
+    
+    - name: Change current working directory
+      run: |
+        if [ ! -d "build" ]; then mkdir build; elif
+        cd build
+
+    - name: Run doxygen
+      run: doxygen ../Doxyfile.ini
+      
+    - name: Commit updated file(s) back to this repository
+      run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add ../docs
+          git diff-index --quiet HEAD || git commit -m "Update documentation"
+          git fetch
+          git push
