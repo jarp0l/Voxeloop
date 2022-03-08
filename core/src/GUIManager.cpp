@@ -3,6 +3,7 @@
 
 GUIManager::GUIManager() {}
 
+
 GUIManager::GUIManager(GLFWwindow *window) { this->init(window); }
 
 void GUIManager::init(GLFWwindow *window) {
@@ -17,7 +18,6 @@ void GUIManager::init(GLFWwindow *window) {
   ImGui_ImplGlfw_InitForOpenGL(window,
                                true);     // platform: GLFW
   ImGui_ImplOpenGL3_Init("#version 450"); // renderer: OpenGL
-
   ImGuiStyle &style = ImGui::GetStyle();
   ImGuiIO &io = ImGui::GetIO();
   (void)io;
@@ -49,6 +49,7 @@ void GUIManager::render() {
   ImGui::Render();
   ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
 }
+
 
 void GUIManager::begin() { this->getFrame(); }
 

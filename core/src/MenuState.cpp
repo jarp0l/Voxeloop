@@ -12,6 +12,7 @@ void MenuState::resume() { std::cout << "[INFO] MenuState resumed\n"; }
 
 void MenuState::handleEvents(CoreEngine *engine) {}
 
+
 void MenuState::update(CoreEngine *engine) {}
 
 void MenuState::draw(CoreEngine *engine) {

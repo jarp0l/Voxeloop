@@ -15,6 +15,7 @@ void AboutState::handleEvents(CoreEngine *engine) {}
 void AboutState::update(CoreEngine *engine) {}
 
 void AboutState::draw(CoreEngine *engine) {
+
   m_sharedData->gui.begin();
 
   if (m_sharedData->gui.renderAbout(&m_sharedData->window))
