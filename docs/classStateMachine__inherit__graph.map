@@ -1,0 +1,8 @@
+<map id="StateMachine" name="StateMachine">
+<area shape="rect" id="node1" title=" " alt="" coords="322,5,458,200"/>
+<area shape="rect" id="node2" href="$classAboutState.html" title=" " alt="" coords="5,263,140,472"/>
+<area shape="rect" id="node3" href="$classMenuState.html" title=" " alt="" coords="164,255,299,479"/>
+<area shape="rect" id="node4" href="$classPlayState.html" title=" " alt="" coords="323,248,457,487"/>
+<area shape="rect" id="node5" href="$classSettingsState.html" title=" " alt="" coords="481,263,616,472"/>
+<area shape="rect" id="node6" href="$classTemplateState.html" title=" " alt="" coords="640,263,785,472"/>
+</map>

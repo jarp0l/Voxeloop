@@ -18,7 +18,6 @@ endif()
 FetchContent_Declare(
   voxeloop-base
   GIT_REPOSITORY https://github.com/RujalAcharya/voxeloop-base.git
-  # GIT_REPOSITORY https://github.com/jarp0l/voxeloop-base.git
   GIT_TAG main)
 
 FetchContent_MakeAvailable(voxeloop-base)
@@ -33,6 +32,6 @@ file(GLOB PROJECT_SOURCES core/src/*.cpp)
 source_group("Headers" FILES ${PROJECT_HEADERS})
 source_group("Sources" FILES ${PROJECT_SOURCES})
 
-add_executable(${PROJECT_NAME} ${PROJECT_HEADERS} ${PROJECT_SOURCES} core/src/Voxeloop.cpp core/include/Voxeloop.hpp)
+add_executable(${PROJECT_NAME} ${PROJECT_HEADERS} ${PROJECT_SOURCES})
 
 target_link_libraries(${PROJECT_NAME} glad glm imgui stb miniaudio)
