@@ -1,7 +1,6 @@
 #ifndef CORE_INCLUDE_GUIMANAGER_HPP
 #define CORE_INCLUDE_GUIMANAGER_HPP
 
-
 #define FONT_ICON_FILE_NAME "../core/assets/fonts/fa-solid-900.ttf"
 
 #include "../audio/Bindings.hpp"

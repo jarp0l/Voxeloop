@@ -13,5 +13,4 @@ struct GameData {
 
 typedef std::shared_ptr<GameData> SharedDataRef;
 
-
 #endif // CORE_INCLUDE_COMMON_HPP

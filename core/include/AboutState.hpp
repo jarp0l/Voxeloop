@@ -25,9 +25,7 @@ protected:
 private:
   static AboutState m_AboutState;
 
-
   SharedDataRef m_sharedData;
-
 };
 
 #endif // CORE_INCLUDE_TEMPLATESTATE_HPP
