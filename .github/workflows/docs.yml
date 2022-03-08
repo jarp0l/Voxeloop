@@ -9,17 +9,16 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./build
     steps:
       - uses: actions/checkout@v2
       
       # Using this approach to make it easier to integrate with cmake
       - name: Install Doxygen
         run: sudo apt-get install doxygen -y
-
-      - name: Change current working directory
-        run: |
-          if [ ! -d "build" ]; then mkdir build; fi
-          cd build
+        
       - name: Run doxygen
         run: doxygen ../Doxyfile.ini
 
