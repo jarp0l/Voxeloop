@@ -7,6 +7,10 @@
 #include <vector>
 
 class StateMachine;
+
+///
+/// @brief The underlying engine that handles everything underneath
+///
 class CoreEngine {
 public:
   void init(const char *title, int width = 640, int height = 480, int bpp = 0,

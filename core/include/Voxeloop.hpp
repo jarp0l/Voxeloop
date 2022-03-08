@@ -2,8 +2,8 @@
 #define CORE_INCLUDE_VOXELOOP_HPP
 
 // clang-format off
-#include "glad/gl.h"
-#include "GLFW/glfw3.h"
+#include "glad/gl.h>
+#include <GLFW/glfw3.h>
 // clang-format on
 #include "Audio.hpp"
 #include "Common.hpp"

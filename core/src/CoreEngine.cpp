@@ -1,6 +1,6 @@
 #include "CoreEngine.hpp"
-#include "GLFW/glfw3.h"
 #include "StateMachine.hpp"
+#include <GLFW/glfw3.h>
 
 void CoreEngine::key_callback(GLFWwindow *window, int key, int scancode,
                               int action, int modes) {}
@@ -10,12 +10,10 @@ void CoreEngine::init(const char *title, int width, int height, int bpp,
   m_fullscreen = fullscreen;
   m_isRunning = true;
 
-
   m_sharedData->window.create(title, width, height);
 
   m_window = m_sharedData->window.getWindow();
   m_sharedData->gui.init(m_window);
-
 
   std::cout << "[INFO] CoreEngine initialized\n\n<<< Here we go >>>\n\n";
 }

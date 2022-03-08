@@ -1,5 +1,5 @@
 #include "Voxeloop.hpp"
-#include "GLFW/glfw3.h"
+#include <GLFW/glfw3.h>
 
 void Voxeloop::init(GLFWwindow *window) {
   m_window = window;
