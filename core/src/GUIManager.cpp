@@ -3,7 +3,6 @@
 
 GUIManager::GUIManager() {}
 
-
 GUIManager::GUIManager(GLFWwindow *window) { this->init(window); }
 
 void GUIManager::init(GLFWwindow *window) {
@@ -49,7 +48,6 @@ void GUIManager::render() {
   ImGui::Render();
   ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
 }
-
 
 void GUIManager::begin() { this->getFrame(); }
 

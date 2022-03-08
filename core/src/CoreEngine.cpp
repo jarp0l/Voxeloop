@@ -10,12 +10,10 @@ void CoreEngine::init(const char *title, int width, int height, int bpp,
   m_fullscreen = fullscreen;
   m_isRunning = true;
 
-
   m_sharedData->window.create(title, width, height);
 
   m_window = m_sharedData->window.getWindow();
   m_sharedData->gui.init(m_window);
-
 
   std::cout << "[INFO] CoreEngine initialized\n\n<<< Here we go >>>\n\n";
 }
