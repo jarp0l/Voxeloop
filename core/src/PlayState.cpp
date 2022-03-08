@@ -6,7 +6,7 @@ PlayState PlayState::m_PlayState;
 void PlayState::init() {
   voxeloop = new Voxeloop;
 
-  voxeloop->init(m_gameData->window.getWindow());
+  voxeloop->init(m_sharedData->window.getWindow());
 
   std::cout << "[INFO] PlayState initialized\n";
 }
@@ -51,7 +51,7 @@ void PlayState::update(CoreEngine *engine) {}
 void PlayState::draw(CoreEngine *engine) {
   voxeloop->run();
 
-  m_gameData->gui.begin();
-  if (m_gameData->gui.renderBackButton())
+  m_sharedData->gui.begin();
+  if (m_sharedData->gui.renderBackButton())
     engine->popState();
 }

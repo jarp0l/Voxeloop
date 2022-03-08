@@ -15,8 +15,8 @@ void MenuState::handleEvents(CoreEngine *engine) {}
 void MenuState::update(CoreEngine *engine) {}
 
 void MenuState::draw(CoreEngine *engine) {
-  m_gameData->gui.begin();
-  nextState = m_gameData->gui.renderMenu(&m_gameData->window);
+  m_sharedData->gui.begin();
+  nextState = m_sharedData->gui.renderMenu(&m_sharedData->window);
 
   switch (nextState) {
   case 0:
@@ -37,5 +37,5 @@ void MenuState::draw(CoreEngine *engine) {
     //   break;
   }
 
-  m_gameData->gui.end();
+  m_sharedData->gui.end();
 }

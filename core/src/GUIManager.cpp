@@ -6,7 +6,7 @@ GUIManager::GUIManager() {}
 GUIManager::GUIManager(GLFWwindow *window) { this->init(window); }
 
 void GUIManager::init(GLFWwindow *window) {
-  // m_window = m_gameData->window.getWindow();
+  // m_window = m_sharedData->window.getWindow();
 
   // Setup Dear ImGui context
   /////////////////// Dear ImGui /////////////////////

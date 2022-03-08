@@ -18,10 +18,10 @@ void SettingsState::update(CoreEngine *engine) {}
 
 void SettingsState::draw(CoreEngine *engine) {
   // draw all the stuffs here
-  m_gameData->gui.begin();
+  m_sharedData->gui.begin();
 
-  if (m_gameData->gui.renderSettings(&m_gameData->window) == 1)
+  if (m_sharedData->gui.renderSettings(&m_sharedData->window) == 1)
     engine->popState();
 
-  m_gameData->gui.end();
+  m_sharedData->gui.end();
 }

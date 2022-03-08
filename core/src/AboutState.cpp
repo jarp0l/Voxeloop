@@ -15,10 +15,10 @@ void AboutState::handleEvents(CoreEngine *engine) {}
 void AboutState::update(CoreEngine *engine) {}
 
 void AboutState::draw(CoreEngine *engine) {
-  m_gameData->gui.begin();
+  m_sharedData->gui.begin();
 
-  if (m_gameData->gui.renderAbout(&m_gameData->window))
+  if (m_sharedData->gui.renderAbout(&m_sharedData->window))
     engine->popState();
 
-  m_gameData->gui.end();
+  m_sharedData->gui.end();
 }

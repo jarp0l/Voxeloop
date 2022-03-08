@@ -11,6 +11,6 @@ struct GameData {
   GUIManager gui;
 };
 
-typedef std::shared_ptr<GameData> GameDataRef;
+typedef std::shared_ptr<GameData> SharedDataRef;
 
 #endif // CORE_INCLUDE_COMMON_HPP

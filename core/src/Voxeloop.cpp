@@ -62,7 +62,7 @@ void Voxeloop::key_callback(GLFWwindow *window, int key, int scancode,
   float *mvmt = &vwin->m_mvmt;
   float *scale = &vwin->m_scale;
 
-  WindowManager *win = &vwin->m_gameData->window;
+  WindowManager *win = &vwin->m_sharedData->window;
 
   if (key == GLFW_KEY_SPACE && action == GLFW_PRESS) {
     audio->play(' ');

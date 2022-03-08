@@ -22,7 +22,7 @@ public:
 
 private:
   GLFWwindow *m_window;
-  GameDataRef m_gameData;
+  SharedDataRef m_sharedData;
   WindowManager *win;
 
   Cubes *m_cubes;

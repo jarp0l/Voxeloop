@@ -17,13 +17,13 @@ void TemplateState::handleEvents(CoreEngine *engine) {}
 void TemplateState::update(CoreEngine *engine) {}
 
 void TemplateState::draw(CoreEngine *engine) {
-  m_gameData->window.update();
-  m_gameData->window.clear();
+  m_sharedData->window.update();
+  m_sharedData->window.clear();
 
   // draw all the stuffs here
 
-  // m_gameData->gui.getFrame();
-  // m_gameData->gui.renderMenu(&m_gameData->window);
+  // m_sharedData->gui.getFrame();
+  // m_sharedData->gui.renderMenu(&m_sharedData->window);
 
-  m_gameData->window.render();
+  m_sharedData->window.render();
 }
