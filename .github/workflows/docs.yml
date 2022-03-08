@@ -17,7 +17,7 @@ jobs:
         run: sudo apt-get install doxygen -y
         
       - name: Run doxygen
-        working-directory: ./build
+        working-directory: ../build
         run: doxygen ../Doxyfile.ini
 
       - name: Commit updated file(s) back to this repository
