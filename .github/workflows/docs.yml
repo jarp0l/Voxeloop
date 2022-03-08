@@ -25,7 +25,7 @@ jobs:
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
-          git add ../docs
+          git add docs
           git diff-index --quiet HEAD || git commit -m "Update documentation"
           git fetch
           git push
