@@ -12,8 +12,8 @@
 
 #include "ebo.hpp"
 #include "Shader.hpp"
-#include "vao.hpp"
-#include "vbo.hpp"
+#include "VAO.hpp"
+#include "VBO.hpp"
 
 const uint32_t ls_verticesSize = 5;
 const uint32_t ls_indicesSize = 5;

@@ -17,22 +17,12 @@ void GUIManager::init(GLFWwindow *window) {
   ImGui_ImplGlfw_InitForOpenGL(window,
                                true);     // platform: GLFW
   ImGui_ImplOpenGL3_Init("#version 450"); // renderer: OpenGL
-  // m_window = window;
-  // ImGuiStyle &style = ImGui::GetStyle();
-  // m_style = style;
-  // m_io = &ImGui::GetIO();
-  // (void)m_io;
 
   ImGuiStyle &style = ImGui::GetStyle();
   ImGuiIO &io = ImGui::GetIO();
   (void)io;
 
-  // io.Fonts->AddFontDefault();
-
-  // m_mainFont = m_io.Fonts->AddFontDefault();
-
   const char *fontPath = "../core/assets/fonts/ineptic/Ineptic.ttf";
-  // m_mainFont = io.Fonts->AddFontFromFileTTF(fontPath, 16.0f);
   io.Fonts->AddFontFromFileTTF(fontPath, 36.0f);
 
   // merge in icons from Font Awesome
@@ -42,7 +32,6 @@ void GUIManager::init(GLFWwindow *window) {
   icons_config.PixelSnapH = true;
   io.Fonts->AddFontFromFileTTF(FONT_ICON_FILE_NAME, 36.0f, &icons_config,
                                icons_ranges);
-  // use FONT_ICON_FILE_NAME_FAR if you want regular instead of solid
 
   // Setup Dear ImGui style to dark
   ImGui::StyleColorsDark();
@@ -69,8 +58,6 @@ bool GUIManager::renderBackButton() {
   bool nextState = false;
 
   ImGuiWindowFlags windowFlags = 0;
-  // windowFlags = ImGuiWindowFlags_NoDecoration;
-  // windowFlags |= ImGuiWindowFlags_NoBackground;
   windowFlags |= ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoBackground |
                  ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoResize;
 
@@ -78,12 +65,10 @@ bool GUIManager::renderBackButton() {
   ImGui::SetWindowPos(ImVec2(0, 0));
   ImGui::SetWindowSize(ImVec2(500, 500));
 
-  // ImGui::PushFont(m_backFont);
   // change to menu state
   if (ImGui::Button("Back", ImVec2(100, 50)))
     nextState = true;
   ImGui::End();
-  // ImGui::PopFont();
 
   this->render();
 

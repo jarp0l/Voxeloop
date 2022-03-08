@@ -1,4 +1,4 @@
-#include "vbo.hpp"
+#include "VBO.hpp"
 
 VBO::VBO() { }
 
