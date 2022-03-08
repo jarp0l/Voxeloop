@@ -1,12 +1,16 @@
 #ifndef VOXELOOP_AUDIO_HPP
 #define VOXELOOP_AUDIO_HPP
 
+#include "../audio/Bindings.hpp"
 #include "Tree.hpp"
+
+#include <miniaudio.h>
 
 #include <iostream>
 #include <map>
-#include <miniaudio.h>
+#include <sstream>
 #include <string>
+#include <unistd.h>
 
 class Audio {
 public:

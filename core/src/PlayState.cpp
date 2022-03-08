@@ -8,23 +8,10 @@ void PlayState::init() {
 
   voxeloop->init(m_gameData->window.getWindow());
 
-  // m_mvmt = 0.0f;
-  // m_scale = 1.0f;
-
-  // m_audio = new Audio;
-  // m_cubes = new Cubes;
-
-  // // Setup rotation
-  // m_prevTime = glfwGetTime();
-
-  // glfwSetWindowUserPointer(window, this);
-
   std::cout << "[INFO] PlayState initialized\n";
 }
 
 void PlayState::cleanup() {
-  // delete m_audio;
-  // delete m_cubes;
   voxeloop->cleanup();
   delete voxeloop;
 
@@ -62,11 +49,9 @@ void PlayState::handleEvents(CoreEngine *engine) {
 void PlayState::update(CoreEngine *engine) {}
 
 void PlayState::draw(CoreEngine *engine) {
-  // m_gameData->gui.getFrame();
-  // m_gameData->gui.renderMenu(&m_gameData->window);
   voxeloop->run();
 
-  m_gameData->gui.getFrame();
+  m_gameData->gui.begin();
   if (m_gameData->gui.renderBackButton())
     engine->popState();
 }

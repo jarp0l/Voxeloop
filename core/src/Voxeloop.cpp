@@ -1,4 +1,5 @@
 #include "Voxeloop.hpp"
+#include "GLFW/glfw3.h"
 
 void Voxeloop::init(GLFWwindow *window) {
   m_window = window;
@@ -13,7 +14,7 @@ void Voxeloop::init(GLFWwindow *window) {
   // Setup rotation
   m_prevTime = glfwGetTime();
 
-  glfwSetWindowUserPointer(window, this);
+  glfwSetWindowUserPointer(m_window, this);
 
   std::cout << "[INFO] Voxeloop initialized\n";
 }
@@ -28,8 +29,9 @@ void Voxeloop::cleanup() {
 void Voxeloop::run() { loop(); }
 
 void Voxeloop::loop() {
-  // m_gameData->window.clear();
-  glClearColor(0.f, 0.f, 0.f, 1.f);
+  int red = 19, green = 20, blue = 26;
+
+  glClearColor((float)red / 255, (float)green / 255, (float)blue / 255, 1.0f);
   glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
   glfwSetKeyCallback(m_window, key_callback);
@@ -39,7 +41,7 @@ void Voxeloop::loop() {
   // Rotate the object
   double crntTime = glfwGetTime();
 
-  if (crntTime - m_prevTime >= 1 / 60) {
+  if (crntTime - m_prevTime >= 1.0f / 60.0f) {
     m_mvmt -= 0.1f;
     m_cubes->rotate(1.5f);
     m_cubes->move(0.1f);
@@ -60,6 +62,8 @@ void Voxeloop::key_callback(GLFWwindow *window, int key, int scancode,
   float *mvmt = &vwin->m_mvmt;
   float *scale = &vwin->m_scale;
 
+  WindowManager *win = &vwin->m_gameData->window;
+
   if (key == GLFW_KEY_SPACE && action == GLFW_PRESS) {
     audio->play(' ');
     while (*mvmt <= 0.0f) {
@@ -78,6 +82,10 @@ void Voxeloop::key_callback(GLFWwindow *window, int key, int scancode,
     audio->updateList();
   } else {
     if (action == GLFW_PRESS) {
+      if (key == GLFW_KEY_ESCAPE) {
+        win->close();
+      }
+
       if (key == GLFW_KEY_A) {
         cubes->addCube();
         audio->addAudio('a', *mvmt);
