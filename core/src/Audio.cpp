@@ -59,8 +59,8 @@ void Audio::setAudio(char s, std::string path) {
 
 
 void Audio::addAudio(char key, float mvmt) {
-  play(key);
   tree->root = tree->addNode(key, mvmt, tree->root);
+  play(key);
 }
 
 void Audio::updateList() {
@@ -69,9 +69,11 @@ void Audio::updateList() {
 }
 
 void Audio::traverseList(float mvmt) {
+
   if (currentSound == nullptr) return;
   if(currentSound->value->mvmt >= mvmt) {
     play(currentSound->value->key);
     currentSound = currentSound->right;
   }
+
 }

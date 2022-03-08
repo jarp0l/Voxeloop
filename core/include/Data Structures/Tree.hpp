@@ -10,7 +10,7 @@ typedef struct {
 
 struct TreeNode {
   TreeData *value;
-  struct TreeNode *left, *right;
+  struct TreeNode *left, *right, *prev;
 };
 
 typedef struct TreeNode TreeNode;
