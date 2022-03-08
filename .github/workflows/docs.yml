@@ -9,9 +9,6 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./build
     steps:
       - uses: actions/checkout@v2
       
@@ -20,6 +17,7 @@ jobs:
         run: sudo apt-get install doxygen -y
         
       - name: Run doxygen
+        working-directory: ./build
         run: doxygen ../Doxyfile.ini
 
       - name: Commit updated file(s) back to this repository
