@@ -3,9 +3,9 @@
 
 #define FONT_ICON_FILE_NAME "../core/assets/fonts/fa-solid-900.ttf"
 
+#include "../audio/Bindings.hpp"
 #include "External/IconsFontAwesome5.h"
 #include "WindowManager.hpp"
-#include "../audio/Bindings.hpp"
 
 #include "GLFW/glfw3.h"
 #include <imgui.h>

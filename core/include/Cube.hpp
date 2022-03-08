@@ -9,9 +9,9 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
 
+#include "EBO.hpp"
 #include "Shader.hpp"
 #include "Texture.hpp"
-#include "EBO.hpp"
 
 #include "VAO.hpp"
 #include "VBO.hpp"
