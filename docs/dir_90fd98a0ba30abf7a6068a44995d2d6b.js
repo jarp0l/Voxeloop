@@ -5,7 +5,7 @@ var dir_90fd98a0ba30abf7a6068a44995d2d6b =
     [ "CoreEngine.cpp", "CoreEngine_8cpp.html", null ],
     [ "Cube.cpp", "Cube_8cpp.html", null ],
     [ "Cubes.cpp", "Cubes_8cpp.html", null ],
-    [ "ebo.cpp", "ebo_8cpp.html", null ],
+    [ "EBO.cpp", "EBO_8cpp.html", null ],
     [ "FileHandler.cpp", "FileHandler_8cpp.html", "FileHandler_8cpp" ],
     [ "GUIManager.cpp", "GUIManager_8cpp.html", null ],
     [ "LightSource.cpp", "LightSource_8cpp.html", null ],
@@ -17,8 +17,8 @@ var dir_90fd98a0ba30abf7a6068a44995d2d6b =
     [ "TemplateState.cpp", "TemplateState_8cpp.html", null ],
     [ "Texture.cpp", "Texture_8cpp.html", "Texture_8cpp" ],
     [ "Tree.cpp", "Tree_8cpp.html", null ],
-    [ "vao.cpp", "vao_8cpp.html", null ],
-    [ "vbo.cpp", "vbo_8cpp.html", null ],
+    [ "VAO.cpp", "VAO_8cpp.html", null ],
+    [ "VBO.cpp", "VBO_8cpp.html", null ],
     [ "Voxeloop.cpp", "Voxeloop_8cpp.html", null ],
     [ "WindowManager.cpp", "WindowManager_8cpp.html", "WindowManager_8cpp" ]
 ];
