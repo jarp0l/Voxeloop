@@ -25,7 +25,7 @@ Online documentation of the project is available at:
 [https://jarp0l.github.io/Voxeloop](https://jarp0l.github.io/Voxeloop)
 
 
-Project report: [VOXELOOP__PRAJWOL_RUJAL_076BEI023_29.pdf](https://raw.githubusercontent.com/jarp0l/Voxeloop/VOXELOOP__PRAJWOL_RUJAL_076BEI023_29.pdf)
+Project report: [VOXELOOP__PRAJWOL_RUJAL_076BEI023_29.pdf](https://github.com/jarp0l/Voxeloop/blob/main/VOXELOOP__PRAJWOL_RUJAL_076BEI023_29.pdf)
 
 ## Build
 ### Build using CMake
