@@ -40,9 +40,6 @@ var dir_24d671cfcbc5d5238a6bd565a49d198f =
     [ "StateMachine.hpp", "StateMachine_8hpp.html", [
       [ "StateMachine", "classStateMachine.html", "classStateMachine" ]
     ] ],
-    [ "TemplateState.hpp", "TemplateState_8hpp.html", [
-      [ "TemplateState", "classTemplateState.html", "classTemplateState" ]
-    ] ],
     [ "Texture.hpp", "Texture_8hpp.html", [
       [ "Texture", "classTexture.html", "classTexture" ]
     ] ],

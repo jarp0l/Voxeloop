@@ -19,8 +19,7 @@ var hierarchy =
       [ "AboutState", "classAboutState.html", null ],
       [ "MenuState", "classMenuState.html", null ],
       [ "PlayState", "classPlayState.html", null ],
-      [ "SettingsState", "classSettingsState.html", null ],
-      [ "TemplateState", "classTemplateState.html", null ]
+      [ "SettingsState", "classSettingsState.html", null ]
     ] ],
     [ "Texture", "classTexture.html", null ],
     [ "Tree", "classTree.html", null ],

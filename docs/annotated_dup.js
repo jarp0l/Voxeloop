@@ -18,7 +18,6 @@ var annotated_dup =
     [ "Stack", "classStack.html", "classStack" ],
     [ "State", "classState.html", "classState" ],
     [ "StateMachine", "classStateMachine.html", "classStateMachine" ],
-    [ "TemplateState", "classTemplateState.html", "classTemplateState" ],
     [ "Texture", "classTexture.html", "classTexture" ],
     [ "Tree", "classTree.html", "classTree" ],
     [ "TreeData", "structTreeData.html", "structTreeData" ],
