@@ -21,7 +21,6 @@ var dir_24d671cfcbc5d5238a6bd565a49d198f =
     [ "FileHandler.hpp", "FileHandler_8hpp.html", "FileHandler_8hpp" ],
     [ "GUIManager.hpp", "GUIManager_8hpp.html", "GUIManager_8hpp" ],
     [ "LightSource.hpp", "LightSource_8hpp.html", "LightSource_8hpp" ],
-    [ "Main.hpp", "Main_8hpp.html", null ],
     [ "MenuState.hpp", "MenuState_8hpp.html", [
       [ "MenuState", "classMenuState.html", "classMenuState" ]
     ] ],

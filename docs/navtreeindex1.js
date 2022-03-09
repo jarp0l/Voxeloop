@@ -1,7 +1,5 @@
 var NAVTREEINDEX1 =
 {
-"classSettingsState.html":[0,1,13],
-"classSettingsState.html#a0039be756cbdc958613eca25edb2cb99":[0,1,13,0],
 "classSettingsState.html#a03222967d2c8716722e9fa85917e7829":[0,1,13,5],
 "classSettingsState.html#a04cc678ed85a4ee686e3b918699af8cc":[0,1,13,10],
 "classSettingsState.html#a0f05e2301e64bbc661664be0ec47fc33":[0,1,13,2],
