@@ -131,14 +131,14 @@ uint8_t GUIManager::renderMenu(WindowManager *window) {
 uint8_t GUIManager::renderSettings(WindowManager *window) {
   uint8_t nextState = 0;
   ImGuiWindowFlags windowFlags = 0;
-  // windowFlags |= ImGuiWindowFlags_NoTitleBar;
+  windowFlags |= ImGuiWindowFlags_NoTitleBar;
 
   int ImGuiWinX = window->getWidth() / 6;
   int ImGuiWinY = window->getHeight() / 6;
 
   ImGui::Begin("Settings", &m_open, windowFlags);
   ImGui::SetWindowPos(ImVec2(ImGuiWinX, ImGuiWinY));
-  ImGui::SetWindowSize(ImVec2(1100, 550));
+  ImGui::SetWindowSize(ImVec2(550, 550));
 
   ImGui::Text("Test");
 
@@ -153,22 +153,22 @@ uint8_t GUIManager::renderSettings(WindowManager *window) {
 uint8_t GUIManager::renderAbout(WindowManager *window) {
   uint8_t nextState = 0;
   ImGuiWindowFlags windowFlags = 0;
-  // windowFlags |= ImGuiWindowFlags_NoTitleBar;
+  windowFlags |= ImGuiWindowFlags_NoTitleBar;
 
   int ImGuiWinX = window->getWidth() / 6;
   int ImGuiWinY = window->getHeight() / 6;
 
   ImGui::Begin("About", &m_open, windowFlags);
   ImGui::SetWindowPos(ImVec2(ImGuiWinX, ImGuiWinY));
-  ImGui::SetWindowSize(ImVec2(1100, 550));
+  ImGui::SetWindowSize(ImVec2(550, 550));
 
-  ImGui::Text("Voxeloop: Musical Loop Generation in Voxel World");
+  ImGui::Text("Voxeloop: Musical Loop Generation\n in Voxel World");
   ImGui::Dummy(ImVec2(0, 50));
   ImGui::Text(
-      "Voxeloop is a musical loop generating and playing system.\nUse "
-      "your keyboard (like a \"launchpad\") to generate musical loops \n"
-      "along with voxels. Press a key to listen to these again. Enjoy!");
-  ImGui::Dummy(ImVec2(0, 200));
+      "Voxeloop is a musical loop generating\nand playing system.\nUse "
+      "your keyboard (like a \"launchpad\")\nto generate musical loops "
+      "along\nwith voxels. Press a key to listen\nto these again\nEnjoy!");
+  ImGui::Dummy(ImVec2(0, 100));
   ImGui::Text("Created with " ICON_FA_HEART " by Prajwol & Rujal");
 
   ImGui::End();
