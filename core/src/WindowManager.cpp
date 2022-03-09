@@ -1,5 +1,5 @@
 #include "../include/WindowManager.hpp"
-#include "GLFW/glfw3.h"
+#include <GLFW/glfw3.h>
 
 int WindowManager::m_height = 0;
 int WindowManager::m_width = 0;
@@ -85,7 +85,12 @@ void WindowManager::render() { glfwSwapBuffers(m_window); }
 
 // Clear screen
 void WindowManager::clear() {
-  glClearColor(0.f, 0.f, 0.f, 1.0f);
+  // RGB = 37, 30, 62
+  uint8_t red = 37;
+  uint8_t green = 30;
+  uint8_t blue = 62;
+
+  glClearColor((float)red / 255, (float)green / 255, (float)blue / 255, 1.0f);
   glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 }
 

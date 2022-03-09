@@ -1,7 +1,6 @@
 #ifndef CORE_INCLUDE_COMMON_HPP
 #define CORE_INCLUDE_COMMON_HPP
 
-// #include "StateMachine.hpp"
 #include "GUIManager.hpp"
 #include "WindowManager.hpp"
 
@@ -10,11 +9,8 @@
 struct GameData {
   WindowManager window;
   GUIManager gui;
-  //   StateMachine machine;
-  // InputManager input;
-  // AssetManager assets;
 };
 
-typedef std::shared_ptr<GameData> GameDataRef;
+typedef std::shared_ptr<GameData> SharedDataRef;
 
 #endif // CORE_INCLUDE_COMMON_HPP

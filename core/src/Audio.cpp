@@ -1,6 +1,4 @@
 #include "Audio.hpp"
-#include "../audio/Bindings.hpp"
-#include <sstream>
 
 Audio::Audio() {
   result = ma_engine_init(nullptr, &engine);
@@ -50,6 +48,12 @@ void Audio::play(char s) {
 void Audio::setAudio(char s, std::string path) {
   result = ma_sound_init_from_file(&engine, path.c_str(), 0, nullptr, nullptr,
                                    &sounds[s]);
+
+  // char *buf;
+  // size_t size;
+  // // getcwd(buf, size);
+  // std::cout << "[CWD]: " << getcwd(buf, size) << std::endl;
+
   if (result != MA_SUCCESS) {
     std::cerr << "Couldn't init audio" << std::endl;
     exit(-1);

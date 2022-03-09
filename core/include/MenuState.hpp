@@ -29,7 +29,7 @@ protected:
 private:
   static MenuState m_menuState;
 
-  GameDataRef m_gameData;
+  SharedDataRef m_sharedData;
   uint8_t nextState;
 };
 

@@ -1,6 +1,6 @@
 #include "CoreEngine.hpp"
-#include "GLFW/glfw3.h"
 #include "StateMachine.hpp"
+#include <GLFW/glfw3.h>
 
 void CoreEngine::key_callback(GLFWwindow *window, int key, int scancode,
                               int action, int modes) {}
@@ -10,10 +10,10 @@ void CoreEngine::init(const char *title, int width, int height, int bpp,
   m_fullscreen = fullscreen;
   m_isRunning = true;
 
-  m_gameData->window.create(title, width, height);
+  m_sharedData->window.create(title, width, height);
 
-  m_window = m_gameData->window.getWindow();
-  m_gameData->gui.init(m_window);
+  m_window = m_sharedData->window.getWindow();
+  m_sharedData->gui.init(m_window);
 
   std::cout << "[INFO] CoreEngine initialized\n\n<<< Here we go >>>\n\n";
 }
@@ -27,8 +27,8 @@ void CoreEngine::cleanup() {
 
   std::cout << "\n<<< Good bye! >>>\n\n[INFO] CoreEngine cleaned\n";
 
-  m_gameData->gui.cleanup();
-  m_gameData->window.cleanup();
+  m_sharedData->gui.cleanup();
+  m_sharedData->window.cleanup();
 }
 
 void CoreEngine::changeState(StateMachine *state) {
@@ -78,16 +78,16 @@ void CoreEngine::update() {
 }
 
 void CoreEngine::draw() {
-  m_gameData->window.update();
-  m_gameData->window.clear();
+  m_sharedData->window.update();
+  m_sharedData->window.clear();
 
   // let the state draw the screen
-  if (m_gameData->window.isCloseRequested())
+  if (m_sharedData->window.isCloseRequested())
     this->quit();
   else {
     glfwSetKeyCallback(m_window, this->key_callback);
     states.back()->draw(this);
 
-    m_gameData->window.render();
+    m_sharedData->window.render();
   }
 }
