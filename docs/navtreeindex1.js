@@ -1,5 +1,7 @@
 var NAVTREEINDEX1 =
 {
+"classPlayState.html#ad3f3f9c827b499c605782ae71e0c1310":[0,1,12,2],
+"classPlayState.html#ad4dda6c0b72ce34bd9caaade8a5562b9":[0,1,12,8],
 "classPlayState.html#af49af6d2bc865f0912a0c4e91f00de1a":[0,1,12,1],
 "classSettingsState.html":[0,1,13],
 "classSettingsState.html#a0039be756cbdc958613eca25edb2cb99":[0,1,13,0],
@@ -174,7 +176,8 @@ var NAVTREEINDEX1 =
 "structTreeData.html#a195c21c7e9e24496d8687f1b6032f1c8":[0,1,21,1],
 "structTreeData.html#ac28c490d2ac13ae208bf19345dd2c233":[0,1,21,0],
 "structTreeNode.html":[0,1,22],
-"structTreeNode.html#a8fd9ca4048c7ed0bdb919e9c13cf74d0":[0,1,22,2],
-"structTreeNode.html#ab36f951b4d3d53dfc2d345978900c6e2":[0,1,22,1],
+"structTreeNode.html#a8fd9ca4048c7ed0bdb919e9c13cf74d0":[0,1,22,3],
+"structTreeNode.html#ab36f951b4d3d53dfc2d345978900c6e2":[0,1,22,2],
+"structTreeNode.html#abc22d13b88c7d733a3c91f4dde61dc3a":[0,1,22,1],
 "structTreeNode.html#af4ab5453a9305f5620c0eb9ac360fb90":[0,1,22,0]
 };
