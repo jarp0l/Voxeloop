@@ -1,8 +1,8 @@
-#ifndef CORE_INCLUDE_VOXELOOP_HPP
-#define CORE_INCLUDE_VOXELOOP_HPP
+#ifndef VOXELOOP_VOXELOOP_HPP
+#define VOXELOOP_VOXELOOP_HPP
 
 // clang-format off
-#include "glad/gl.h>
+#include <glad/gl.h>
 #include <GLFW/glfw3.h>
 // clang-format on
 #include "Audio.hpp"

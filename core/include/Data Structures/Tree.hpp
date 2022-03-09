@@ -1,5 +1,5 @@
-#ifndef VOXELOOP_AVLTREE_HPP
-#define VOXELOOP_AVLTREE_HPP
+#ifndef VOXELOOP_TREE_HPP
+#define VOXELOOP_TREE_HPP
 
 #include "LinkedList.hpp"
 
@@ -10,7 +10,7 @@ typedef struct {
 
 struct TreeNode {
   TreeData *value;
-  struct TreeNode *left, *right;
+  struct TreeNode *left, *right, *prev;
 };
 
 typedef struct TreeNode TreeNode;

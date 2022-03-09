@@ -26,10 +26,6 @@ protected:
 private:
   static PlayState m_PlayState;
 
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/improvements
   SharedDataRef m_sharedData;
   Voxeloop *voxeloop;
 

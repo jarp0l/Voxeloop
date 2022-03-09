@@ -41,7 +41,7 @@ void Voxeloop::loop() {
   // Rotate the object
   double crntTime = glfwGetTime();
 
-  if (crntTime - m_prevTime >= 1.0f / 60.0f) {
+  if (crntTime - m_prevTime >= 1 / 60) {
     m_mvmt -= 0.1f;
     m_cubes->rotate(1.5f);
     m_cubes->move(0.1f);
