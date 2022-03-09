@@ -9,12 +9,11 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
 
+#include "EBO.hpp"
 #include "Shader.hpp"
 #include "Texture.hpp"
-#include "ebo.hpp"
-
-#include "vao.hpp"
-#include "vbo.hpp"
+#include "VAO.hpp"
+#include "VBO.hpp"
 
 const uint32_t WinWidth = 800;
 const uint32_t WinHeight = 800;
