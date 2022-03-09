@@ -76,27 +76,32 @@ var NAVTREEINDEX0 =
 "State_8hpp.html":[1,0,0,1,16],
 "State_8hpp_source.html":[1,0,0,1,16],
 "TemplateState_8cpp.html":[1,0,0,2,14],
+<<<<<<< HEAD
+=======
+"TemplateState_8hpp.html":[1,0,0,1,18],
+"TemplateState_8hpp_source.html":[1,0,0,1,18],
+>>>>>>> fe59a9db95788ae3e5d6891ec8e72fe4354091fe
 "Texture_8cpp.html":[1,0,0,2,15],
 "Texture_8cpp.html#a18372412ad2fc3ce1e3240b3cf0efe78":[1,0,0,2,15,0],
-"Texture_8hpp.html":[1,0,0,1,18],
-"Texture_8hpp_source.html":[1,0,0,1,18],
+"Texture_8hpp.html":[1,0,0,1,19],
+"Texture_8hpp_source.html":[1,0,0,1,19],
 "Tree_8cpp.html":[1,0,0,2,16],
 "Tree_8hpp.html":[1,0,0,1,0,2],
 "Tree_8hpp.html#aba028b9fa75702386100892732a4e800":[1,0,0,1,0,2,3],
 "Tree_8hpp_source.html":[1,0,0,1,0,2],
 "VAO_8cpp.html":[1,0,0,2,17],
-"VAO_8hpp.html":[1,0,0,1,19],
-"VAO_8hpp_source.html":[1,0,0,1,19],
+"VAO_8hpp.html":[1,0,0,1,20],
+"VAO_8hpp_source.html":[1,0,0,1,20],
 "VBO_8cpp.html":[1,0,0,2,18],
-"VBO_8hpp.html":[1,0,0,1,20],
-"VBO_8hpp_source.html":[1,0,0,1,20],
+"VBO_8hpp.html":[1,0,0,1,21],
+"VBO_8hpp_source.html":[1,0,0,1,21],
 "Voxeloop_8cpp.html":[1,0,0,2,19],
-"Voxeloop_8hpp.html":[1,0,0,1,21],
-"Voxeloop_8hpp_source.html":[1,0,0,1,21],
+"Voxeloop_8hpp.html":[1,0,0,1,22],
+"Voxeloop_8hpp_source.html":[1,0,0,1,22],
 "WindowManager_8cpp.html":[1,0,0,2,20],
 "WindowManager_8cpp.html#abcfcb7addcee931ebf29a17a36534504":[1,0,0,2,20,0],
-"WindowManager_8hpp.html":[1,0,0,1,22],
-"WindowManager_8hpp_source.html":[1,0,0,1,22],
+"WindowManager_8hpp.html":[1,0,0,1,23],
+"WindowManager_8hpp_source.html":[1,0,0,1,23],
 "annotated.html":[0,1],
 "classAboutState.html":[0,1,0],
 "classAboutState.html#a09295ba2e534961afaa9b45b4a383ffe":[0,1,0,9],
@@ -247,7 +252,11 @@ var NAVTREEINDEX0 =
 "classPlayState.html#a58b4dca3663173f2080bb35243acf4aa":[0,1,12,3],
 "classPlayState.html#a5c135eed71fd8dbf30b75e577c28ad0d":[0,1,12,7],
 "classPlayState.html#a6a46a82e229d66dae0c68244faa7ade3":[0,1,12,5],
+<<<<<<< HEAD
 "classPlayState.html#a911bd5c25e277094bf8ec43b72116112":[0,1,12,10],
 "classPlayState.html#ad3f3f9c827b499c605782ae71e0c1310":[0,1,12,2],
 "classPlayState.html#ad4dda6c0b72ce34bd9caaade8a5562b9":[0,1,12,8]
+=======
+"classPlayState.html#a911bd5c25e277094bf8ec43b72116112":[0,1,12,10]
+>>>>>>> fe59a9db95788ae3e5d6891ec8e72fe4354091fe
 };
