@@ -27,12 +27,21 @@ jobs:
           touch docs/.dummy && echo "There is nothing here!" > docs/.dummy
           cd build
           doxygen ../Doxyfile.ini
-          
-      - name: Commit files
+    
+      - name: Commit updated file(s) back to this repository
         run: |
-          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git commit -m "Update documentation" -a
+          git config user.name "github-actions[bot]"
+          git config user.email github-actions@github.com
+          git add docs
+          git diff-index --quiet HEAD || git commit -m "Update documentation"
+          git fetch
+          git push
+          
+#       - name: Commit files
+#         run: |
+#           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+#           git config --local user.name "github-actions[bot]"
+#           git commit -m "Update documentation" -a
           
 #       - name: Deploy
 #         uses: s0/git-publish-subdir-action@develop
@@ -43,9 +52,9 @@ jobs:
 #           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 #           MESSAGE: Update documentation for commit {sha}
 
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: gh-pages
-          directory: docs
+#       - name: Push changes
+#         uses: ad-m/github-push-action@master
+#         with:
+#           github_token: ${{ secrets.GITHUB_TOKEN }}
+#           branch: gh-pages
+#           directory: docs
