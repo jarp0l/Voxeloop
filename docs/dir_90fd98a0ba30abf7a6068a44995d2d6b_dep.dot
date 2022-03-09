@@ -1,0 +1,11 @@
+digraph "/home/runner/work/Voxeloop/Voxeloop/core/src" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_4270bfced15e0e73154b13468c7c9ad9 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="core" fontname="Helvetica", fontsize="10", URL="dir_4270bfced15e0e73154b13468c7c9ad9.html"]
+  dir_90fd98a0ba30abf7a6068a44995d2d6b [shape=box, label="src", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_90fd98a0ba30abf7a6068a44995d2d6b.html"];
+  }
+  dir_24d671cfcbc5d5238a6bd565a49d198f [shape=box label="include" fillcolor="white" style="filled" color="red" URL="dir_24d671cfcbc5d5238a6bd565a49d198f.html"];
+  dir_90fd98a0ba30abf7a6068a44995d2d6b->dir_24d671cfcbc5d5238a6bd565a49d198f [headlabel="23", labeldistance=1.5 headhref="dir_000004_000002.html"];
+}
