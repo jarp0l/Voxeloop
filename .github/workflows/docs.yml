@@ -21,6 +21,7 @@ jobs:
         run: |
           if [ ! -d build ]; then mkdir build; fi
           if [ ! -d docs ]; then mkdir docs; fi
+          touch docs/.dummy && echo "There is nothing here!" > docs/.dummy
           cd build
           doxygen ../Doxyfile.ini
           
