@@ -7,7 +7,7 @@ digraph "Audio"
   Node1 [label="{Audio\n|- engine\l- result\l- sounds\l|+ Audio()\l+ ~Audio()\l+ setAudio()\l+ play()\l+ addAudio()\l+ updateList()\l+ traverseList()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node2 -> Node1 [color="grey25",fontsize="10",style="solid",label=" -currentSound" ,arrowhead="odiamond",fontname="Helvetica"];
   Node2 [label="{TreeNode\n||}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structTreeNode.html",tooltip=" "];
-  Node2 -> Node2 [color="grey25",fontsize="10",style="solid",label=" +right\n+left" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node2 -> Node2 [color="grey25",fontsize="10",style="solid",label=" +prev\n+right\n+left" ,arrowhead="odiamond",fontname="Helvetica"];
   Node3 -> Node2 [color="grey25",fontsize="10",style="solid",label=" +value" ,arrowhead="odiamond",fontname="Helvetica"];
   Node3 [label="{TreeData\n|+ key\l+ mvmt\l|}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structTreeData.html",tooltip=" "];
   Node4 -> Node1 [color="grey25",fontsize="10",style="solid",label=" -tree" ,arrowhead="odiamond",fontname="Helvetica"];

@@ -1,10 +1,9 @@
 #include "Cube.hpp"
 
-
-Cube::Cube() :
-  shader {"../core/shaders/default.vert", "../core/shaders/default.frag"},
-  _vertices {
-                   // clang-format off
+Cube::Cube()
+    : shader{"../core/shaders/default.vert", "../core/shaders/default.frag"},
+      _vertices{
+          // clang-format off
                    //   POSITIONS                            /  COLORS                       / TEXTURE COORDS
                    // Face 1
                    -0.125f,   0.125f,  0.125f,  0.0f,  0.0f,  0.0f,  0.0f,  0.0f, // Upper left corner - f
@@ -43,10 +42,10 @@ Cube::Cube() :
                    -0.125f, -0.125f, -0.125f,  0.0f,  0.0f,  0.0f,  1.0f,  1.0f,  // Lower left corner - b
                    0.125f, -0.125f, -0.125f,  0.0f,  0.0f,  0.0f,  0.0f,  1.0f // Lower right corner - b
 
-                    // clang-format on
-               },
-  _indices {
-                   // clang-format off
+          // clang-format on
+      },
+      _indices{
+          // clang-format off
                    // face 1
                    0, 1, 2,
                    2, 3, 0,
@@ -81,11 +80,10 @@ Cube::Cube() :
                    // face 6
                    20, 21, 22,
                    22, 23, 20
-                   // clang-format on
-            },
-  texture {"../core/textures/great_img.png", GL_TEXTURE_2D, GL_TEXTURE0,
-                                 GL_RGB, GL_UNSIGNED_BYTE}
-{
+          // clang-format on
+      },
+      texture{"../core/textures/great_img.png", GL_TEXTURE_2D, GL_TEXTURE0,
+              GL_RGB, GL_UNSIGNED_BYTE} {
   vao.bind();
 
   vbo.setup(_vertices, sizeof(_vertices));
