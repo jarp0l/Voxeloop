@@ -20,6 +20,8 @@
     - [Play Screen](#play-screen)
 - [Acknowledgements](#acknowledgements)
 
+**Course project for 4th sem [BEI II/II] of DSA and Computer Graphics**
+
 ## Documentation
 Online documentation of the project is available at: 
 [https://jarp0l.github.io/Voxeloop](https://jarp0l.github.io/Voxeloop)
