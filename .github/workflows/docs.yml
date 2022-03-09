@@ -20,6 +20,7 @@ jobs:
       - name: Run doxygen
         run: |
           if [ ! -d build ]; then mkdir build; fi
+          if [ ! -d docs ]; then mkdir docs; fi
           cd build
           doxygen ../Doxyfile.ini
           
