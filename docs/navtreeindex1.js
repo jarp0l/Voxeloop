@@ -1,6 +1,5 @@
 var NAVTREEINDEX1 =
 {
-"classPlayState.html#af49af6d2bc865f0912a0c4e91f00de1a":[0,1,12,1],
 "classSettingsState.html":[0,1,13],
 "classSettingsState.html#a0039be756cbdc958613eca25edb2cb99":[0,1,13,0],
 "classSettingsState.html#a03222967d2c8716722e9fa85917e7829":[0,1,13,5],
@@ -112,8 +111,8 @@ var NAVTREEINDEX1 =
 "dir_4270bfced15e0e73154b13468c7c9ad9.html":[1,0,0],
 "dir_90fd98a0ba30abf7a6068a44995d2d6b.html":[1,0,0,2],
 "files.html":[1,0],
-"functions.html":[0,4,0,0],
 "functions.html":[0,4,0],
+"functions.html":[0,4,0,0],
 "functions_a.html":[0,4,0,1],
 "functions_b.html":[0,4,0,2],
 "functions_c.html":[0,4,0,3],
