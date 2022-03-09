@@ -1,11 +1,12 @@
 <map id="/home/prajol329/Projects/campus/project/ws/Voxeloop/core/include/Audio.hpp" name="/home/prajol329/Projects/campus/project/ws/Voxeloop/core/include/Audio.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="475,5,685,61"/>
-<area shape="rect" id="node2" href="$Voxeloop_8hpp.html" title=" " alt="" coords="357,109,568,165"/>
-<area shape="rect" id="node9" href="$Audio_8cpp.html" title=" " alt="" coords="592,109,803,165"/>
-<area shape="rect" id="node3" href="$PlayState_8hpp.html" title=" " alt="" coords="215,213,425,269"/>
-<area shape="rect" id="node7" href="$PlayState_8cpp.html" title=" " alt="" coords="357,317,568,373"/>
-<area shape="rect" id="node8" href="$Voxeloop_8cpp.html" title=" " alt="" coords="500,213,711,269"/>
-<area shape="rect" id="node4" href="$MenuState_8hpp.html" title=" " alt="" coords="123,317,333,373"/>
-<area shape="rect" id="node5" href="$main_8cpp.html" title=" " alt="" coords="5,421,216,477"/>
-<area shape="rect" id="node6" href="$MenuState_8cpp.html" title=" " alt="" coords="240,421,451,477"/>
+<area shape="rect" id="node1" title=" " alt="" coords="428,5,639,61"/>
+<area shape="rect" id="node2" href="$Voxeloop_8hpp.html" title=" " alt="" coords="311,109,521,165"/>
+<area shape="rect" id="node10" href="$Audio_8cpp.html" title=" " alt="" coords="545,109,756,165"/>
+<area shape="rect" id="node3" href="$Main_8hpp.html" title=" " alt="" coords="5,213,216,269"/>
+<area shape="rect" id="node4" href="$PlayState_8hpp.html" title=" " alt="" coords="240,213,451,269"/>
+<area shape="rect" id="node8" href="$PlayState_8cpp.html" title=" " alt="" coords="383,317,593,373"/>
+<area shape="rect" id="node9" href="$Voxeloop_8cpp.html" title=" " alt="" coords="525,213,736,269"/>
+<area shape="rect" id="node5" href="$MenuState_8hpp.html" title=" " alt="" coords="148,317,359,373"/>
+<area shape="rect" id="node6" href="$main_8cpp.html" title=" " alt="" coords="31,421,241,477"/>
+<area shape="rect" id="node7" href="$MenuState_8cpp.html" title=" " alt="" coords="265,421,476,477"/>
 </map>
