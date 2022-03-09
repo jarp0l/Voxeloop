@@ -1,20 +1,19 @@
 <map id="/home/prajol329/Projects/campus/project/ws/Voxeloop/core/src/CoreEngine.cpp" name="/home/prajol329/Projects/campus/project/ws/Voxeloop/core/src/CoreEngine.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="989,5,1199,61"/>
-<area shape="rect" id="node2" href="$CoreEngine_8hpp.html" title=" " alt="" coords="925,184,1049,211"/>
-<area shape="rect" id="node8" title=" " alt="" coords="1014,483,1126,509"/>
-<area shape="rect" id="node18" href="$StateMachine_8hpp.html" title=" " alt="" coords="918,109,1057,136"/>
-<area shape="rect" id="node3" href="$Common_8hpp.html" title=" " alt="" coords="579,259,689,285"/>
-<area shape="rect" id="node16" title=" " alt="" coords="914,259,975,285"/>
-<area shape="rect" id="node17" title=" " alt="" coords="1000,259,1063,285"/>
-<area shape="rect" id="node4" href="$GUIManager_8hpp.html" title=" " alt="" coords="621,333,751,360"/>
-<area shape="rect" id="node6" href="$WindowManager_8hpp.html" title=" " alt="" coords="5,408,164,435"/>
-<area shape="rect" id="node15" title=" " alt="" coords="469,333,546,360"/>
-<area shape="rect" id="node5" title=" " alt="" coords="755,408,982,435"/>
-<area shape="rect" id="node9" title=" " alt="" coords="530,483,610,509"/>
-<area shape="rect" id="node10" href="$Bindings_8hpp.html" title=" " alt="" coords="1108,408,1267,435"/>
-<area shape="rect" id="node11" title=" " alt="" coords="188,408,259,435"/>
-<area shape="rect" id="node12" title=" " alt="" coords="283,408,425,435"/>
-<area shape="rect" id="node13" title=" " alt="" coords="449,408,616,435"/>
-<area shape="rect" id="node14" title=" " alt="" coords="641,408,731,435"/>
-<area shape="rect" id="node7" title=" " alt="" coords="45,483,124,509"/>
+<area shape="rect" id="node1" title=" " alt="" coords="966,5,1177,61"/>
+<area shape="rect" id="node2" href="$CoreEngine_8hpp.html" title=" " alt="" coords="903,184,1027,211"/>
+<area shape="rect" id="node8" title=" " alt="" coords="1017,483,1129,509"/>
+<area shape="rect" id="node17" href="$StateMachine_8hpp.html" title=" " alt="" coords="895,109,1034,136"/>
+<area shape="rect" id="node3" href="$Common_8hpp.html" title=" " alt="" coords="801,259,910,285"/>
+<area shape="rect" id="node15" title=" " alt="" coords="934,259,995,285"/>
+<area shape="rect" id="node16" title=" " alt="" coords="1020,259,1083,285"/>
+<area shape="rect" id="node4" href="$GUIManager_8hpp.html" title=" " alt="" coords="583,333,714,360"/>
+<area shape="rect" id="node6" href="$WindowManager_8hpp.html" title=" " alt="" coords="875,408,1033,435"/>
+<area shape="rect" id="node14" title=" " alt="" coords="893,333,970,360"/>
+<area shape="rect" id="node5" title=" " alt="" coords="311,408,538,435"/>
+<area shape="rect" id="node9" title=" " alt="" coords="673,483,753,509"/>
+<area shape="rect" id="node10" title=" " alt="" coords="613,408,684,435"/>
+<area shape="rect" id="node11" title=" " alt="" coords="709,408,850,435"/>
+<area shape="rect" id="node12" title=" " alt="" coords="5,408,172,435"/>
+<area shape="rect" id="node13" title=" " alt="" coords="197,408,287,435"/>
+<area shape="rect" id="node7" title=" " alt="" coords="913,483,992,509"/>
 </map>
