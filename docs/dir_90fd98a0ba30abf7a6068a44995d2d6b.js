@@ -14,7 +14,6 @@ var dir_90fd98a0ba30abf7a6068a44995d2d6b =
     [ "PlayState.cpp", "PlayState_8cpp.html", null ],
     [ "SettingsState.cpp", "SettingsState_8cpp.html", null ],
     [ "Shader.cpp", "Shader_8cpp.html", null ],
-    [ "TemplateState.cpp", "TemplateState_8cpp.html", null ],
     [ "Texture.cpp", "Texture_8cpp.html", "Texture_8cpp" ],
     [ "Tree.cpp", "Tree_8cpp.html", null ],
     [ "VAO.cpp", "VAO_8cpp.html", null ],
