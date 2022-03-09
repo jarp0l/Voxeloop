@@ -50,7 +50,11 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "AboutState_8cpp.html",
+<<<<<<< HEAD
 "classPlayState.html#ad3f3f9c827b499c605782ae71e0c1310"
+=======
+"classSettingsState.html"
+>>>>>>> 4774350b200a45a623022c099ebacff5a422fc2f
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
