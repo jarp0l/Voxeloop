@@ -1,4 +1,5 @@
 #include "GUIManager.hpp"
+#include "External/IconsFontAwesome5.h"
 #include "imgui.h"
 
 GUIManager::GUIManager() {}
@@ -140,8 +141,16 @@ uint8_t GUIManager::renderSettings(WindowManager *window) {
   ImGui::SetWindowPos(ImVec2(ImGuiWinX, ImGuiWinY));
   ImGui::SetWindowSize(ImVec2(550, 550));
 
-  ImGui::Text("Test");
+  ImGui::Text("Available key bindings:");
+  ImGui::Text("\t\tA");
+  ImGui::Text("\t\tS");
+  ImGui::Text("\t\tD");
+  ImGui::Text("\t\tF");
 
+  ImGui::Text("\t\tJ");
+  ImGui::Text("\t\tK");
+  ImGui::Text("\t\tL");
+  ImGui::Text("\t\t;");
   ImGui::End();
 
   if (this->renderBackButton())
