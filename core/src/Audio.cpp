@@ -74,8 +74,9 @@ void Audio::updateList() {
 
 void Audio::traverseList(float mvmt) {
 
-  if (currentSound == nullptr) return;
-  if(currentSound->value->mvmt >= mvmt) {
+  if (currentSound == nullptr)
+    return;
+  if (currentSound->value->mvmt >= mvmt) {
     play(currentSound->value->key);
     currentSound = currentSound->right;
   }

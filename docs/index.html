@@ -23,6 +23,9 @@
 /* @license-end */
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
 <script type="text/javascript"> DoxygenAwesomeDarkModeToggle.init() </script>
 </head>
@@ -103,10 +106,15 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 <div class="textblock"><h2><a class="anchor" id="autotoc_md1"></a>
 Musical Loop Generation in Voxel World</h2>
 <p><a href="https://github.com/jarp0l/Voxeloop/actions/workflows/docs.yml"><object type="image/svg+xml" data="https://github.com/jarp0l/Voxeloop/actions/workflows/docs.yml/badge.svg" style="pointer-events: none;">.github/workflows/docs.yml</object></a></p>
-<p><b>Build using CMake</b> </p><div class="fragment"><div class="line">mkdir build</div>
+<p><b>Build using CMake</b> If you have ninja installed </p><div class="fragment"><div class="line">mkdir build</div>
 <div class="line">cd build</div>
-<div class="line">cmake ..</div>
+<div class="line">cmake .. -G Ninja</div>
 <div class="line">ninja</div>
+<div class="line">./voxeloop</div>
+</div><!-- fragment --><p>Alternatively </p><div class="fragment"><div class="line">mkdir build</div>
+<div class="line">cd build</div>
+<div class="line">cmake</div>
+<div class="line">make</div>
 <div class="line">./voxeloop</div>
 </div><!-- fragment --> </div></div><!-- PageDoc -->
 </div><!-- contents -->

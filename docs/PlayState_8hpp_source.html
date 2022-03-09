@@ -23,6 +23,9 @@
 /* @license-end */
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
 <script type="text/javascript"> DoxygenAwesomeDarkModeToggle.init() </script>
 </head>
@@ -128,18 +131,14 @@ $(document).ready(function(){initNavTree('PlayState_8hpp_source.html',''); initR
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classPlayState.html#a911bd5c25e277094bf8ec43b72116112">   27</a></span>&#160;  <span class="keyword">static</span> <a class="code" href="classPlayState.html">PlayState</a> <a class="code" href="classPlayState.html#a911bd5c25e277094bf8ec43b72116112">m_PlayState</a>;</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;=======</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classPlayState.html#a4e1ce03a72915355cff28ecbbc599868">   29</a></span>&#160;  <a class="code" href="Common_8hpp.html#a8fe7bc79a109db55ccbaa8fe3fac029b">SharedDataRef</a> <a class="code" href="classPlayState.html#a4e1ce03a72915355cff28ecbbc599868">m_sharedData</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classPlayState.html#a0b99992c1b9872b0d310e976a770fc74">   30</a></span>&#160;  <a class="code" href="classVoxeloop.html">Voxeloop</a> *<a class="code" href="classPlayState.html#a0b99992c1b9872b0d310e976a770fc74">voxeloop</a>;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;&gt;&gt;&gt;&gt;&gt;&gt;&gt; origin/improvements</div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classPlayState.html#a7d48742d271446a5280066a74e2ab8ee">   33</a></span>&#160;  <a class="code" href="Common_8hpp.html#a8fe7bc79a109db55ccbaa8fe3fac029b">SharedDataRef</a> <a class="code" href="classPlayState.html#a7d48742d271446a5280066a74e2ab8ee">m_sharedData</a>;</div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classPlayState.html#a0b99992c1b9872b0d310e976a770fc74">   34</a></span>&#160;  <a class="code" href="classVoxeloop.html">Voxeloop</a> *<a class="code" href="classPlayState.html#a0b99992c1b9872b0d310e976a770fc74">voxeloop</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classPlayState.html#a0f4d2739965fc05fb07f0db25a68a5c1">loop</a>();</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;};</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classPlayState.html#a0f4d2739965fc05fb07f0db25a68a5c1">loop</a>();</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;};</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#endif // CORE_INCLUDE_PLAYSTATE_HPP</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#endif // CORE_INCLUDE_PLAYSTATE_HPP</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aclassPlayState_html_ad3f3f9c827b499c605782ae71e0c1310"><div class="ttname"><a href="classPlayState.html#ad3f3f9c827b499c605782ae71e0c1310">PlayState::draw</a></div><div class="ttdeci">void draw(CoreEngine *engine)</div><div class="ttdef"><b>Definition:</b> PlayState.cpp:51</div></div>
@@ -158,12 +157,12 @@ $(document).ready(function(){initNavTree('PlayState_8hpp_source.html',''); initR
 <div class="ttc" id="aVoxeloop_8hpp_html"><div class="ttname"><a href="Voxeloop_8hpp.html">Voxeloop.hpp</a></div></div>
 <div class="ttc" id="aclassPlayState_html_a5c135eed71fd8dbf30b75e577c28ad0d"><div class="ttname"><a href="classPlayState.html#a5c135eed71fd8dbf30b75e577c28ad0d">PlayState::pause</a></div><div class="ttdeci">void pause()</div><div class="ttdef"><b>Definition:</b> PlayState.cpp:21</div></div>
 <div class="ttc" id="aclassPlayState_html_a0f4d2739965fc05fb07f0db25a68a5c1"><div class="ttname"><a href="classPlayState.html#a0f4d2739965fc05fb07f0db25a68a5c1">PlayState::loop</a></div><div class="ttdeci">void loop()</div></div>
-<div class="ttc" id="aclassPlayState_html_a7d48742d271446a5280066a74e2ab8ee"><div class="ttname"><a href="classPlayState.html#a7d48742d271446a5280066a74e2ab8ee">PlayState::m_sharedData</a></div><div class="ttdeci">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD=======&gt;&gt;&gt;&gt;&gt;&gt; origin improvements SharedDataRef m_sharedData</div><div class="ttdef"><b>Definition:</b> PlayState.hpp:33</div></div>
 <div class="ttc" id="aStateMachine_8hpp_html"><div class="ttname"><a href="StateMachine_8hpp.html">StateMachine.hpp</a></div></div>
+<div class="ttc" id="aclassPlayState_html_a4e1ce03a72915355cff28ecbbc599868"><div class="ttname"><a href="classPlayState.html#a4e1ce03a72915355cff28ecbbc599868">PlayState::m_sharedData</a></div><div class="ttdeci">SharedDataRef m_sharedData</div><div class="ttdef"><b>Definition:</b> PlayState.hpp:29</div></div>
 <div class="ttc" id="aclassVoxeloop_html"><div class="ttname"><a href="classVoxeloop.html">Voxeloop</a></div><div class="ttdef"><b>Definition:</b> Voxeloop.hpp:14</div></div>
 <div class="ttc" id="aCoreEngine_8hpp_html"><div class="ttname"><a href="CoreEngine_8hpp.html">CoreEngine.hpp</a></div></div>
 <div class="ttc" id="aCommon_8hpp_html_a8fe7bc79a109db55ccbaa8fe3fac029b"><div class="ttname"><a href="Common_8hpp.html#a8fe7bc79a109db55ccbaa8fe3fac029b">SharedDataRef</a></div><div class="ttdeci">std::shared_ptr&lt; GameData &gt; SharedDataRef</div><div class="ttdef"><b>Definition:</b> Common.hpp:14</div></div>
-<div class="ttc" id="aclassPlayState_html_a0b99992c1b9872b0d310e976a770fc74"><div class="ttname"><a href="classPlayState.html#a0b99992c1b9872b0d310e976a770fc74">PlayState::voxeloop</a></div><div class="ttdeci">Voxeloop * voxeloop</div><div class="ttdef"><b>Definition:</b> PlayState.hpp:34</div></div>
+<div class="ttc" id="aclassPlayState_html_a0b99992c1b9872b0d310e976a770fc74"><div class="ttname"><a href="classPlayState.html#a0b99992c1b9872b0d310e976a770fc74">PlayState::voxeloop</a></div><div class="ttdeci">Voxeloop * voxeloop</div><div class="ttdef"><b>Definition:</b> PlayState.hpp:30</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

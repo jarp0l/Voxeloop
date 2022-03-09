@@ -26,16 +26,16 @@ void Tree::flatten(TreeNode *node) {
 
   if (node->left != nullptr) {
     flatten(node->left);
-        node->left->prev = node->prev;
-        node->prev->right = node->left;
+    node->left->prev = node->prev;
+    node->prev->right = node->left;
 
-        TreeNode *tmp = node->left;
-        while (tmp->right != nullptr) {
-          tmp = tmp->right;
-        }
-        tmp->right = node;
-        node->prev = tmp;
-        node->left = nullptr;
+    TreeNode *tmp = node->left;
+    while (tmp->right != nullptr) {
+      tmp = tmp->right;
+    }
+    tmp->right = node;
+    node->prev = tmp;
+    node->left = nullptr;
   }
 
   flatten(node->right);
