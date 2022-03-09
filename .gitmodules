@@ -1,6 +1,3 @@
-[submodule "core/thirdparty/doxygen-awesome-css"]
-	path = core/thirdparty/doxygen-awesome-css
-	url = https://github.com/jothepro/doxygen-awesome-css.git
 [submodule "thirdparty/doxygen-awesome-css"]
 	path = thirdparty/doxygen-awesome-css
 	url = https://github.com/jothepro/doxygen-awesome-css.git
