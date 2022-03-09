@@ -28,6 +28,6 @@ jobs:
         env:
           REPO: self
           BRANCH: gh-pages
-          FOLDER: build
+          FOLDER: docs
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           MESSAGE: Update documentation for commit {sha} that had the message:\n{msg}
