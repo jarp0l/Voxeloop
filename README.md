@@ -6,6 +6,7 @@
 
 - [Voxeloop](#voxeloop)
     - [Musical Loop Generation in Voxel World](#musical-loop-generation-in-voxel-world)
+  - [To-Do](#to-do)
   - [Documentation](#documentation)
   - [Build](#build)
     - [Build using CMake](#build-using-cmake)
@@ -22,6 +23,15 @@
 
 **Course project for 4th sem [BEI II/II] of DSA and Computer Graphics**
 
+## To-Do
+This project is still under development. We have planned to do the following things:
+- [ ] Implement lighting and shadow in the voxels.
+- [ ] Add camera movement.
+- [ ] Add actual functionality to the 'Settings' screen, that means the feature to change some settings (music, key bindings) in the program itself.
+- [ ] Improve documentation.
+- [ ] Move documentation to another branch/repo and auto-generate it based on changes in the `main` branch.
+
+
 ## Documentation
 Online documentation of the project is available at: 
 [https://jarp0l.github.io/Voxeloop](https://jarp0l.github.io/Voxeloop)
@@ -30,6 +40,8 @@ Online documentation of the project is available at:
 Project report: [VOXELOOP__PRAJWOL_RUJAL_076BEI023_29.pdf](https://github.com/jarp0l/Voxeloop/blob/main/VOXELOOP__PRAJWOL_RUJAL_076BEI023_29.pdf)
 
 ## Build
+Before proceeding make sure that you have the required dependencies installed. Follow the steps in the official website of GLFW: [Installing dependencies](https://www.glfw.org/docs/latest/compile.html#compile_deps).
+
 ### Build using CMake
 
 (*Note: You must be in `build` directory.*)
