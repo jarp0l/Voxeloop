@@ -10,6 +10,7 @@ void Voxeloop::init(GLFWwindow *window) {
   // Initialize Project
   m_audio = new Audio;
   m_cubes = new Cubes;
+  m_lightsource = new LightSource;
 
   // Setup rotation
   m_prevTime = glfwGetTime();
@@ -22,6 +23,7 @@ void Voxeloop::init(GLFWwindow *window) {
 void Voxeloop::cleanup() {
   delete m_cubes;
   delete m_audio;
+  delete m_lightsource;
 
   std::cout << "[INFO] Voxeloop cleaned\n";
 }
@@ -52,6 +54,9 @@ void Voxeloop::loop() {
 
   m_cubes->scale(m_scale);
   m_cubes->draw();
+
+  // m_lightsource->activateShader();
+  // m_lightsource->draw();
 }
 
 void Voxeloop::key_callback(GLFWwindow *window, int key, int scancode,

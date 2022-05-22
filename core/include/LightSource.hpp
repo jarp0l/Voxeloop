@@ -14,8 +14,8 @@
 #include "VAO.hpp"
 #include "VBO.hpp"
 
-const uint32_t ls_verticesSize = 5;
-const uint32_t ls_indicesSize = 5;
+const uint32_t ls_verticesSize = 192;
+const uint32_t ls_indicesSize = 36;
 
 class LightSource {
 public:

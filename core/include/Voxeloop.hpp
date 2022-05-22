@@ -8,6 +8,7 @@
 #include "Audio.hpp"
 #include "Common.hpp"
 #include "Cubes.hpp"
+#include "LightSource.hpp"
 #include "LinkedList.hpp"
 #include "WindowManager.hpp"
 
@@ -27,6 +28,7 @@ private:
 
   Cubes *m_cubes;
   Audio *m_audio;
+  LightSource *m_lightsource;
 
   float m_mvmt;
   float m_scale;

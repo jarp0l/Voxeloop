@@ -18,7 +18,7 @@
 const uint32_t WinWidth = 800;
 const uint32_t WinHeight = 800;
 
-const uint8_t verticesSize = 192;
+const uint16_t verticesSize = 264;
 const uint8_t indicesSize = 36;
 
 class Cube {
@@ -29,6 +29,7 @@ public:
   void setScaleUniform();
   void setTexUinform();
   void setMatUniform();
+  void setColorUniform();
 
   void scale(float s);
   void rotate(float r);
@@ -37,6 +38,7 @@ public:
 
   void activateShader();
   void draw();
+  void toggleView();
 
 private:
   Shader shader;
@@ -49,6 +51,8 @@ private:
   VBO vbo;
   EBO ebo;
 
+  bool isPespective;
+
   // Model Matrix
   glm::mat4 model;
 
@@ -57,6 +61,12 @@ private:
 
   // Projection Matrix
   glm::mat4 proj;
+
+  // Light Color
+  glm::vec4 lightColor;
+
+  // Light Position
+  glm::vec3 lightPosition;
 
   GLuint scaleUniID;
 
