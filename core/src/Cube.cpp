@@ -160,13 +160,13 @@ void Cube::draw() {
 
   view = glm::translate(view, glm::vec3(xpos, ypos, -2.0f + zmove));
 
-  // if (isPespective) {
+  if (isPespective) {
     proj = glm::perspective(glm::radians(30.0f), (float)(WinWidth / WinHeight),
                           0.1f, 25.0f);
-  // } else {
-    // proj = glm::rotate(glm::ortho(-1.0f, 1.0f, 1.0f, -1.0f, -1000.0f, 1000.0f), 
-    //     glm::radians(225.0f), glm::vec3(-1.0f, 0.0f, 0.0f));
-  // }
+  } else {
+    proj = glm::rotate(glm::ortho(-1.0f, 1.0f, 1.0f, -1.0f, -1000.0f, 1000.0f), 
+        glm::radians(225.0f), glm::vec3(-1.0f, 0.0f, 0.0f));
+  }
 
   setMatUniform();
   setColorUniform();
