@@ -39,6 +39,7 @@ public:
   void activateShader();
   void draw();
   void toggleView();
+  void setPrespective(bool view);
 
 private:
   Shader shader;
@@ -51,7 +52,7 @@ private:
   VBO vbo;
   EBO ebo;
 
-  bool isPespective;
+  bool isPerspective;
 
   // Model Matrix
   glm::mat4 model;

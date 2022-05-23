@@ -96,7 +96,7 @@ Cube::Cube()
   lightColor = glm::vec4(0.0f, 0.28f, 0.49f, 1.0f);
   lightPosition = glm::vec3(0.0f, 0.0f, -1.0f);
 
-  isPespective = true;
+  isPerspective = true;
 }
 
 Cube::~Cube() {
@@ -135,7 +135,7 @@ void Cube::rotate(float r) { rotation += r; }
 
 void Cube::activateShader() { shader.activate(); }
 
-void Cube::toggleView() { isPespective = !isPespective; }
+void Cube::toggleView() { isPerspective = !isPerspective; }
 
 void Cube::setColorUniform() {
   int colorLoc = glGetUniformLocation(shader.ID, "lightColor");
@@ -144,6 +144,8 @@ void Cube::setColorUniform() {
   int lightPosLoc = glGetUniformLocation(shader.ID, "lightPos");
   glUniform3f(lightPosLoc, lightPosition.x, lightPosition.y, lightPosition.z);
 }
+
+void Cube::setPrespective(bool view) {isPerspective = view;}
 
 void Cube::draw() {
   // Model Matrix
@@ -160,7 +162,7 @@ void Cube::draw() {
 
   view = glm::translate(view, glm::vec3(xpos, ypos, -2.0f + zmove));
 
-  if (isPespective) {
+  if (isPerspective) {
     proj = glm::perspective(glm::radians(30.0f), (float)(WinWidth / WinHeight),
                           0.1f, 25.0f);
   } else {
