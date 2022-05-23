@@ -2,7 +2,7 @@
 
 Cube::Cube()
     : shader{"../core/shaders/default.vert", "../core/shaders/default.frag"},
-      _vertices{      
+      _vertices{
           // clang-format off
                    //   POSITIONS            |  COLORS            | TEX COORDS   | NORMALS
                    // Face 1
@@ -125,8 +125,6 @@ void Cube::setMatUniform() {
   // Uniform for projection matrix
   int projLoc = glGetUniformLocation(shader.ID, "proj");
   glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(proj));
-
-  
 }
 
 void Cube::scale(float s) { glUniform1f(scaleUniID, s); }
@@ -145,7 +143,7 @@ void Cube::setColorUniform() {
   glUniform3f(lightPosLoc, lightPosition.x, lightPosition.y, lightPosition.z);
 }
 
-void Cube::setPrespective(bool view) {isPerspective = view;}
+void Cube::setPrespective(bool view) { isPerspective = view; }
 
 void Cube::draw() {
   // Model Matrix
@@ -157,17 +155,16 @@ void Cube::draw() {
   // Projection Matrix
   proj = glm::mat4(1.0f);
 
-  model =
-      glm::rotate(model, glm::radians(0.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+  model = glm::rotate(model, glm::radians(0.0f), glm::vec3(0.0f, 1.0f, 0.0f));
 
   view = glm::translate(view, glm::vec3(xpos, ypos, -2.0f + zmove));
 
   if (isPerspective) {
     proj = glm::perspective(glm::radians(30.0f), (float)(WinWidth / WinHeight),
-                          0.1f, 25.0f);
+                            0.1f, 25.0f);
   } else {
-    proj = glm::rotate(glm::ortho(-1.0f, 1.0f, 1.0f, -1.0f, -1000.0f, 1000.0f), 
-        glm::radians(225.0f), glm::vec3(-1.0f, 0.0f, 0.0f));
+    proj = glm::rotate(glm::ortho(-1.0f, 1.0f, 1.0f, -1.0f, -1000.0f, 1000.0f),
+                       glm::radians(225.0f), glm::vec3(-1.0f, 0.0f, 0.0f));
   }
 
   setMatUniform();

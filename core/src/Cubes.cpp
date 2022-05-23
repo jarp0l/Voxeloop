@@ -1,8 +1,9 @@
 #include "Cubes.hpp"
 
-
-Cubes::Cubes() { list = new LinkedList<Cube *>; 
-isPerspective = true;}
+Cubes::Cubes() {
+  list = new LinkedList<Cube *>;
+  isPerspective = true;
+}
 
 Cubes::~Cubes() { delete list; }
 
@@ -74,8 +75,6 @@ void Cubes::setPerspective(bool view) {
   }
 }
 
-void Cubes::setPerVal(bool view) {
-  isPerspective = view;
-}
+void Cubes::setPerVal(bool view) { isPerspective = view; }
 
 void Cubes::clean() {}

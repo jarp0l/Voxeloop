@@ -23,7 +23,7 @@ public:
   void setPerVal(bool view);
 
 private:
-  LinkedList <Cube*> *list;
+  LinkedList<Cube *> *list;
   bool isPerspective;
 };
 
