@@ -22,6 +22,7 @@ void Voxeloop::init(GLFWwindow *window) {
 void Voxeloop::cleanup() {
   delete m_cubes;
   delete m_audio;
+  // delete m_lightsource;
 
   std::cout << "[INFO] Voxeloop cleaned\n";
 }
@@ -124,6 +125,14 @@ void Voxeloop::key_callback(GLFWwindow *window, int key, int scancode,
       if (key == GLFW_KEY_SEMICOLON) {
         cubes->addCube();
         audio->addAudio(';', *mvmt);
+      }
+
+      if (key == GLFW_KEY_HOME) {
+        cubes->setPerVal(true);
+      }
+
+      if (key == GLFW_KEY_END) {
+        cubes->setPerVal(false);
       }
     }
 

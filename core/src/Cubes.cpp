@@ -1,7 +1,9 @@
 #include "Cubes.hpp"
 
-
-Cubes::Cubes() { list = new LinkedList<Cube *>; }
+Cubes::Cubes() {
+  list = new LinkedList<Cube *>;
+  isPerspective = true;
+}
 
 Cubes::~Cubes() { delete list; }
 
@@ -43,6 +45,7 @@ void Cubes::scale(float s) {
 }
 
 void Cubes::draw() {
+  setPerspective(isPerspective);
   if (list->head == nullptr)
     return;
   struct Node<Cube *> *thead = list->head;
@@ -61,5 +64,17 @@ void Cubes::activateShader() {
     thead = thead->next;
   }
 }
+
+void Cubes::setPerspective(bool view) {
+  if (list->head == nullptr)
+    return;
+  struct Node<Cube *> *thead = list->head;
+  while (thead != nullptr) {
+    thead->data->setPrespective(view);
+    thead = thead->next;
+  }
+}
+
+void Cubes::setPerVal(bool view) { isPerspective = view; }
 
 void Cubes::clean() {}
