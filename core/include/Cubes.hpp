@@ -19,8 +19,12 @@ public:
   void activateShader();
   void clean();
 
+  void setPerspective(bool view);
+  void setPerVal(bool view);
+
 private:
   LinkedList <Cube*> *list;
+  bool isPerspective;
 };
 
 #endif // VOXELOOP_CUBES_HPP
