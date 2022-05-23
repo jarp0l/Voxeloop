@@ -151,6 +151,10 @@ uint8_t GUIManager::renderSettings(WindowManager *window) {
   ImGui::Text("\t\tK");
   ImGui::Text("\t\tL");
   ImGui::Text("\t\t;");
+
+  ImGui::Text("\t\tHOME");
+  ImGui::Text("\t\tEND");
+  ImGui::Text("\t\tSPACE");
   ImGui::End();
 
   if (this->renderBackButton())

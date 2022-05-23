@@ -10,15 +10,15 @@ Audio::Audio() {
 
   std::stringstream aBinding, sBinding, dBinding, fBinding, jBinding, kBinding,
       lBinding, scolonBinding, spaceBinding;
-  aBinding << "../core/audio/" << KEY_A_BINDING;
-  sBinding << "../core/audio/" << KEY_S_BINDING;
-  dBinding << "../core/audio/" << KEY_D_BINDING;
-  fBinding << "../core/audio/" << KEY_F_BINDING;
-  jBinding << "../core/audio/" << KEY_J_BINDING;
-  kBinding << "../core/audio/" << KEY_K_BINDING;
-  lBinding << "../core/audio/" << KEY_L_BINDING;
-  scolonBinding << "../core/audio/" << KEY_SEMICOLON_BINDING;
-  spaceBinding << "../core/audio/" << KEY_SPACE_BINDING;
+  aBinding << "../core/assets/audio/" << KEY_A_BINDING;
+  sBinding << "../core/assets/audio/" << KEY_S_BINDING;
+  dBinding << "../core/assets/audio/" << KEY_D_BINDING;
+  fBinding << "../core/assets/audio/" << KEY_F_BINDING;
+  jBinding << "../core/assets/audio/" << KEY_J_BINDING;
+  kBinding << "../core/assets/audio/" << KEY_K_BINDING;
+  lBinding << "../core/assets/audio/" << KEY_L_BINDING;
+  scolonBinding << "../core/assets/audio/" << KEY_SEMICOLON_BINDING;
+  spaceBinding << "../core/assets/audio/" << KEY_SPACE_BINDING;
 
   // spaceBinding << getBinding(KEY_SPACE_BINDING);
 

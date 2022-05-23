@@ -1,7 +1,7 @@
 #ifndef VOXELOOP_AUDIO_HPP
 #define VOXELOOP_AUDIO_HPP
 
-#include "../audio/Bindings.hpp"
+#include "../assets/audio/Bindings.hpp"
 #include "Tree.hpp"
 
 #include <miniaudio.h>

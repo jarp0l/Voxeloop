@@ -83,48 +83,50 @@ void Voxeloop::key_callback(GLFWwindow *window, int key, int scancode,
     audio->updateList();
   } else {
     if (action == GLFW_PRESS) {
-      if (key == GLFW_KEY_ESCAPE) {
+      switch (key) {
+      case GLFW_KEY_ESCAPE:
         win->close();
-      }
+        break;
 
-      if (key == GLFW_KEY_A) {
+      case GLFW_KEY_A:
         cubes->addCube();
         audio->addAudio('a', *mvmt);
-      }
+        break;
 
-      if (key == GLFW_KEY_S) {
+      case GLFW_KEY_S:
         cubes->addCube();
         audio->addAudio('s', *mvmt);
-      }
+        break;
 
-      if (key == GLFW_KEY_D) {
+      case GLFW_KEY_D:
         cubes->addCube();
         audio->addAudio('d', *mvmt);
-      }
+        break;
 
-      if (key == GLFW_KEY_F) {
+      case GLFW_KEY_F:
         cubes->addCube();
         audio->addAudio('f', *mvmt);
-      }
+        break;
 
-      if (key == GLFW_KEY_J) {
+      case GLFW_KEY_J:
         cubes->addCube();
         audio->addAudio('j', *mvmt);
-      }
+        break;
 
-      if (key == GLFW_KEY_K) {
+      case GLFW_KEY_K:
         cubes->addCube();
         audio->addAudio('k', *mvmt);
-      }
+        break;
 
-      if (key == GLFW_KEY_L) {
+      case GLFW_KEY_L:
         cubes->addCube();
         audio->addAudio('l', *mvmt);
-      }
+        break;
 
-      if (key == GLFW_KEY_SEMICOLON) {
+      case GLFW_KEY_SEMICOLON:
         cubes->addCube();
         audio->addAudio(';', *mvmt);
+        break;
       }
 
       if (key == GLFW_KEY_HOME) {

@@ -12,7 +12,6 @@
 #include <imgui_impl_opengl3.h>
 
 #include <filesystem>
-#include <iostream>
 
 class GUIManager {
 public:
