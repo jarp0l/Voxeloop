@@ -1,13 +1,13 @@
-<map id="/home/prajol329/Projects/campus/project/ws/Voxeloop/core/src/GUIManager.cpp" name="/home/prajol329/Projects/campus/project/ws/Voxeloop/core/src/GUIManager.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="527,5,737,61"/>
-<area shape="rect" id="node2" href="$GUIManager_8hpp.html" title=" " alt="" coords="567,109,697,136"/>
+<map id="/home/prajol329/Projects/campus/sem4/graphics/project/voxeloop/core/src/GUIManager.cpp" name="/home/prajol329/Projects/campus/sem4/graphics/project/voxeloop/core/src/GUIManager.cpp">
+<area shape="rect" id="node1" title=" " alt="" coords="435,5,687,61"/>
+<area shape="rect" id="node2" href="$GUIManager_8hpp.html" title=" " alt="" coords="496,109,627,136"/>
 <area shape="rect" id="node3" title=" " alt="" coords="5,184,232,211"/>
-<area shape="rect" id="node8" title=" " alt="" coords="1014,184,1085,211"/>
-<area shape="rect" id="node4" href="$WindowManager_8hpp.html" title=" " alt="" coords="779,184,938,211"/>
-<area shape="rect" id="node6" title=" " alt="" coords="920,259,1032,285"/>
-<area shape="rect" id="node7" title=" " alt="" coords="471,259,551,285"/>
-<area shape="rect" id="node9" title=" " alt="" coords="307,184,448,211"/>
-<area shape="rect" id="node10" title=" " alt="" coords="473,184,639,211"/>
-<area shape="rect" id="node11" title=" " alt="" coords="664,184,755,211"/>
-<area shape="rect" id="node5" title=" " alt="" coords="817,259,895,285"/>
+<area shape="rect" id="node8" title=" " alt="" coords="963,184,1034,211"/>
+<area shape="rect" id="node4" href="$WindowManager_8hpp.html" title=" " alt="" coords="257,184,415,211"/>
+<area shape="rect" id="node6" title=" " alt="" coords="399,259,511,285"/>
+<area shape="rect" id="node9" title=" " alt="" coords="491,184,632,211"/>
+<area shape="rect" id="node10" title=" " alt="" coords="657,184,823,211"/>
+<area shape="rect" id="node11" title=" " alt="" coords="848,184,939,211"/>
+<area shape="rect" id="node5" title=" " alt="" coords="191,259,270,285"/>
+<area shape="rect" id="node7" title=" " alt="" coords="295,259,375,285"/>
 </map>

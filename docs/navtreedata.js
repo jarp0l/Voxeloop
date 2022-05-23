@@ -25,23 +25,24 @@
 var NAVTREE =
 [
   [ "Voxeloop", "index.html", [
-    [ "Documentation", "index.html#autotoc_md2", null ],
-    [ "Build", "index.html#autotoc_md3", [
+    [ "To-Do", "index.html#autotoc_md2", null ],
+    [ "Documentation", "index.html#autotoc_md3", null ],
+    [ "Build", "index.html#autotoc_md4", [
       [ "Musical Loop Generation in Voxel World", "index.html#autotoc_md1", null ],
-      [ "Build using CMake", "index.html#autotoc_md4", [
-        [ "With <tt>ninja</tt>", "index.html#autotoc_md5", null ],
-        [ "With <tt>make</tt>", "index.html#autotoc_md6", null ]
+      [ "Build using CMake", "index.html#autotoc_md5", [
+        [ "With <tt>ninja</tt>", "index.html#autotoc_md6", null ],
+        [ "With <tt>make</tt>", "index.html#autotoc_md7", null ]
       ] ]
     ] ],
-    [ "Project By", "index.html#autotoc_md7", null ],
-    [ "Libraries Used", "index.html#autotoc_md8", null ],
-    [ "Screenshots of Program", "index.html#autotoc_md9", [
-      [ "Menu Screen", "index.html#autotoc_md10", null ],
-      [ "About Screen", "index.html#autotoc_md11", null ],
-      [ "Settings Screen", "index.html#autotoc_md12", null ],
-      [ "Play Screen", "index.html#autotoc_md13", null ]
+    [ "Project By", "index.html#autotoc_md8", null ],
+    [ "Libraries Used", "index.html#autotoc_md9", null ],
+    [ "Screenshots of Program", "index.html#autotoc_md10", [
+      [ "Menu Screen", "index.html#autotoc_md11", null ],
+      [ "About Screen", "index.html#autotoc_md12", null ],
+      [ "Settings Screen", "index.html#autotoc_md13", null ],
+      [ "Play Screen", "index.html#autotoc_md14", null ]
     ] ],
-    [ "Acknowledgements", "index.html#autotoc_md14", null ],
+    [ "Acknowledgements", "index.html#autotoc_md15", null ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
@@ -68,7 +69,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "AboutState_8cpp.html",
-"classSettingsState.html#a03222967d2c8716722e9fa85917e7829"
+"classShader.html#a7be2afcbd5ba5873a04536a2b4b5e576"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

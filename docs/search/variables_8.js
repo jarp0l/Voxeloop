@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['left_406',['left',['../structTreeNode.html#af4ab5453a9305f5620c0eb9ac360fb90',1,'TreeNode']]],
-  ['list_407',['list',['../classCubes.html#a6571f508f562ef377becd45b058477d2',1,'Cubes']]],
-  ['ls_5findicessize_408',['ls_indicesSize',['../LightSource_8hpp.html#a17c51cfe05f18b579d6c8714b1f7d839',1,'LightSource.hpp']]],
-  ['ls_5fverticessize_409',['ls_verticesSize',['../LightSource_8hpp.html#a7a9b060dfc7a352d2c799e574247b695',1,'LightSource.hpp']]]
+  ['left_405',['left',['../structTreeNode.html#af4ab5453a9305f5620c0eb9ac360fb90',1,'TreeNode']]],
+  ['lightcolor_406',['lightColor',['../classCube.html#aa87db186c9133aefdc2260242d2c8a73',1,'Cube']]],
+  ['lightposition_407',['lightPosition',['../classCube.html#a7857841161408c944e8888768878df47',1,'Cube']]],
+  ['list_408',['list',['../classCubes.html#aa60d2c2e9eccf4455e6264bdf9cc3598',1,'Cubes']]]
 ];

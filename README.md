@@ -25,7 +25,7 @@
 
 ## To-Do
 This project is still under development. We have planned to do the following things:
-- [ ] Implement lighting and shadow in the voxels.
+- [x] Implement lighting and shading in the voxels.
 - [ ] Add camera movement.
 - [ ] Add actual functionality to the 'Settings' screen, that means the feature to change some settings (music, key bindings) in the program itself.
 - [ ] Improve documentation.

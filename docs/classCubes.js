@@ -9,5 +9,8 @@ var classCubes =
     [ "move", "classCubes.html#abf5def350ab67c4d64451a81bc78b932", null ],
     [ "rotate", "classCubes.html#a1963c4eb36122d916ec258717da1c150", null ],
     [ "scale", "classCubes.html#af81a45eff1975057a12ea2c217e5f3d1", null ],
-    [ "list", "classCubes.html#a6571f508f562ef377becd45b058477d2", null ]
+    [ "setPerspective", "classCubes.html#aa088dc63855fc9267fdf05f7b1615a5b", null ],
+    [ "setPerVal", "classCubes.html#a97e52483ae568b6b007636b4254cddf0", null ],
+    [ "isPerspective", "classCubes.html#a6bd99d12e1863433d0e9b38acb0b4b4c", null ],
+    [ "list", "classCubes.html#aa60d2c2e9eccf4455e6264bdf9cc3598", null ]
 ];

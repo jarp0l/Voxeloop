@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Voxeloop: /home/prajol329/Projects/campus/project/ws/Voxeloop/core/include/GUIManager.hpp Source File</title>
+<title>Voxeloop: /home/prajol329/Projects/campus/sem4/graphics/project/voxeloop/core/include/GUIManager.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -117,55 +117,54 @@ $(document).ready(function(){initNavTree('GUIManager_8hpp_source.html',''); init
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;imgui_impl_opengl3.h&gt;</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;filesystem&gt;</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classGUIManager.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="classGUIManager.html">GUIManager</a> {</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  <a class="code" href="classGUIManager.html#a5587062fc64af58b9adbe5df4ba25097">GUIManager</a>();</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <a class="code" href="classGUIManager.html#a5587062fc64af58b9adbe5df4ba25097">GUIManager</a>(GLFWwindow *window);</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classGUIManager.html#adc523b70bc742fd128668cb8a3a6d3de">init</a>(GLFWwindow *window);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classGUIManager.html#ad0614326281593aeea5ee8947f532836">getFrame</a>();</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classGUIManager.html#a937deb45c1ae0b350898d3c6e4a2fd2a">render</a>();</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classGUIManager.html#a81d4f0d68d445ee0a4c78c5150f80ee5">begin</a>();</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classGUIManager.html#a20fe69a1e2631daadb6bb23c74a455d0">end</a>();</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  uint8_t <a class="code" href="classGUIManager.html#af78a28c68b469bb2bc65e08dffdcdfb3">renderMenu</a>(<a class="code" href="classWindowManager.html">WindowManager</a> *window);</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  uint8_t <a class="code" href="classGUIManager.html#a49e9265a2ff791073989d4162160d7e6">renderSettings</a>(<a class="code" href="classWindowManager.html">WindowManager</a> *window);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  uint8_t <a class="code" href="classGUIManager.html#a707629a1f0c23197ec8333ba45326a6e">renderAbout</a>(<a class="code" href="classWindowManager.html">WindowManager</a> *window);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classGUIManager.html#afc16731c0f51a8f6c88b258f62d38b6f">renderBackButton</a>();</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classGUIManager.html#af948e53ae14f248d6fe110c86db836e4">cleanup</a>();</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classGUIManager.html#a4e1a7873e94f406c1b6cb4c50d3f2aab">   36</a></span>&#160;  <a class="code" href="classGUIManager.html#a4e1a7873e94f406c1b6cb4c50d3f2aab">~GUIManager</a>() {}</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="comment">// ImVec4: 4D vector used to store clipping rectangles, colors etc.</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classGUIManager.html#aed59584949d83985fa29662e9793ad23">   40</a></span>&#160;  ImVec4 <a class="code" href="classGUIManager.html#aed59584949d83985fa29662e9793ad23">clearColor</a> = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);</div>
-<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="classGUIManager.html#a27169176b12c4d946637d64c7afdd837">   41</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classGUIManager.html#a27169176b12c4d946637d64c7afdd837">displayWidth</a>, <a class="code" href="classGUIManager.html#afb8afe0426f6f671268781d894566bcc">displayHeight</a>;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classGUIManager.html#a2b24d99b1865a3b7a606f84416a768bd">   43</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classGUIManager.html#a2b24d99b1865a3b7a606f84416a768bd">m_open</a>;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;};</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// CORE_INCLUDE_GUIMANAGER_HPP</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classGUIManager.html">   16</a></span>&#160;<span class="keyword">class </span><a class="code" href="classGUIManager.html">GUIManager</a> {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  <a class="code" href="classGUIManager.html#a5587062fc64af58b9adbe5df4ba25097">GUIManager</a>();</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  <a class="code" href="classGUIManager.html#a5587062fc64af58b9adbe5df4ba25097">GUIManager</a>(GLFWwindow *window);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classGUIManager.html#adc523b70bc742fd128668cb8a3a6d3de">init</a>(GLFWwindow *window);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classGUIManager.html#ad0614326281593aeea5ee8947f532836">getFrame</a>();</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classGUIManager.html#a937deb45c1ae0b350898d3c6e4a2fd2a">render</a>();</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classGUIManager.html#a81d4f0d68d445ee0a4c78c5150f80ee5">begin</a>();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classGUIManager.html#a20fe69a1e2631daadb6bb23c74a455d0">end</a>();</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  uint8_t <a class="code" href="classGUIManager.html#af78a28c68b469bb2bc65e08dffdcdfb3">renderMenu</a>(<a class="code" href="classWindowManager.html">WindowManager</a> *window);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  uint8_t <a class="code" href="classGUIManager.html#a49e9265a2ff791073989d4162160d7e6">renderSettings</a>(<a class="code" href="classWindowManager.html">WindowManager</a> *window);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  uint8_t <a class="code" href="classGUIManager.html#a707629a1f0c23197ec8333ba45326a6e">renderAbout</a>(<a class="code" href="classWindowManager.html">WindowManager</a> *window);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classGUIManager.html#afc16731c0f51a8f6c88b258f62d38b6f">renderBackButton</a>();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classGUIManager.html#af948e53ae14f248d6fe110c86db836e4">cleanup</a>();</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classGUIManager.html#a4e1a7873e94f406c1b6cb4c50d3f2aab">   35</a></span>&#160;  <a class="code" href="classGUIManager.html#a4e1a7873e94f406c1b6cb4c50d3f2aab">~GUIManager</a>() {}</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <span class="comment">// ImVec4: 4D vector used to store clipping rectangles, colors etc.</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classGUIManager.html#aed59584949d83985fa29662e9793ad23">   39</a></span>&#160;  ImVec4 <a class="code" href="classGUIManager.html#aed59584949d83985fa29662e9793ad23">clearColor</a> = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classGUIManager.html#a27169176b12c4d946637d64c7afdd837">   40</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classGUIManager.html#a27169176b12c4d946637d64c7afdd837">displayWidth</a>, <a class="code" href="classGUIManager.html#afb8afe0426f6f671268781d894566bcc">displayHeight</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classGUIManager.html#a2b24d99b1865a3b7a606f84416a768bd">   42</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classGUIManager.html#a2b24d99b1865a3b7a606f84416a768bd">m_open</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;};</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// CORE_INCLUDE_GUIMANAGER_HPP</span></div>
 <div class="ttc" id="aWindowManager_8hpp_html"><div class="ttname"><a href="WindowManager_8hpp.html">WindowManager.hpp</a></div></div>
-<div class="ttc" id="aclassGUIManager_html"><div class="ttname"><a href="classGUIManager.html">GUIManager</a></div><div class="ttdef"><b>Definition:</b> GUIManager.hpp:17</div></div>
+<div class="ttc" id="aclassGUIManager_html"><div class="ttname"><a href="classGUIManager.html">GUIManager</a></div><div class="ttdef"><b>Definition:</b> GUIManager.hpp:16</div></div>
 <div class="ttc" id="aclassGUIManager_html_a20fe69a1e2631daadb6bb23c74a455d0"><div class="ttname"><a href="classGUIManager.html#a20fe69a1e2631daadb6bb23c74a455d0">GUIManager::end</a></div><div class="ttdeci">void end()</div><div class="ttdef"><b>Definition:</b> GUIManager.cpp:56</div></div>
-<div class="ttc" id="aclassGUIManager_html_a27169176b12c4d946637d64c7afdd837"><div class="ttname"><a href="classGUIManager.html#a27169176b12c4d946637d64c7afdd837">GUIManager::displayWidth</a></div><div class="ttdeci">int displayWidth</div><div class="ttdef"><b>Definition:</b> GUIManager.hpp:41</div></div>
-<div class="ttc" id="aclassGUIManager_html_a2b24d99b1865a3b7a606f84416a768bd"><div class="ttname"><a href="classGUIManager.html#a2b24d99b1865a3b7a606f84416a768bd">GUIManager::m_open</a></div><div class="ttdeci">bool m_open</div><div class="ttdef"><b>Definition:</b> GUIManager.hpp:43</div></div>
+<div class="ttc" id="aclassGUIManager_html_a27169176b12c4d946637d64c7afdd837"><div class="ttname"><a href="classGUIManager.html#a27169176b12c4d946637d64c7afdd837">GUIManager::displayWidth</a></div><div class="ttdeci">int displayWidth</div><div class="ttdef"><b>Definition:</b> GUIManager.hpp:40</div></div>
+<div class="ttc" id="aclassGUIManager_html_a2b24d99b1865a3b7a606f84416a768bd"><div class="ttname"><a href="classGUIManager.html#a2b24d99b1865a3b7a606f84416a768bd">GUIManager::m_open</a></div><div class="ttdeci">bool m_open</div><div class="ttdef"><b>Definition:</b> GUIManager.hpp:42</div></div>
 <div class="ttc" id="aclassGUIManager_html_a49e9265a2ff791073989d4162160d7e6"><div class="ttname"><a href="classGUIManager.html#a49e9265a2ff791073989d4162160d7e6">GUIManager::renderSettings</a></div><div class="ttdeci">uint8_t renderSettings(WindowManager *window)</div><div class="ttdef"><b>Definition:</b> GUIManager.cpp:132</div></div>
-<div class="ttc" id="aclassGUIManager_html_a4e1a7873e94f406c1b6cb4c50d3f2aab"><div class="ttname"><a href="classGUIManager.html#a4e1a7873e94f406c1b6cb4c50d3f2aab">GUIManager::~GUIManager</a></div><div class="ttdeci">~GUIManager()</div><div class="ttdef"><b>Definition:</b> GUIManager.hpp:36</div></div>
+<div class="ttc" id="aclassGUIManager_html_a4e1a7873e94f406c1b6cb4c50d3f2aab"><div class="ttname"><a href="classGUIManager.html#a4e1a7873e94f406c1b6cb4c50d3f2aab">GUIManager::~GUIManager</a></div><div class="ttdeci">~GUIManager()</div><div class="ttdef"><b>Definition:</b> GUIManager.hpp:35</div></div>
 <div class="ttc" id="aclassGUIManager_html_a5587062fc64af58b9adbe5df4ba25097"><div class="ttname"><a href="classGUIManager.html#a5587062fc64af58b9adbe5df4ba25097">GUIManager::GUIManager</a></div><div class="ttdeci">GUIManager()</div><div class="ttdef"><b>Definition:</b> GUIManager.cpp:5</div></div>
-<div class="ttc" id="aclassGUIManager_html_a707629a1f0c23197ec8333ba45326a6e"><div class="ttname"><a href="classGUIManager.html#a707629a1f0c23197ec8333ba45326a6e">GUIManager::renderAbout</a></div><div class="ttdeci">uint8_t renderAbout(WindowManager *window)</div><div class="ttdef"><b>Definition:</b> GUIManager.cpp:162</div></div>
+<div class="ttc" id="aclassGUIManager_html_a707629a1f0c23197ec8333ba45326a6e"><div class="ttname"><a href="classGUIManager.html#a707629a1f0c23197ec8333ba45326a6e">GUIManager::renderAbout</a></div><div class="ttdeci">uint8_t renderAbout(WindowManager *window)</div><div class="ttdef"><b>Definition:</b> GUIManager.cpp:166</div></div>
 <div class="ttc" id="aclassGUIManager_html_a81d4f0d68d445ee0a4c78c5150f80ee5"><div class="ttname"><a href="classGUIManager.html#a81d4f0d68d445ee0a4c78c5150f80ee5">GUIManager::begin</a></div><div class="ttdeci">void begin()</div><div class="ttdef"><b>Definition:</b> GUIManager.cpp:54</div></div>
 <div class="ttc" id="aclassGUIManager_html_a937deb45c1ae0b350898d3c6e4a2fd2a"><div class="ttname"><a href="classGUIManager.html#a937deb45c1ae0b350898d3c6e4a2fd2a">GUIManager::render</a></div><div class="ttdeci">void render()</div><div class="ttdef"><b>Definition:</b> GUIManager.cpp:48</div></div>
 <div class="ttc" id="aclassGUIManager_html_ad0614326281593aeea5ee8947f532836"><div class="ttname"><a href="classGUIManager.html#ad0614326281593aeea5ee8947f532836">GUIManager::getFrame</a></div><div class="ttdeci">void getFrame()</div><div class="ttdef"><b>Definition:</b> GUIManager.cpp:41</div></div>
 <div class="ttc" id="aclassGUIManager_html_adc523b70bc742fd128668cb8a3a6d3de"><div class="ttname"><a href="classGUIManager.html#adc523b70bc742fd128668cb8a3a6d3de">GUIManager::init</a></div><div class="ttdeci">void init(GLFWwindow *window)</div><div class="ttdef"><b>Definition:</b> GUIManager.cpp:9</div></div>
-<div class="ttc" id="aclassGUIManager_html_aed59584949d83985fa29662e9793ad23"><div class="ttname"><a href="classGUIManager.html#aed59584949d83985fa29662e9793ad23">GUIManager::clearColor</a></div><div class="ttdeci">ImVec4 clearColor</div><div class="ttdef"><b>Definition:</b> GUIManager.hpp:40</div></div>
+<div class="ttc" id="aclassGUIManager_html_aed59584949d83985fa29662e9793ad23"><div class="ttname"><a href="classGUIManager.html#aed59584949d83985fa29662e9793ad23">GUIManager::clearColor</a></div><div class="ttdeci">ImVec4 clearColor</div><div class="ttdef"><b>Definition:</b> GUIManager.hpp:39</div></div>
 <div class="ttc" id="aclassGUIManager_html_af78a28c68b469bb2bc65e08dffdcdfb3"><div class="ttname"><a href="classGUIManager.html#af78a28c68b469bb2bc65e08dffdcdfb3">GUIManager::renderMenu</a></div><div class="ttdeci">uint8_t renderMenu(WindowManager *window)</div><div class="ttdef"><b>Definition:</b> GUIManager.cpp:79</div></div>
-<div class="ttc" id="aclassGUIManager_html_af948e53ae14f248d6fe110c86db836e4"><div class="ttname"><a href="classGUIManager.html#af948e53ae14f248d6fe110c86db836e4">GUIManager::cleanup</a></div><div class="ttdeci">void cleanup()</div><div class="ttdef"><b>Definition:</b> GUIManager.cpp:191</div></div>
-<div class="ttc" id="aclassGUIManager_html_afb8afe0426f6f671268781d894566bcc"><div class="ttname"><a href="classGUIManager.html#afb8afe0426f6f671268781d894566bcc">GUIManager::displayHeight</a></div><div class="ttdeci">int displayHeight</div><div class="ttdef"><b>Definition:</b> GUIManager.hpp:41</div></div>
+<div class="ttc" id="aclassGUIManager_html_af948e53ae14f248d6fe110c86db836e4"><div class="ttname"><a href="classGUIManager.html#af948e53ae14f248d6fe110c86db836e4">GUIManager::cleanup</a></div><div class="ttdeci">void cleanup()</div><div class="ttdef"><b>Definition:</b> GUIManager.cpp:195</div></div>
+<div class="ttc" id="aclassGUIManager_html_afb8afe0426f6f671268781d894566bcc"><div class="ttname"><a href="classGUIManager.html#afb8afe0426f6f671268781d894566bcc">GUIManager::displayHeight</a></div><div class="ttdeci">int displayHeight</div><div class="ttdef"><b>Definition:</b> GUIManager.hpp:40</div></div>
 <div class="ttc" id="aclassGUIManager_html_afc16731c0f51a8f6c88b258f62d38b6f"><div class="ttname"><a href="classGUIManager.html#afc16731c0f51a8f6c88b258f62d38b6f">GUIManager::renderBackButton</a></div><div class="ttdeci">bool renderBackButton()</div><div class="ttdef"><b>Definition:</b> GUIManager.cpp:58</div></div>
 <div class="ttc" id="aclassWindowManager_html"><div class="ttname"><a href="classWindowManager.html">WindowManager</a></div><div class="ttdef"><b>Definition:</b> WindowManager.hpp:12</div></div>
 </div><!-- fragment --></div><!-- contents -->

@@ -114,10 +114,10 @@ Collaboration diagram for Cubes:</div>
 <div class="dyncontent">
 <div class="center"><img src="classCubes__coll__graph.png" border="0" usemap="#aCubes_coll__map" alt="Collaboration graph"/></div>
 <map name="aCubes_coll__map" id="aCubes_coll__map">
-<area shape="rect" title=" " alt="" coords="227,947,372,1141"/>
-<area shape="rect" href="classLinkedList.html" title=" " alt="" coords="219,777,380,884"/>
-<area shape="rect" href="structNode.html" title=" " alt="" coords="234,637,365,715"/>
-<area shape="rect" href="classCube.html" title=" " alt="" coords="222,219,377,575"/>
+<area shape="rect" title=" " alt="" coords="227,1035,372,1259"/>
+<area shape="rect" href="classLinkedList.html" title=" " alt="" coords="219,865,380,972"/>
+<area shape="rect" href="structNode.html" title=" " alt="" coords="234,725,365,803"/>
+<area shape="rect" href="classCube.html" title=" " alt="" coords="222,219,377,663"/>
 <area shape="rect" href="classShader.html" title=" " alt="" coords="5,27,105,134"/>
 <area shape="rect" href="classTexture.html" title=" " alt="" coords="129,5,227,156"/>
 <area shape="rect" href="classEBO.html" title=" " alt="" coords="251,5,348,156"/>
@@ -146,11 +146,17 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a85a6e736c3cf29112c951b50151c534e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a94f61a29df7bc23f02219eb7f804a4dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCubes.html#a94f61a29df7bc23f02219eb7f804a4dd">clean</a> ()</td></tr>
 <tr class="separator:a94f61a29df7bc23f02219eb7f804a4dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa088dc63855fc9267fdf05f7b1615a5b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCubes.html#aa088dc63855fc9267fdf05f7b1615a5b">setPerspective</a> (bool view)</td></tr>
+<tr class="separator:aa088dc63855fc9267fdf05f7b1615a5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97e52483ae568b6b007636b4254cddf0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCubes.html#a97e52483ae568b6b007636b4254cddf0">setPerVal</a> (bool view)</td></tr>
+<tr class="separator:a97e52483ae568b6b007636b4254cddf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a6571f508f562ef377becd45b058477d2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLinkedList.html">LinkedList</a>&lt; <a class="el" href="classCube.html">Cube</a> * &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCubes.html#a6571f508f562ef377becd45b058477d2">list</a></td></tr>
-<tr class="separator:a6571f508f562ef377becd45b058477d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa60d2c2e9eccf4455e6264bdf9cc3598"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLinkedList.html">LinkedList</a>&lt; <a class="el" href="classCube.html">Cube</a> * &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCubes.html#aa60d2c2e9eccf4455e6264bdf9cc3598">list</a></td></tr>
+<tr class="separator:aa60d2c2e9eccf4455e6264bdf9cc3598"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bd99d12e1863433d0e9b38acb0b4b4c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCubes.html#a6bd99d12e1863433d0e9b38acb0b4b4c">isPerspective</a></td></tr>
+<tr class="separator:a6bd99d12e1863433d0e9b38acb0b4b4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="acb215920079aa438dbe335532a77b628"></a>
@@ -310,9 +316,45 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="aa088dc63855fc9267fdf05f7b1615a5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa088dc63855fc9267fdf05f7b1615a5b">&#9670;&nbsp;</a></span>setPerspective()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Cubes::setPerspective </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>view</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a97e52483ae568b6b007636b4254cddf0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97e52483ae568b6b007636b4254cddf0">&#9670;&nbsp;</a></span>setPerVal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Cubes::setPerVal </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>view</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a6571f508f562ef377becd45b058477d2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6571f508f562ef377becd45b058477d2">&#9670;&nbsp;</a></span>list</h2>
+<a id="a6bd99d12e1863433d0e9b38acb0b4b4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bd99d12e1863433d0e9b38acb0b4b4c">&#9670;&nbsp;</a></span>isPerspective</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -321,7 +363,29 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classLinkedList.html">LinkedList</a>&lt;<a class="el" href="classCube.html">Cube</a>*&gt;* Cubes::list</td>
+          <td class="memname">bool Cubes::isPerspective</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa60d2c2e9eccf4455e6264bdf9cc3598"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa60d2c2e9eccf4455e6264bdf9cc3598">&#9670;&nbsp;</a></span>list</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classLinkedList.html">LinkedList</a>&lt;<a class="el" href="classCube.html">Cube</a> *&gt;* Cubes::list</td>
         </tr>
       </table>
   </td>
@@ -334,8 +398,8 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/prajol329/Projects/campus/project/ws/Voxeloop/core/include/<a class="el" href="Cubes_8hpp_source.html">Cubes.hpp</a></li>
-<li>/home/prajol329/Projects/campus/project/ws/Voxeloop/core/src/<a class="el" href="Cubes_8cpp.html">Cubes.cpp</a></li>
+<li>/home/prajol329/Projects/campus/sem4/graphics/project/voxeloop/core/include/<a class="el" href="Cubes_8hpp_source.html">Cubes.hpp</a></li>
+<li>/home/prajol329/Projects/campus/sem4/graphics/project/voxeloop/core/src/<a class="el" href="Cubes_8cpp.html">Cubes.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

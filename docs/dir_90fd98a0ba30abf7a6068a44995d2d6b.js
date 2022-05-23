@@ -8,7 +8,6 @@ var dir_90fd98a0ba30abf7a6068a44995d2d6b =
     [ "EBO.cpp", "EBO_8cpp.html", null ],
     [ "FileHandler.cpp", "FileHandler_8cpp.html", "FileHandler_8cpp" ],
     [ "GUIManager.cpp", "GUIManager_8cpp.html", null ],
-    [ "LightSource.cpp", "LightSource_8cpp.html", null ],
     [ "main.cpp", "main_8cpp.html", "main_8cpp" ],
     [ "MenuState.cpp", "MenuState_8cpp.html", null ],
     [ "PlayState.cpp", "PlayState_8cpp.html", null ],

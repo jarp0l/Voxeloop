@@ -1,7 +1,7 @@
-<map id="/home/prajol329/Projects/campus/project/ws/Voxeloop/core/include/PlayState.hpp" name="/home/prajol329/Projects/campus/project/ws/Voxeloop/core/include/PlayState.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="240,5,451,61"/>
-<area shape="rect" id="node2" href="$MenuState_8hpp.html" title=" " alt="" coords="123,109,333,165"/>
-<area shape="rect" id="node5" href="$PlayState_8cpp.html" title=" " alt="" coords="357,109,568,165"/>
-<area shape="rect" id="node3" href="$main_8cpp.html" title=" " alt="" coords="5,213,216,269"/>
-<area shape="rect" id="node4" href="$MenuState_8cpp.html" title=" " alt="" coords="240,213,451,269"/>
+<map id="/home/prajol329/Projects/campus/sem4/graphics/project/voxeloop/core/include/PlayState.hpp" name="/home/prajol329/Projects/campus/sem4/graphics/project/voxeloop/core/include/PlayState.hpp">
+<area shape="rect" id="node1" title=" " alt="" coords="252,5,515,61"/>
+<area shape="rect" id="node2" href="$MenuState_8hpp.html" title=" " alt="" coords="111,109,381,165"/>
+<area shape="rect" id="node5" href="$PlayState_8cpp.html" title=" " alt="" coords="405,109,639,165"/>
+<area shape="rect" id="node3" href="$main_8cpp.html" title=" " alt="" coords="5,213,231,269"/>
+<area shape="rect" id="node4" href="$MenuState_8cpp.html" title=" " alt="" coords="255,213,496,269"/>
 </map>

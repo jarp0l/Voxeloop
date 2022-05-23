@@ -8,7 +8,6 @@ var annotated_dup =
     [ "EBO", "classEBO.html", "classEBO" ],
     [ "GameData", "structGameData.html", "structGameData" ],
     [ "GUIManager", "classGUIManager.html", "classGUIManager" ],
-    [ "LightSource", "classLightSource.html", "classLightSource" ],
     [ "LinkedList", "classLinkedList.html", "classLinkedList" ],
     [ "MenuState", "classMenuState.html", "classMenuState" ],
     [ "Node", "structNode.html", "structNode" ],

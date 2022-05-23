@@ -103,7 +103,7 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 <div class="title"><a class="el" href="classVoxeloop.html">Voxeloop</a> </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="md__home_prajol329_Projects_campus_project_ws_Voxeloop_README"></a> </p>
+<div class="textblock"><p><a class="anchor" id="md__home_prajol329_Projects_campus_sem4_graphics_project_voxeloop_README"></a> </p>
 <h2><a class="anchor" id="autotoc_md1"></a>
 Musical Loop Generation in Voxel World</h2>
 <p><a href="https://github.com/jarp0l/Voxeloop/actions/workflows/docs.yml"><img src="https://github.com/jarp0l/Voxeloop/actions/workflows/docs.yml/badge.svg" alt=".github/workflows/docs.yml" style="pointer-events: none;" class="inline"/></a></p>
@@ -113,7 +113,8 @@ Musical Loop Generation in Voxel World</h2>
 </ul>
 </li>
 </ul>
-<p><a href="#documentation">Documentation</a></p><ul>
+<p><a href="#to-do">To-Do</a></p><ul>
+<li><a href="#documentation">Documentation</a></li>
 <li><a href="#build">Build</a><ul>
 <li><a href="#build-using-cmake">Build using CMake</a><ul>
 <li><a href="#with-ninja">With <code>ninja</code></a></li>
@@ -135,15 +136,25 @@ Musical Loop Generation in Voxel World</h2>
 <p><a href="#acknowledgements">Acknowledgements</a></p>
 <p><b>Course project for 4th sem [BEI II/II] of DSA and Computer Graphics</b></p>
 <h1><a class="anchor" id="autotoc_md2"></a>
+To-Do</h1>
+<p>This project is still under development. We have planned to do the following things:</p><ul>
+<li>[ ] Implement lighting and shadow in the voxels.</li>
+<li>[ ] Add camera movement.</li>
+<li>[ ] Add actual functionality to the 'Settings' screen, that means the feature to change some settings (music, key bindings) in the program itself.</li>
+<li>[ ] Improve documentation.</li>
+<li>[ ] Move documentation to another branch/repo and auto-generate it based on changes in the <code>main</code> branch.</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md3"></a>
 Documentation</h1>
 <p>Online documentation of the project is available at: <a href="https://jarp0l.github.io/Voxeloop">https://jarp0l.github.io/Voxeloop</a></p>
 <p>Project report: <a href="https://github.com/jarp0l/Voxeloop/blob/main/VOXELOOP__PRAJWOL_RUJAL_076BEI023_29.pdf">VOXELOOP__PRAJWOL_RUJAL_076BEI023_29.pdf</a></p>
-<h1><a class="anchor" id="autotoc_md3"></a>
+<h1><a class="anchor" id="autotoc_md4"></a>
 Build</h1>
-<h2><a class="anchor" id="autotoc_md4"></a>
+<p>Before proceeding make sure that you have the required dependencies installed. Follow the steps in the official website of GLFW: <a href="https://www.glfw.org/docs/latest/compile.html#compile_deps">Installing dependencies</a>.</p>
+<h2><a class="anchor" id="autotoc_md5"></a>
 Build using CMake</h2>
 <p>(<em>Note: You must be in <code>build</code> directory.</em>)</p>
-<h3><a class="anchor" id="autotoc_md5"></a>
+<h3><a class="anchor" id="autotoc_md6"></a>
 With &lt;tt&gt;ninja&lt;/tt&gt;</h3>
 <p>If you have <code>ninja</code> installed:</p>
 <div class="fragment"><div class="line">mkdir build</div>
@@ -151,7 +162,7 @@ With &lt;tt&gt;ninja&lt;/tt&gt;</h3>
 <div class="line">cmake .. -G Ninja</div>
 <div class="line">ninja</div>
 <div class="line">./voxeloop </div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md6"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md7"></a>
 With &lt;tt&gt;make&lt;/tt&gt;</h3>
 <div class="fragment"><div class="line">mkdir build</div>
 <div class="line">cd build</div>
@@ -159,13 +170,13 @@ With &lt;tt&gt;make&lt;/tt&gt;</h3>
 <div class="line">make</div>
 <div class="line">./voxeloop </div>
 </div><!-- fragment --><p><b>Note:</b> Since the project was developed mainly on linux machines, it is not guaranteed that the project will build on first time at Windows. You may need to change the paths of assets used to the relative path. Also since the libraries are built from source, it takes a bit longer time when building for the first time.</p>
-<h1><a class="anchor" id="autotoc_md7"></a>
+<h1><a class="anchor" id="autotoc_md8"></a>
 Project By</h1>
 <ul>
 <li>Prajwol Pradhan (PUL076BEI023)</li>
 <li>Rujal Acharya (PUL076BEI029)</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md8"></a>
+<h1><a class="anchor" id="autotoc_md9"></a>
 Libraries Used</h1>
 <ul>
 <li>GLFW: <a href="https://glfw.org">https://glfw.org</a></li>
@@ -174,21 +185,21 @@ Libraries Used</h1>
 <li>stb: <a href="https://github.com/nothings/stb">https://github.com/nothings/stb</a></li>
 <li>miniaudio: <a href="https://miniaud.io">https://miniaud.io</a></li>
 </ul>
-<h1><a class="anchor" id="autotoc_md9"></a>
+<h1><a class="anchor" id="autotoc_md10"></a>
 Screenshots of Program</h1>
-<h2><a class="anchor" id="autotoc_md10"></a>
+<h2><a class="anchor" id="autotoc_md11"></a>
 Menu Screen</h2>
 <p><img src="screenshots/menu.png" alt="menu" class="inline"/></p>
-<h2><a class="anchor" id="autotoc_md11"></a>
+<h2><a class="anchor" id="autotoc_md12"></a>
 About Screen</h2>
 <p><img src="screenshots/about.png" alt="about" class="inline"/></p>
-<h2><a class="anchor" id="autotoc_md12"></a>
+<h2><a class="anchor" id="autotoc_md13"></a>
 Settings Screen</h2>
 <p><img src="screenshots/settings.png" alt="menu" class="inline"/></p>
-<h2><a class="anchor" id="autotoc_md13"></a>
+<h2><a class="anchor" id="autotoc_md14"></a>
 Play Screen</h2>
 <p><img src="screenshots/main.png" alt="play" class="inline"/></p>
-<h1><a class="anchor" id="autotoc_md14"></a>
+<h1><a class="anchor" id="autotoc_md15"></a>
 Acknowledgements</h1>
 <ul>
 <li>Ineptic Font by Chequered Ink (Non-Commercial use)</li>

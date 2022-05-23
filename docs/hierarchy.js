@@ -7,7 +7,6 @@ var hierarchy =
     [ "EBO", "classEBO.html", null ],
     [ "GameData", "structGameData.html", null ],
     [ "GUIManager", "classGUIManager.html", null ],
-    [ "LightSource", "classLightSource.html", null ],
     [ "LinkedList< T >", "classLinkedList.html", null ],
     [ "LinkedList< Cube * >", "classLinkedList.html", null ],
     [ "Node< T >", "structNode.html", null ],
